@@ -46,7 +46,7 @@ _One-liner_ - download the latest template files directly into the current direc
 
 ## Example
 
-The [example](https://github.com/alex-free/ezre/blob/master/example) directory contains a test use case for EzRe (hello world in C). You can get a grasp of what is possible by trying it out and reading the edited [control-i386](https://github.com/alex-free/ezre/blob/master/example/control-i386), [control-x86_64](https://github.com/alex-free/ezre/blob/master/example/control-x86_64), and [variables.mk](https://github.com/alex-free/ezre/blob/master/variables.mk) files to see a working implementation. The [Makefile](https://github.com/alex-free/ezre/blob/master/example/Makefile) was not edited at all for this example.
+The [example](https://github.com/alex-free/ezre/blob/master/example) directory contains a test use case for EzRe (hello world in C). You can get a grasp of what is possible by trying it out and reading the edited [control-i386](https://github.com/alex-free/ezre/blob/master/example/control-i386), [control-x86_64](https://github.com/alex-free/ezre/blob/master/example/control-x86_64), and [variables.mk](https://github.com/alex-free/ezre/blob/master/example/variables.mk) files to see a working implementation. The [Makefile](https://github.com/alex-free/ezre/blob/master/example/Makefile) was not edited at all for this example.
 
 `cd example`
 
@@ -72,9 +72,9 @@ The [example](https://github.com/alex-free/ezre/blob/master/example) directory c
 
 ### For Linux 3.2.0 and above, 386 CPU minimum (32 bit)
 
-*   Linux i386 static executable file (Linux 3.2.0 32 bit and above)
-*   Portable Linux i386 release .zip file (Linux 3.2.0 32 bit and above)
-*   Linux i386 release .deb file (Linux 3.2.0 32 bit and above)
+*   Linux i386 static executable file
+*   Portable Linux i386 release .zip file
+*   Linux i386 release .deb file
 
 ### For Linux 3.2.0 and above, x86_64 (64 bit)
 
