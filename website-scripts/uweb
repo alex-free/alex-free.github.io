@@ -14,8 +14,6 @@ if [ -d "$web_page" ]; then
 		rm -rf "$web_page"/images
 		cp -rv images "$web_page"
 	fi
-
-	mv "$web_page"/readme.md "$web_page"/index.md
 else
 	echo "Error: \""$web_page\"" does not exist!"
 fi
