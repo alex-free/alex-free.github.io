@@ -1,8 +1,8 @@
 # The Ultimate Guide To PSX CD-Rs
 
-_By Alex Free - v1.1.0 - 3/4/2024_ 
+_By Alex Free - v1.1.1 - 4/9/2024_ 
 
-By using a high quality [CD-R burner](#cd-r-burner), high quality [CD-R Media](#recommended-cd-r-media), and [correct burn speed](#cd-r-burn-speed) you will avoid common issues with burned CD-R media on the PSX, such as:
+By using a high quality [CD-R burner](#cd-r-burner), high quality [CD-R Media](#recommended-cd-r-media), [correct burn speed](#burn-speed), and the correct options in [burning software](#burning-software) you will avoid common issues with burned CD-R media on the PSX/PS1, such as:
 
 *   Extremely slow loading times.
 *   Game freezes (drive gets load, spins fast, disc stops spinning, because it can't read the disc).
@@ -13,16 +13,30 @@ Inspired by the GBATemp thread [Do modern burners/CD's make lower quality PS1 ba
 
 Before continuing, if your drive has issues reading real PSX CD-ROM discs you should really try my [PSX CD drive refurbishment guide](https://alex-free.github.io/unofficial-ps1-cd-drive-service-manual/) first and get that working correctly.
 
-Table Of Contents:
+## Table Of Contents:
+
+_CD-R:_
 
 *   [CD-R Composition](#cd-r-composition)
 *   [CD-R Capacity](#cd-r-capacity)
-*   [CD-R Burn Speed](#cd-r-burn-speed)
+
+_Burner:_
+
 *   [Recommended CD-R Burners](#recommended-cd-r-burners)
 *   [Bad CD-R Burners](#bad-cd-r-burners)
 *   [Recommended CD-R Media](#recommended-cd-r-media)
 *   [Bad CD-R Media](#bad-cd-r-media)
+
+_Burning:_
+
+*   [Burn Speed](#burn-speed)
+*   [Burning Software](#burning-software)
 *   [CD-R Care](#cd-r-care)
+
+_Playing:_
+
+*   [Console Model](#console-model)
+*   [Orientation Trick](#orientation-trick)
 
 ##  CD-R Composition
 
@@ -86,12 +100,6 @@ The best CD-R capacity to use for the PSX is 71 minutes, specifically you want t
 
 Competition is healthy and good for a market. There were once many different competing manufactures of CD-R media, but as of 2023 one single monopoly known as CMC magnetics has [bought out every good manufacturer of CD-R media](https://github.com/alex-free/tonyhax/issues/30). Quality of the 'consumer grade' media has seemed to [gone down due to this](https://gbatemp.net/threads/do-modern-burners-cds-make-lower-quality-ps1-backups.628708/page-3#post-10182249), which is why investing in the 'Pro'/'Archival Grade' CD-R media is important. CMC Magnetics does still use the original equipment and manufacturing proccess of it's acquired brands for the 'Pro'/'Archival Grade' media (which is why the ATIP info still says things like Taiyo Yuden or Verbatim).
 
-### CD-R Burn Speed
-
-CD-Rs have ATIP info that explains to the burner how the disc should be burned (and at what speed they can be successfully burned). Each different CD-R media type has a unique dye/substrate/manufacturing process combination and an optimal way to be burned, which even varies with burn speed. This is known as a ['strategy'](https://www.tapeheads.net/threads/cdr-is-speed-all.33741/). Modern CD burners have less 'strategies' in their firmware because it is 'good enough for most cases' to use a generic strategy that mostly works for modern writers, media, and readers (and it saves on flash storage space in the CD burner firmware). Key words, 'mostly works for modern readers', which the PSX certainly is not. The PSX came out in 1994, **before consumer grade CD-R burners were even available for [under $1000](https://web.archive.org/web/20030202233907/http://www.roxio.com/en/support/cdr/historycdr.html)**.
-
-There isn't a best answer to what burn speed you should use with your specific CD-R burner and media. You really need to do some trial and error tests to find what works best for your burner and media combination. Almost all modern (brand new as of 2020) CD burners are incapable of writing at a speed less then 10x, and most can't even do less then 16x. Anything above 24x probably won't work at all. Try 1x,2x,4x,6x,8x,10x, or 16x first.
-
 ## CD-R Burner
 
 The EMF signal strength on burned discs produced by most modern burners is extremely weak (thanks [Ramapcsx2](https://github.com/ramapcsx2) for this info!). This is a key factor in how well the CD-R will work in the PSX. The PSX requires a burned disc with a strong EMF signal. ATAPI/IDE drives pre 2005 are very likely to produce discs with a strong EMF signal.
@@ -124,6 +132,7 @@ These are no hard rules, but rather a general idea for what you should be lookin
 | --------------- | ------------- |
 | ASUS DRW-24F1ST | [Fien](https://gbatemp.net/threads/do-modern-burners-cds-make-lower-quality-ps1-backups.628708/page-2#post-10126429)  |
 | LG GP63EX70 | Alex Free |
+ Philips RWDV3210 | [Fien](https://gbatemp.net/threads/do-modern-burners-cds-make-lower-quality-ps1-backups.628708/page-7#post-10380318)
 | Plextor PX-891SAF | [Ramapcsx2](https://github.com/ramapcsx2) |
 | Sony AW-Q160S | [Fien](https://gbatemp.net/threads/do-modern-burners-cds-make-lower-quality-ps1-backups.628708/page-7#post-10367903) | 
 | Sony-Optiarc AD-7280S | [Fien](https://gbatemp.net/threads/do-modern-burners-cds-make-lower-quality-ps1-backups.628708/page-7#post-10367903) | 
@@ -324,12 +333,104 @@ Note: I don't have any of these at the moment to show the ATIP info.
 
 ![verbatim-80min-2](images/verbatim-80min-2.jpeg)
 
+## Burn Speed
+
+CD-Rs have ATIP info that explains to the burner how the disc should be burned (and at what speed they can be successfully burned). Each different CD-R media type has a unique dye/substrate/manufacturing process combination and an optimal way to be burned, which even varies with burn speed. This is known as a ['strategy'](https://www.tapeheads.net/threads/cdr-is-speed-all.33741/). Modern CD burners have less 'strategies' in their firmware because it is 'good enough for most cases' to use a generic strategy that mostly works for modern writers, media, and readers (and it saves on flash storage space in the CD burner firmware). Key words, 'mostly works for modern readers', which the PSX certainly is not. The PSX came out in 1994, **before consumer grade CD-R burners were even available for [under $1000](https://web.archive.org/web/20030202233907/http://www.roxio.com/en/support/cdr/historycdr.html)**.
+
+There isn't a best answer to what burn speed you should use with your specific CD-R burner and media. You really need to do some trial and error tests to find what works best for your burner and media combination. Almost all modern (brand new as of 2020) CD burners are incapable of writing at a speed less then 10x, and most can't even do less then 16x. Anything above 24x probably won't work at all. Try 1x,2x,4x,6x,8x,10x, or 16x first.
+
+## Burning Software
+
+While most burning software can burn a majority of PSX disc images just fine, there are some exceptions:
+
+* Some games are testing for intentional invalid EDC/EEC data as an additional anti-piracy measure known as [EDC protection](https://alex-free.github.io/tonyhax-international/anti-piracy-bypass.html#edc). By using specific software with options available specifying to not regenerate the EDC/EEC data written to disc, we can completely get around this protection.
+
+* A more advanced burn detection anti-piracy protection was released exclusively in some PSX games released in the PAL region, known as LibCrypt. That protection can be patched out with my [libCrypt patcher](https://github.com/alex-free/libcrypt-patcher) and then the disc burned will work in all burning software.
+
+### [CDRecord](https://cdrtools.sourceforge.net/private/cdrecord.html)
+
+Get my portable [Linux x86_64 build](https://alex-free.github.io/cdrtools).
+
+`cdrtools -raw16 --speed=x cuefile=yourgame.cue`
+
+Breakdown of arguments:
+
+`-raw16` specifies using the raw 16 writing mode to burn the cd image, which does not regenerate EDC/ECC data before writing to disc.
+
+Note: You can't use the default dao writing mode mode anyways because there is some bug in regards to handling the pre-gap between the data and audio tracks when burning with the latest cdrecord currently anyways.
+
+`--speed=x` specifies the burn speed. Replace `x` with a number.
+
+`cuefile=yourgame.cue` specifies that your using a cue file named `yourgame.cue`. Replace `yourgame.cue` with the game's cue file your burning.
+
+### [CDRDAO](https://cdrdao.sourceforge.net/)
+
+Get my portable [Linux x86_64 build](https://alex-free.github.io/cdrdao).
+
+CDRDAO version 1.2.4 and below can not burn EDC Protected PSX games correctly if the game contains CD audio tracks. I have fixed this issue and got my changes into the project. So as of version 1.2.5, cdrdao can now burn EDC Protected PSX games correctly, even those which contain CD audio tracks correctly using the `generic-mmc-raw` driver.
+
+`cdrdao write --speed x --driver generic-mmc-raw --swap -n --eject yourgame.cue`
+
+Breakdown of arguments:
+
+*   `--speed x` argument sets the writing speed. Replace `x` with a number.
+
+*   `--driver generic-mmc-raw` specifies CDRDAO to use the `generic-mmc-raw` driver, which burns the CD image without regenerating the EDC/ECC data written to disc.
+
+*   `--swap` is necessary if the BIN/CUE CD image contains CD audio. Without it, you will get loud static when the CD audio tracks are played as they are by default byte-swapped by CDRDAO if this argument is not specified.
+
+*   `-n` disables the 10 second waiting period before burning.
+
+*   `--eject` will automatically eject the disc immediately after a successful burn.
+
+### [IMGBurn](https://www.imgburn.com/)
+
+IMGBurn (Windows only) does not have an option to disable regeneration of EDC/EEC data, so it can not burn EDC protected games correctly. For games without EDC protection it works fine however.
+
 ## CD-R Care
 
-Here are just a few tips of taking care of CD-Rs:
+Tips:
 
-Keep Them Clean. Wiping with a clean high thread count microfiber cloth from the inner ring to the outer edge of the disc in all directions is the proper way to clean CDs.
+* Keep Them Clean. Wiping with a clean high thread count microfiber cloth from the inner ring to the outer edge of the disc in all directions is the proper way to clean CDs.
 
-Keep Them Out Of The Elements. CD-Rs should be kept sealed in a Jewel case and not left loose (where they will collect dust). They should also be kept out of direct sunlight (in a dark closet or something is best).
+* Keep Them Out Of The Elements. CD-Rs should be kept sealed in a Jewel case and not left loose (where they will collect dust). They should also be kept out of direct sunlight (in a dark closet or something is best).
 
-Don't put any sticky labels on them! I'm not sure about writing on discs with a sharpie, so I just invested in a label maker and just put the label on the jewel case for the CD-R and call it a day.
+* Don't put any sticky labels on them! I'm not sure about writing on discs with a sharpie, so I just invested in a label maker and just put the label on the jewel case for the CD-R and call it a day.
+
+## Console Model
+
+CD-ROM technology was still developing at the time of the PlayStation's initial release in Japan (December 4th 1994). The original model's CDROM controller hardware is quite primitive compared to the last models, and what was found in PS2s. Disc reading tolerances improved greatly throughout the lifespan of the console. It appears to me that these console models have the best disc reading performance and tolerances in roughly these 4 tiers below:
+
+1) SCPH-10000-SCPH-39004 PS2s, SCPH-9XXX PSX, SCPH-7XXX PSX - VC3A or VC3B controllers.
+
+2) SCPH-1XX PSone - theory: made cheaper then any of the above? It is a VC3B or VC3C, but seems a bit less performant to many..
+
+3) SCPH-5XXX - VC2 controller, auto bias/gain software focus, all-digital servo.
+
+4) SCPH-1XXX, SCPH-3XXX - original VC0 or VC1 controller, analog servo, constant, manual hardware bias/gain set by screws on motherboard.
+
+CDROM Controller versions (from [no $ psx-spx](https://psx-spx.consoledev.net/cdromdrive/#19h20h-int3yymmddver)):
+
+
+      (unknown)        ;DTL-H2000 (with SPC700 instead HC05)
+      94h,09h,19h,C0h  ;PSX (PU-7)               19 Sep 1994, version vC0 (a)
+      94h,11h,18h,C0h  ;PSX (PU-7)               18 Nov 1994, version vC0 (b)
+      94h,11h,28h,01h  ;PSX (DTL-H2000)          28 Nov 1994, version v01 (debug)
+      95h,05h,16h,C1h  ;PSX (LATE-PU-8)          16 May 1995, version vC1 (a)
+      95h,07h,24h,C1h  ;PSX (LATE-PU-8)          24 Jul 1995, version vC1 (b)
+      95h,07h,24h,D1h  ;PSX (LATE-PU-8,debug ver)24 Jul 1995, version vD1 (debug)
+      96h,08h,15h,C2h  ;PSX (PU-16, Video CD)    15 Aug 1996, version vC2 (VCD)
+      96h,08h,18h,C1h  ;PSX (LATE-PU-8,yaroze)   18 Aug 1996, version vC1 (yaroze)
+      96h,09h,12h,C2h  ;PSX (PU-18) (japan)      12 Sep 1996, version vC2 (a.jap)
+      97h,01h,10h,C2h  ;PSX (PU-18) (us/eur)     10 Jan 1997, version vC2 (a)
+      97h,08h,14h,C2h  ;PSX (PU-20)              14 Aug 1997, version vC2 (b)
+      98h,06h,10h,C3h  ;PSX (PU-22)              10 Jun 1998, version vC3 (a)
+      99h,02h,01h,C3h  ;PSX/PSone (PU-23, PM-41) 01 Feb 1999, version vC3 (b)
+      A1h,03h,06h,C3h  ;PSone/late (PM-41(2))    06 Jun 2001, version vC3 (c)
+      (unknown)        ;PS2,   xx xxx xxxx, late PS2 models...?`
+
+## Orientation Trick
+
+If your console is having issues reading discs, an old trick involves changing the console to a vertical, diagonal, or upside-down orientation while playing the disc. This can sometimes improve the dCD-R disc reading ability of the console. It is recommended to try both left and right orientation changes and different angles in a slight diagonal to figure out the exact best position.
+
+Sometimes the above issue can be alleviated or disappear entirely by following my [psx cdrom refurbishment guide](https://alex-free.github.io/unofficial-ps1-cd-drive-service-manual/).
