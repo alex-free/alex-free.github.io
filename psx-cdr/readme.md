@@ -1,6 +1,6 @@
 # The Ultimate Guide To PSX CD-Rs
 
-_By Alex Free - v1.1.2 - 4/18/2024_ 
+_By Alex Free - v1.1.3- 4/21/2024_ 
 
 By using a high quality [CD-R burner](#cd-r-burner), high quality [CD-R Media](#recommended-cd-r-media), [correct burn speed](#burn-speed), and the correct options in [burning software](#burning-software) you will avoid common issues with burned CD-R media on the PSX/PS1, such as:
 
@@ -119,7 +119,8 @@ These are no hard rules, but rather a general idea for what you should be lookin
 | Model  | Tester |
 | --------------- | ------------- |
 | HL-DT-ST GU90n  | Kamil (psxdev discord)|
-| IHAS124b Lite On | [wolffangalchemist](https://gbatemp.net/threads/do-modern-burners-cds-make-lower-quality-ps1-backups.628708/page-7#post-10369990)
+| IHAS124B Lite On | [wolffangalchemist](https://gbatemp.net/threads/do-modern-burners-cds-make-lower-quality-ps1-backups.628708/page-7#post-10369990) |
+| IHas124Y Lite On | [SquidDude](https://gbatemp.net/threads/do-modern-burners-cds-make-lower-quality-ps1-backups.628708/page-8#post-10401567) |
 | NEC ND-3550A | [Fien](https://gbatemp.net/threads/do-modern-burners-cds-make-lower-quality-ps1-backups.628708/page-2#post-10126429)  |
 | Plextor PX-708A  | Alex Free  |
 | Pioneer DVR-AO4 | [DanHans42](https://github.com/danhans42) |
