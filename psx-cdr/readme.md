@@ -1,6 +1,6 @@
 # The Ultimate Guide To PSX CD-Rs
 
-_By Alex Free - v1.1.1 - 4/9/2024_ 
+_By Alex Free - v1.1.2 - 4/18/2024_ 
 
 By using a high quality [CD-R burner](#cd-r-burner), high quality [CD-R Media](#recommended-cd-r-media), [correct burn speed](#burn-speed), and the correct options in [burning software](#burning-software) you will avoid common issues with burned CD-R media on the PSX/PS1, such as:
 
@@ -27,8 +27,9 @@ _Burner:_
 *   [Recommended CD-R Media](#recommended-cd-r-media)
 *   [Bad CD-R Media](#bad-cd-r-media)
 
-_Burning:_
+_Ripping & Burning:_
 
+*   [Ripping PSX CDROMs](#ripping-psx-cd-roms)
 *   [Burn Speed](#burn-speed)
 *   [Burning Software](#burning-software)
 *   [CD-R Care](#cd-r-care)
@@ -333,6 +334,35 @@ Note: I don't have any of these at the moment to show the ATIP info.
 
 ![verbatim-80min-2](images/verbatim-80min-2.jpeg)
 
+## Ripping PSX CD-ROMs
+
+The below instructions cover ripping the entire PSX library successfully, including games which utilize EDC/EEC protection. 
+
+LibCrypt protected games can simply be ripped by any standard CD burning software and then patched using my [LibCrypt Patcher](https://alex-free.github.io/libcrypt-patcher). The below instuctions do not 'preserve' the protection in any way since it is unnecessary with said patcher being available.
+
+### Ripping With [CDRDAO](https://cdrdao.sourceforge.net/)
+
+_(portable [Linux x86_64 build](https://alex-free.github.io/cdrdao).)_
+
+CDRDAO by default will rip a CD to it's own native BIN/TOC format, this can be done with the command below.
+
+`cdrdao read-cd --read-raw --read-subchan rw_raw --driver generic-mmc-raw yourgame.toc`
+
+**NOTE:** The above command must be run immediately after inserting the CD that you are ripping into your drive, **before it is mounted** by the computer OS. Otherwise, you will run into 'device busy' errors as CDRDAO can not access the CD while your OS has it mounted.
+
+![Ripping Castrol Honda SuperBike Racing Part 1](images/ripping-castrol-honda-superbike-racing-japan-1.png)
+
+Next use the `toc2cue` program included in CDRDAO to then convert this image to a proper BIN/CUE format (with audio tracks in the correct byte order and SubChannel data removed) that can then be used by other burning programs using this command:
+
+`toc2cue -C yourgame.bin -s yourgame.toc yourgame.cue`
+
+This will output 2 new files, `yourgame.bin` and `yourgame.cue`. These 2 files can be burned like any other BIN/CUE CD image, either by CDRDAO or another program. The other file pair: `yourgame.toc` and `data.bin` is the BIN/TOC fileset that can only be burned by CDRDAO.
+
+![Ripping Castrol Honda SuperBike Racing Part 2](images/ripping-castrol-honda-superbike-racing-japan-2.png)
+
+![Ripping Castrol Honda SuperBike Racing Part 3](images/ripping-castrol-honda-superbike-racing-japan-3.png)
+
+
 ## Burn Speed
 
 CD-Rs have ATIP info that explains to the burner how the disc should be burned (and at what speed they can be successfully burned). Each different CD-R media type has a unique dye/substrate/manufacturing process combination and an optimal way to be burned, which even varies with burn speed. This is known as a ['strategy'](https://www.tapeheads.net/threads/cdr-is-speed-all.33741/). Modern CD burners have less 'strategies' in their firmware because it is 'good enough for most cases' to use a generic strategy that mostly works for modern writers, media, and readers (and it saves on flash storage space in the CD burner firmware). Key words, 'mostly works for modern readers', which the PSX certainly is not. The PSX came out in 1994, **before consumer grade CD-R burners were even available for [under $1000](https://web.archive.org/web/20030202233907/http://www.roxio.com/en/support/cdr/historycdr.html)**.
@@ -347,11 +377,11 @@ While most burning software can burn a majority of PSX disc images just fine, th
 
 * A more advanced burn detection anti-piracy protection was released exclusively in some PSX games released in the PAL region, known as LibCrypt. That protection can be patched out with my [libCrypt patcher](https://github.com/alex-free/libcrypt-patcher) and then the disc burned will work in all burning software.
 
-### [CDRecord](https://cdrtools.sourceforge.net/private/cdrecord.html)
+### Burning With [CDRecord](https://cdrtools.sourceforge.net/private/cdrecord.html)
 
-Get my portable [Linux x86_64 build](https://alex-free.github.io/cdrtools).
+_(Portable [Linux x86_64 build](https://alex-free.github.io/cdrtools).)_
 
-`cdrtools -raw16 --speed=x cuefile=yourgame.cue`
+`cdrecord -raw16 --speed=x cuefile=yourgame.cue`
 
 Breakdown of arguments:
 
@@ -363,9 +393,9 @@ Note: You can't use the default dao writing mode mode anyways because there is s
 
 `cuefile=yourgame.cue` specifies that your using a cue file named `yourgame.cue`. Replace `yourgame.cue` with the game's cue file your burning.
 
-### [CDRDAO](https://cdrdao.sourceforge.net/)
+### Burning With [CDRDAO](https://cdrdao.sourceforge.net/)
 
-Get my portable [Linux x86_64 build](https://alex-free.github.io/cdrdao).
+_(Portable [Linux x86_64 build](https://alex-free.github.io/cdrdao).)_
 
 CDRDAO version 1.2.4 and below can not burn EDC Protected PSX games correctly if the game contains CD audio tracks. I have fixed this issue and got my changes into the project. So as of version 1.2.5, cdrdao can now burn EDC Protected PSX games correctly, even those which contain CD audio tracks correctly using the `generic-mmc-raw` driver.
 
@@ -383,7 +413,11 @@ Breakdown of arguments:
 
 *   `--eject` will automatically eject the disc immediately after a successful burn.
 
-### [IMGBurn](https://www.imgburn.com/)
+![burn-ddr2-japan-1](images/burn-ddr2-japan-1.png)
+
+![burn-ddr2-japan-2](images/burn-ddr2-japan-2.png)
+
+### Burning With [IMGBurn](https://www.imgburn.com/)
 
 IMGBurn (Windows only) does not have an option to disable regeneration of EDC/EEC data, so it can not burn EDC protected games correctly. For games without EDC protection it works fine however.
 
@@ -428,6 +462,8 @@ CDROM Controller versions (from [no $ psx-spx](https://psx-spx.consoledev.net/cd
       99h,02h,01h,C3h  ;PSX/PSone (PU-23, PM-41) 01 Feb 1999, version vC3 (b)
       A1h,03h,06h,C3h  ;PSone/late (PM-41(2))    06 Jun 2001, version vC3 (c)
       (unknown)        ;PS2,   xx xxx xxxx, late PS2 models...?`
+
+**This isn't to say you can't get great CD-R reading performance from all consoles at all**, just that there are better technology/tolerances in different models.
 
 ## Orientation Trick
 
