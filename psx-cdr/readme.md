@@ -1,6 +1,6 @@
 # The Ultimate Guide To PSX CD-Rs
 
-_By Alex Free - v1.1.3- 4/21/2024_ 
+_By Alex Free - v1.1.4- 4/25/2024_ 
 
 By using a high quality [CD-R burner](#cd-r-burner), high quality [CD-R Media](#recommended-cd-r-media), [correct burn speed](#burn-speed), and the correct options in [burning software](#burning-software) you will avoid common issues with burned CD-R media on the PSX/PS1, such as:
 
@@ -144,7 +144,30 @@ These are no hard rules, but rather a general idea for what you should be lookin
 
 So with all of these factors in regards to the CD-R media itself, I have come up with a list of discs I can recommend to be used with the PSX as they are all use high quality (and reflective) dyes, substrates, and are meant to either last a long time and or provide professional performance and high compatibility with legacy CD-ROM drives:
 
-### PlayStation Master Disc 71PS CD-R
+--------
+_Tier 1_
+
+1) [PlayStation Master Disc 71PS CD-R (71 Minutes)](#playstation-master-disc-71ps-cd-r-71-minutes) - the best, the standard, the correct density.
+
+2) [Taiyo Yuden That's CD-R CDR-74ZY (74 Minutes)](#taiyo-yuden-thats-cd-r-cdr-74zy-74-minutes) - the retail twin to the above, in a standard 74 minute density.
+
+--------
+_Tier 2_
+
+3) [TDK Data CD-R For Computer Writers (74 Minutes)](#tdk-data-cd-r-for-computer-writers-74-minutes) - had good results, and can be found cheap in bulk new-old stock listings.
+
+4) [Verbatim DataLifePlus (74 Minutes)](#verbatim-datalifeplus-74-minutes) - a bit expensive, but these are what originally gave Verbatim an excellent reputation.
+
+5) [CMC Pro Powered By Taiyo Yuden Technology (80 Minutes)](#cmc-pro-powered-by-taiyo-yuden-technology-80-minutes) - very similar in disc composition and ATIP info to tier 1 CD-Rs, only difference is an 80 minute capacity. **The only reason this is not tier 1 is because it is 80 minutes in density**. Hands down **the best 80 minute CD-R still made brand new**.
+
+--------
+_Tier 3_
+
+6) [Verbatim DataLifePlus (80 Minutes)](#verbatim-datalifeplus-80-minutes) - uses a newer SuperAZO dye to enable burning at speeds above 8x, which some burners require. Not as good as the original AZO dye formulation, but works well enough and are still made brand new.
+
+7) [Verbatim UltraLifePlus (80 Minutes)](#verbatim-ultralifeplus-80-minutes) - work as well as the above, another good option.
+
+### PlayStation Master Disc 71PS CD-R (71 Minutes)
 
 The holly grail. This is the only CD-R recommended by Sony for in-house use during development of PSX games. It also was what needed to be sent to Sony as the final build in order to ship the game and create the PSX CD-ROMs for retail.
 
@@ -168,7 +191,7 @@ Output of [cdrecord](https://cdrtools.sourceforge.net/private/cdrecord.html) `-a
 
 ![psx master disc 4](images/psx-master-disc-4.jpg)
 
-### Taiyo Yuden That's CD-R CDR-74ZY
+### Taiyo Yuden That's CD-R CDR-74ZY (74 Minutes)
 
 These are almost the same thing as the PlayStation Master Disc 71PS CD-R, but they are 74 minutes in length instead of 71. They also include a `Disc sub type` in the ATIP.
 
@@ -184,8 +207,8 @@ Output of [cdrecord](https://cdrtools.sourceforge.net/private/cdrecord.html) `-a
     Disk type:    Long strategy type (Cyanine, AZO or similar)
     Manuf. index: 25
     Manufacturer: Taiyo Yuden Company Limited
-
-### TDK Data CD-R For Computer Writers (74 Minute)
+ 
+### TDK Data CD-R For Computer Writers (74 Minutes)
 
 These work great, and are pretty cheap for 74 minute media if you can find them on eBay.
 
@@ -204,7 +227,7 @@ Output of [cdrecord](https://cdrtools.sourceforge.net/private/cdrecord.html) `-a
 
 ![tdk-data-cd-r-for-computer-writers-74-min](images/tdk-data-cd-r-for-computer-writers-74-min.jpg)
 
-### Verbatim DataLifePlus (74 Minute)
+### Verbatim DataLifePlus (74 Minutes)
 
 I've used them in the past and they work quite well. Huge thanks to [akikokumagara](https://gbatemp.net/members/akikokumagara.410237/) for [these pictures](https://gbatemp.net/threads/do-modern-burners-cds-make-lower-quality-ps1-backups.628708/page-3#post-10223678) since I don't have any around at the moment myself.
 
@@ -234,7 +257,7 @@ Notice the super deep blue AZO dye. This is the original formulation, it was cha
 
 ![verbatim-data-life-plus-74min-4](images/verbatim-data-life-plus-74min-4.jpg)
 
-### CMC Pro Powered By Taiyo Yuden Technology (80 Minute)
+### CMC Pro Powered By Taiyo Yuden Technology (80 Minutes)
 
 These are something like the grandchild of the 'That's CD-R!' by Taiyo Yuden from the 90s, which was the basis for the PS1 Master Disc 71PS. They work really well and are cheaper then any of the Verbatim discs. Probably the best 80 minute discs you can buy brand new.
 
@@ -253,7 +276,7 @@ Output of [cdrecord](https://cdrtools.sourceforge.net/private/cdrecord.html) `-a
 
 ![cmc-pro](images/cmc-pro.jpeg)
 
-### Verbatim DataLifePlus (80 Minute)
+### Verbatim DataLifePlus (80 Minutes)
 
 These have the newer Super AZO dye formulation that allows for burning at higher then 8x speed. Not quite as good as the [Verbatim DataLifePlus 74 Minute Discs](#verbatim-datalifeplus-80-minute), or as good as the [CMC Pro 80 Minute Discs](#cmc-pro-powered-by-taiyo-yuden-technology-80-minute)
 
@@ -272,7 +295,7 @@ Output of [cdrecord](https://cdrtools.sourceforge.net/private/cdrecord.html) `-a
 
 ![verbatim-data-life-plus-80min](images/verbatim-data-life-plus-80min.jpeg)
 
-### Verbatim UltraLifePlus (80 Minute)
+### Verbatim UltraLifePlus (80 Minutes)
 
 The gold reflective layer makes these very reflective. They work about as well as the [Verbatim DataLifePlus 80 Minute Discs](#verbatim-80-minute).
 
