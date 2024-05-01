@@ -1,6 +1,6 @@
 # The Ultimate Guide To PSX CD-Rs
 
-_By Alex Free - v1.1.5- 5/1/2024_ 
+_By Alex Free - v1.1.6- 5/1/2024_ 
 
 By using a high quality [CD-R burner](#cd-r-burner), high quality [CD-R Media](#cd-r-media), [correct burn speed](#burn-speed), and the correct options in [burning software](#burning-software) you will avoid common issues with burned CD-R media on the PSX/PS1, such as:
 
@@ -24,8 +24,8 @@ _CD-R:_
 _Ripping & Burning:_
 
 *   [CD-R Burners](#cd-r-burner)
-*   [Ripping PSX CDROMs](#ripping-psx-cd-roms)
 *   [Burn Speed](#burn-speed)
+*   [Ripping PSX CDROMs](#ripping-psx-cd-roms)
 *   [Burning Software](#burning-software)
 *   [CD-R Care](#cd-r-care)
 
@@ -156,7 +156,7 @@ Real PSX performance test results with multiple CD-Rs:
 | [Verbatim DataLifePlus](verbatim-datalifeplus-74-minutes.md) | 74 Minutes/650MB | Mid | Alex Free |
 | [Verbatim DataLifePlus](verbatim-datalifeplus-80-minutes.md) | 80 Minutes/700MB | Mid | Alex Free |
 | [Verbatim UltraLifePlus](verbatim-ultralifeplus-80-minutes.md)  | 80 Minutes/700MB | Mid | Alex Free |
-| [Maxell CD-R](maxell-cd-r-80-minutes.md) | 80 Minutes/700MB | Bad | Alex Free |
+| [Maxell CD-R](maxell-80-minutes.md) | 80 Minutes/700MB | Bad | Alex Free |
 | [Verbatim](verbatim-80-minutes.md) | 80 Minutes/700MB | Bad | Alex Free |
 
 ## CD-R Burner
@@ -195,91 +195,36 @@ These are no hard rules, but rather a general idea for what you should be lookin
 | Sony-Optiarc AD-7280S | Bad | [Fien](https://gbatemp.net/threads/do-modern-burners-cds-make-lower-quality-ps1-backups.628708/page-7#post-10367903) | 
 | TS-H492C | Bad | [Fien](https://gbatemp.net/threads/do-modern-burners-cds-make-lower-quality-ps1-backups.628708/page-2#post-10126429)  |
 
-## Ripping PSX CD-ROMs
-
-The below instructions cover ripping the entire PSX library successfully, including games which utilize EDC/EEC protection. 
-
-LibCrypt protected games can simply be ripped by any standard CD burning software and then patched using my [LibCrypt Patcher](https://alex-free.github.io/libcrypt-patcher). The below instuctions do not 'preserve' the protection in any way since it is unnecessary with said patcher being available.
-
-### Ripping With [CDRDAO](https://cdrdao.sourceforge.net/)
-
-_(portable [Linux x86_64 build](https://alex-free.github.io/cdrdao).)_
-
-CDRDAO by default will rip a CD to it's own native BIN/TOC format, this can be done with the command below.
-
-`cdrdao read-cd --read-raw --read-subchan rw_raw --driver generic-mmc-raw yourgame.toc`
-
-**NOTE:** The above command must be run immediately after inserting the CD that you are ripping into your drive, **before it is mounted** by the computer OS. Otherwise, you will run into 'device busy' errors as CDRDAO can not access the CD while your OS has it mounted.
-
-![Ripping Castrol Honda SuperBike Racing Part 1](images/ripping-castrol-honda-superbike-racing-japan-1.png)
-
-Next use the `toc2cue` program included in CDRDAO to then convert this image to a proper BIN/CUE format (with audio tracks in the correct byte order and SubChannel data removed) that can then be used by other burning programs using this command:
-
-`toc2cue -C yourgame.bin -s yourgame.toc yourgame.cue`
-
-This will output 2 new files, `yourgame.bin` and `yourgame.cue`. These 2 files can be burned like any other BIN/CUE CD image, either by CDRDAO or another program. The other file pair: `yourgame.toc` and `data.bin` is the BIN/TOC fileset that can only be burned by CDRDAO.
-
-![Ripping Castrol Honda SuperBike Racing Part 2](images/ripping-castrol-honda-superbike-racing-japan-2.png)
-
-![Ripping Castrol Honda SuperBike Racing Part 3](images/ripping-castrol-honda-superbike-racing-japan-3.png)
-
 ## Burn Speed
 
 CD-Rs have ATIP info that explains to the burner how the disc should be burned (and at what speed they can be successfully burned). Each different CD-R media type has a unique dye/substrate/manufacturing process combination and an optimal way to be burned, which even varies with burn speed. This is known as a ['strategy'](https://www.tapeheads.net/threads/cdr-is-speed-all.33741/). Modern CD burners have less 'strategies' in their firmware because it is 'good enough for most cases' to use a generic strategy that mostly works for modern writers, media, and readers (and it saves on flash storage space in the CD burner firmware). Key words, 'mostly works for modern readers', which the PSX certainly is not. The PSX came out in 1994, **before consumer grade CD-R burners were even available for [under $1000](https://web.archive.org/web/20030202233907/http://www.roxio.com/en/support/cdr/historycdr.html)**.
 
 There isn't a best answer to what burn speed you should use with your specific CD-R burner and media. You really need to do some trial and error tests to find what works best for your burner and media combination. Almost all modern (brand new as of 2020) CD burners are incapable of writing at a speed less then 10x, and most can't even do less then 16x. Anything above 24x probably won't work at all. Try 1x,2x,4x,6x,8x,10x, or 16x first.
 
+## Ripping PSX CD-ROMs
+
+The below instructions cover ripping the entire PSX library successfully, including games which utilize EDC/EEC protection. 
+
+LibCrypt protected games can simply be ripped by any standard CD burning software and then patched using my [LibCrypt Patcher](https://alex-free.github.io/libcrypt-patcher). The below instuctions do not 'preserve' the protection in any way since it is unnecessary with said patcher being available.
+
+Documented ripping process:
+
+* [Ripping With CDRDAO](ripping-with-cdrdao.md)
+
 ## Burning Software
 
 While most burning software can burn a majority of PSX disc images just fine, there are some exceptions:
 
-* Some games are testing for intentional invalid EDC/EEC data as an additional anti-piracy measure known as [EDC protection](https://alex-free.github.io/tonyhax-international/anti-piracy-bypass.html#edc). By using specific software with options available specifying to not regenerate the EDC/EEC data written to disc, we can completely get around this protection.
+* Some games are testing for intentional invalid EDC/EEC data as an additional anti-piracy measure known as [EDC protection](https://alex-free.github.io/tonyhax-international/anti-piracy-bypass.html#edc). By using specific software with options available specifying to not regenerate the EDC/EEC data written to disc, we can completely get around this protection. Software that don't include this option most notably includes IMGBurn. Said software can therefore not burn EDC/ECC protected games correctly, but can burn unprotected or patched games just fine.
 
 * A more advanced burn detection anti-piracy protection was released exclusively in some PSX games released in the PAL region, known as LibCrypt. That protection can be patched out with my [libCrypt patcher](https://github.com/alex-free/libcrypt-patcher) and then the disc burned will work in all burning software.
 
-### Burning With [CDRecord](https://cdrtools.sourceforge.net/private/cdrecord.html)
 
-_(Portable [Linux x86_64 build](https://alex-free.github.io/cdrtools).)_
-
-`cdrecord -raw16 --speed=x cuefile=yourgame.cue`
-
-Breakdown of arguments:
-
-`-raw16` specifies using the raw 16 writing mode to burn the cd image, which does not regenerate EDC/ECC data before writing to disc.
-
-Note: You can't use the default dao writing mode mode anyways because there is some bug in regards to handling the pre-gap between the data and audio tracks when burning with the latest cdrecord currently anyways.
-
-`--speed=x` specifies the burn speed. Replace `x` with a number.
-
-`cuefile=yourgame.cue` specifies that your using a cue file named `yourgame.cue`. Replace `yourgame.cue` with the game's cue file your burning.
-
-### Burning With [CDRDAO](https://cdrdao.sourceforge.net/)
-
-_(Portable [Linux x86_64 build](https://alex-free.github.io/cdrdao).)_
-
-CDRDAO version 1.2.4 and below can not burn EDC Protected PSX games correctly if the game contains CD audio tracks. I have fixed this issue and got my changes into the project. So as of version 1.2.5, cdrdao can now burn EDC Protected PSX games correctly, even those which contain CD audio tracks correctly using the `generic-mmc-raw` driver.
-
-`cdrdao write --speed x --driver generic-mmc-raw --swap -n --eject yourgame.cue`
-
-Breakdown of arguments:
-
-*   `--speed x` argument sets the writing speed. Replace `x` with a number.
-
-*   `--driver generic-mmc-raw` specifies CDRDAO to use the `generic-mmc-raw` driver, which burns the CD image without regenerating the EDC/ECC data written to disc.
-
-*   `--swap` is necessary if the BIN/CUE CD image contains CD audio. Without it, you will get loud static when the CD audio tracks are played as they are by default byte-swapped by CDRDAO if this argument is not specified.
-
-*   `-n` disables the 10 second waiting period before burning.
-
-*   `--eject` will automatically eject the disc immediately after a successful burn.
-
-![burn-ddr2-japan-1](images/burn-ddr2-japan-1.png)
-
-![burn-ddr2-japan-2](images/burn-ddr2-japan-2.png)
-
-### Burning With [IMGBurn](https://www.imgburn.com/)
-
-IMGBurn (Windows only) does not have an option to disable regeneration of EDC/EEC data, so it can not burn EDC protected games correctly. For games without EDC protection it works fine however.
+| Burning Software  | Supports EDC/ECC Protection | Burn Guide Available | Tester |
+| --------------- | ------------- | ------------- | ------------ |
+| CDRecord | Yes | [Yes](burning-with-cdrecord.md) | Alex Free |
+| CDRDao | Yes | [Yes](burning-with-cdrdao.md) | Alex Free |
+| ImgBurn | No | No | Alex Free |
 
 ## CD-R Care
 
