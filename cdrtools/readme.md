@@ -25,13 +25,13 @@ Changes:
 
 ## Usage
 
-CDRTools/CDRecord **works great for burning Sega Dreamcast games**. I utilize it in [dreamcast-cdi-burner](https://alex-free.github.io/dcdib) and [video2dreamcastdisc](https://alex-free.github.io/video2dreamcastdisc)
+CDRTools/CDRecord **works great for burning Sega Dreamcast games**. I utilize it in [dreamcast cdi burner](https://alex-free.github.io/dcdib) and [video2dreamcastdisc](https://alex-free.github.io/video2dreamcastdisc).
 
-CDRTools/CDRecord is **not recommended for burning standard BIN/CUE images containing CD audio.** I have expierenced the following issues when using cdrtools in specific to PSX games:
+CDRTools/CDRecord is **not recommended for burning standard BIN/CUE images containing CD audio tracks.** I have expierenced the following issues when using cdrtools in specific to PSX games:
 
 | Game | Problem |
 |------|---------|
 | Quake II | Doesn't boot unless `-raw16` or `-raw96r` writing mode is specified. This is due to some kind of pregap issue? |
 | Tomb Raider | Doesn't play some audio tracks of Laura's hints in it's entirerty (cut short by a second or so) in 'Laura's House. This is either the same issue as above, or possibly something related to [subchannel Q seeking](https://www.psx-place.com/threads/ninja-shadow-of-darkness-patch-by-krhacken.30709/). |
 
-It is therefore recommended to instead use [cdrdao](https://alex-free.github.io/cdrdao-pled) instead for PSX games, which has no such issues.
+It is therefore recommended to instead use [cdrdao-pled](https://alex-free.github.io/cdrdao) instead for PSX games, which has no such issues.
