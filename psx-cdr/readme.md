@@ -1,6 +1,6 @@
 # The Ultimate Guide To PSX CD-Rs
 
-_By Alex Free - v1.1.6- 5/1/2024_ 
+_By Alex Free - v1.1.7- 5/4/2024_ 
 
 By using a high quality [CD-R burner](#cd-r-burner), high quality [CD-R Media](#cd-r-media), [correct burn speed](#burn-speed), and the correct options in [burning software](#burning-software) you will avoid common issues with burned CD-R media on the PSX/PS1, such as:
 
@@ -199,7 +199,7 @@ These are no hard rules, but rather a general idea for what you should be lookin
 
 CD-Rs have ATIP info that explains to the burner how the disc should be burned (and at what speed they can be successfully burned). Each different CD-R media type has a unique dye/substrate/manufacturing process combination and an optimal way to be burned, which even varies with burn speed. This is known as a ['strategy'](https://www.tapeheads.net/threads/cdr-is-speed-all.33741/). Modern CD burners have less 'strategies' in their firmware because it is 'good enough for most cases' to use a generic strategy that mostly works for modern writers, media, and readers (and it saves on flash storage space in the CD burner firmware). Key words, 'mostly works for modern readers', which the PSX certainly is not. The PSX came out in 1994, **before consumer grade CD-R burners were even available for [under $1000](https://web.archive.org/web/20030202233907/http://www.roxio.com/en/support/cdr/historycdr.html)**.
 
-There isn't a best answer to what burn speed you should use with your specific CD-R burner and media. You really need to do some trial and error tests to find what works best for your burner and media combination. Almost all modern (brand new as of 2020) CD burners are incapable of writing at a speed less then 10x, and most can't even do less then 16x. Anything above 24x probably won't work at all. Try 1x,2x,4x,6x,8x,10x, or 16x first.
+There isn't a best answer to what burn speed you should use with your specific CD-R burner and media, because the EMF signal strength varies by burn speed. You really need to do some trial and error tests to find what works best for your burner and media combination. Be aware that almost all modern (brand new as of 2020) CD burners are incapable of writing at a speed less then 10x, and most can't even do less then 16x. Older burns are capable of a wider speed range.
 
 ## Ripping PSX CD-ROMs
 
@@ -223,7 +223,7 @@ While most burning software can burn a majority of PSX disc images just fine, th
 | Burning Software  | Supports EDC/ECC Protection | Burn Guide Available | Tester |
 | --------------- | ------------- | ------------- | ------------ |
 | CDRecord | Yes | [Yes](burning-with-cdrecord.md) | Alex Free |
-| CDRDao | Yes | [Yes](burning-with-cdrdao.md) | Alex Free |
+| CDRDao | Yes | **No. and not recommended for PSX specifically, has [other issues](https://alex-free.github.io/cdrtools-pled#usage)** | Alex Free |
 | ImgBurn | No | No | Alex Free |
 
 ## CD-R Care
@@ -272,6 +272,6 @@ CDROM Controller versions (from [no $ psx-spx](https://psx-spx.consoledev.net/cd
 
 ## Orientation Trick
 
-If your console is having issues reading discs, an old trick involves changing the console to a vertical, diagonal, or upside-down orientation while playing the disc. This can sometimes improve the dCD-R disc reading ability of the console. It is recommended to try both left and right orientation changes and different angles in a slight diagonal to figure out the exact best position.
+If your console is having issues reading discs, an old trick involves changing the console to a vertical, diagonal, or upside-down orientation while playing the disc. This can sometimes improve the CD-R disc reading ability of the console. It is recommended to try both left and right orientation changes and different angles in a slight diagonal to figure out the exact best position.
 
 Sometimes the above issue can be alleviated or disappear entirely by following my [psx cdrom refurbishment guide](https://alex-free.github.io/unofficial-ps1-cd-drive-service-manual/).
