@@ -222,8 +222,8 @@ While most burning software can burn a majority of PSX disc images just fine, th
 
 | Burning Software  | Supports EDC/ECC Protection | Burn Guide Available | Tester |
 | --------------- | ------------- | ------------- | ------------ |
-| CDRecord | Yes | [Yes](burning-with-cdrecord.md) | Alex Free |
-| CDRDao | Yes | **No. and not recommended for PSX specifically, has [other issues](https://alex-free.github.io/cdrtools-pled#usage)** | Alex Free |
+| CDRDao | Yes | [Yes](burning-with-cdrdao.md) | Alex Free |
+| CDRecord | Yes |  **No. and not recommended for PSX specifically, has [other issues](https://alex-free.github.io/cdrtools/#usage)** | Alex Free |
 | ImgBurn | No | No | Alex Free |
 
 ## CD-R Care
