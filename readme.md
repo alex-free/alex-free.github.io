@@ -75,6 +75,8 @@
 
 *   [The Ultimate Guide To PSX CD-Rs](https://alex-free.github.io/psx-cdr) - Everything you need to know on burning PSX CD-Rs in modern year.
 
+*   [Protected PSX Games List](https://alex-free.github.io/tonyhax-international/anti-piracy-bypass) - The most accurate and extensive list of protected PSX games ever put together.
+
 *   [TOCPerfect](https://alex-free.github.io/tocperfect)  - Patch a CD image directly to use the Tonyhax International loader as a way to remove some of the limitations of using the CD Player Swap Trick as a boot method.
 
 *   [Tonyhax International](https://alex-free.github.io/tonyhax-international) - Fork of Tonyhax that adds support for all Japanese PS1 consoles, early Japanese PS2 consoles, ROM support, and more!
