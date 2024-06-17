@@ -1,7 +1,7 @@
 
 -----------------------------------------
 
-| [GitHub](https://github.com/alex-free) | [What's New?](https://github.com/alex-free/alex-free.github.io/commits/master) | [Donate](https://github.com/sponsors/alex-free) | [PSXPlace Forum User](https://www.psx-place.com/members/alex-free.229904/) | [GBATemp Forum User](https://gbatemp.net/members/alexfree.573749/) | 
+| [GitHub](https://github.com/alex-free) | [What's New?](https://github.com/alex-free/alex-free.github.io/commits/master) | [Donate](https://github.com/sponsors/alex-free) | [PSXPlace Forum User](https://www.psx-place.com/members/alexfree.127641/) | [GBATemp Forum User](https://gbatemp.net/members/alexfree.573749/) | 
 
 -----------------------------------------
 
