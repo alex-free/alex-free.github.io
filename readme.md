@@ -61,6 +61,8 @@
 
 *   [LibCrypt Patcher](https://alex-free.github.io/libcrypt-patcher) - Universal patcher for LibCrypt protected PSX games.
 
+*   [Lib PS-CD-ID](https://alex-free.github.io/lib-ps-cd-id) - A C library to identify PlayStation 1 and 2 disc images.
+
 *   [Open95KeygenPSX](https://alex-free.github.io/open95keygen-psx) - Homebrew port of [Open95Keygen](https://github.com/alex-free/open95keygen) to the Playstation 1 console.
 
 *   [PS1 DemoSwap Patcher](https://alex-free.github.io/ps1demoswap) - By MottZilla, ported by me to many more operating systems. This is the holly grail of what [TOCPerfect](https://alex-free.github.io/tocperfect) was made to do. Modifies Playstation games to use the correct TOC and unlocks the CD drive after using a swap trick. Can also patch demo discs to enable an easy single swap trick for backups on all consoles.
