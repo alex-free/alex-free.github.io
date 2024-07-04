@@ -22,13 +22,13 @@ EzRe (Easy Release) provides a simple and sane build system for Linux (i386 and 
 
 ## Downloads
 
-### Version 1.0 (3/22/2024)
+### Version 1.0.1 (7/4/2024)
 
-*   Initial release.
+*   Added missing apt build dependencies for C++ Linux i386.
 
 _Zip release_: 
 
-[EzRe v1.0](https://github.com/alex-free/ezre/releases/download/v1.0/ezre-v1.0.zip)
+[EzRe v1.0.1](https://github.com/alex-free/ezre/releases/download/v1.0.1/ezre-v1.0.1.zip)
 
 _Git clone_
 
