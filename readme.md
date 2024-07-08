@@ -67,11 +67,13 @@
 
 *   [Open95KeygenPSX](open95keygen-psx) - Homebrew port of [Open95Keygen](https://github.com/alex-free/open95keygen) to the Playstation 1 console.
 
+*   [PlayStation Disc Burner](psdb) - Patch and burn PS2/PS1 discs on Linux.
+
 *   [PS1 DemoSwap Patcher](ps1demoswap) - By MottZilla, ported by me to many more operating systems. This is the holly grail of what [TOCPerfect](tocperfect) was made to do. Modifies Playstation games to use the correct TOC and unlocks the CD drive after using a swap trick. Can also patch demo discs to enable an easy single swap trick for backups on all consoles.
 
 *   [PS1 DVD Logo Demo](ps1-dvd-logo-demo) - A demo for the original PS1 console that bounces the DVD logo around with various gimmicks and visual effects.
 
-*   [PSEXE2ROM](psexe2rom) - Convert PSX 1 executables to flashable GameShark compatible ROM files.
+*   [PSEXE2ROM](psexe2rom) - Convert PSX 1 executables to flash-able GameShark compatible ROM files.
 
 *   [PSN00bSDK Builder](psn00bsdk-builder) - Script that builds the PSN00bSDK by Lameguy64 on Linux.
 
