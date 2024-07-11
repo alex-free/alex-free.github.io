@@ -2,7 +2,7 @@
 
 _By Alex Free - v1.1.7- 5/4/2024_ 
 
-By using a high quality [CD-R burner](#cd-r-burner), high quality [CD-R media](#cd-r-media), [correct burn speed](#burn-speed), and the correct options in [burning software](#burning-software) you will avoid common issues with burned CD-R media on the PSX/PS1, such as:
+By using a high-quality [CD-R burner](#cd-r-burner), high-quality [CD-R media](#cd-r-media), [correct burn speed](#burn-speed), and the correct options in [burning software](#burning-software) you will avoid common issues with burned CD-R media on the PSX/PS1, such as:
 
 *   Extremely slow loading times.
 *   Game freezes (drive gets loud, spins fast, disc stops spinning, because it can't read the disc).
