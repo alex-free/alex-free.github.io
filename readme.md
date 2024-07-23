@@ -69,6 +69,8 @@
 
 *   [PlayStation Disc Burner](psdb) - Patch and burn PS2/PS1 discs on Linux.
 
+*   [PSX Undither](psx-undither) - Patch PlayStation 1 games to turn off the dithering effect by either modifying the CD image directly, or generating GameShark codes from a DuckStation RAM dump.
+
 *   [PS1 DemoSwap Patcher](ps1demoswap) - By MottZilla, ported by me to many more operating systems. This is the holly grail of what [TOCPerfect](tocperfect) was made to do. Modifies Playstation games to use the correct TOC and unlocks the CD drive after using a swap trick. Can also patch demo discs to enable an easy single swap trick for backups on all consoles.
 
 *   [PS1 DVD Logo Demo](ps1-dvd-logo-demo) - A demo for the original PS1 console that bounces the DVD logo around with various gimmicks and visual effects.
