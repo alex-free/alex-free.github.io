@@ -2,85 +2,76 @@
 
 _By Alex Free_
 
-EzRe (Easy Release) provides a simple and sane build system for Linux (i386 and x86_64) and Windows (i686 and x86_64) targets, tailored to rapid development and deployment of simple C/C++ programs from a Linux OS. Consisting of a generalized GNU `Makefile` configured by a user-edited `variables.mk` file, it can easily be expanded to work for other languages, architectures, and operating systems.
+EzRe (Easy Release) provides a simple and sane build system for Linux (i386 and x86_64) and Windows (i686 and x86_64) targets, tailored to rapid development and deployment of C/C++ programs from a Linux OS. Consisting of a generalized GNU `Makefile` configured by a user-edited `variables.mk` file, it can easily be expanded to work for other languages, architectures, and operating systems.
+
+| [Homepage](https://alex-free.github.io/ezre) | [Github](https://github.com/alex-free/ezre) |
+
+## Table Of Contents
+
+* [Downloads](#downloads)
+* [Usage](#usage)
+* [Example](#example)
+* [License](#license)
+* [Building](build.md)
 
 ## Features:
 
-* Installation consist of [copying 4 files](#downloads) into your source tree. The only pre-requisite is having [GNUMake](https://www.gnu.org/software/make/) installed.
-* No need to write or edit a Makefile for most use cases, just set some variables in the `variables.mk` configuration file.
-* Specify build dependencies for various package managers.
-* Generate .deb packages for Linux.
-* Generate portable release .zip files for Windows and Linux.
+* Installation consist of changing into your source directory and executing a command.
+
+* The only pre-requisite is having [GNUMake](https://www.gnu.org/software/make/) installed.
+
+* No need to write or edit a Makefile for most use cases.
+
+* No need to write or edit a "how to build" document for most use cases (a generic `build.md` is provided by the template files).
+
+* Specify build dependencies for various package managers. Currently both `dnf` and `apt` are supported.
+
+* Generate `.deb` packages (i386 and x86_64) for Linux.
+
+* Generate portable release .zip files for Windows (i686 and x86_64) and Linux (i386 and x86_64).
+
 * Passes a `VERSION` string to source files (no need to edit the version number directly in source files).
+
+* Support for building libraries and linking them with the target executable.
+
 * Highly configurable, expandable, and hackable.
-
-## Links
-
-[Homepage](https://alex-free.github.io/ezre)
-
-[Github](https://github.com/alex-free/ezre)
 
 ## Downloads
 
-### Version 1.0.1 (7/4/2024)
+### Version 1.0.2 (7/8/2024)
 
-*   Added missing apt build dependencies for C++ Linux i386.
+Changes:
 
-_Zip release_: 
+* New deb package release for Linux distributions.
 
-[EzRe v1.0.1](https://github.com/alex-free/ezre/releases/download/v1.0.1/ezre-v1.0.1.zip)
+* New `ezre` command copies the latest EZRE template files into your current directory from the local release files (and prompts if you want to overwrite any existing files).
 
-_Git clone_
+* New `ezre-dl` command downloads the latest EZRE template files into your current directory (and prompts if you want to overwrite any existing files).
 
-`git clone https://github.com/alex-free/ezre`
+* Fixed `deps-apt` and `deps-dnf` makefile rules.
 
-_One-liner_ - download the latest template files directly into the current directory (your source tree):
+* Added the new variable, `BUILD_LIB`. When `BUILD_LIB=YES` is set in your `variables.mk`, the EZRE `Makefile` will first compile any libraries and use those in the linking process of building the target executable. Setting `BUILD_LIB=YES` requires you to edit the template information in the EZRE `Makefile`, which is found in the conditional `ifeq ("BUILD_LIB","YES")` block. `BUILD_LIB` is by default set to no (`BUILD_LIB=NO`), so no editing of the `Makefile` is required _unless_ you are compiling additional libraries with EZRE.
 
-`curl -O https://raw.githubusercontent.com/alex-free/ezre/master/Makefile; curl -O https://raw.githubusercontent.com/alex-free/ezre/master/variables.mk; curl -O https://raw.githubusercontent.com/alex-free/ezre/master/control-i386; curl -O https://raw.githubusercontent.com/alex-free/ezre/master/control-x86_64`
+* Added new variable, `COMPILER_FLAGS_LIB`. This allows you to use different compiler flags when building a library to be used in the target executable.
 
-## Setup
+* Added new variables, `AR`, `WINDOWS_I686_AR`, and `WINDOWS_X86_64_AR` (related to new library support). 
 
-1) Copy [control-i386](https://github.com/alex-free/ezre/blob/master/control-i386), [control-x86_64](https://github.com/alex-free/ezre/blob/master/control-x86_64), [Makefile](https://github.com/alex-free/ezre/blob/master/Makefile), and [variables.mk](https://github.com/alex-free/ezre/blob/master/variables.mk) to the root of your source tree.
+---------------------------------------------
 
-2) Edit [control-i386](https://github.com/alex-free/ezre/blob/master/control-i386), [control-x86_64](https://github.com/alex-free/ezre/blob/master/control-x86_64), and [variables.mk](https://github.com/alex-free/ezre/blob/master/variables.mk)  with your project information. For most use cases, you do not need to edit the [Makefile](https://github.com/alex-free/ezre/blob/master/Makefile) at all!
+*   [EzRe v1.0.2.zip](https://github.com/alex-free/ezre/releases/download/v1.0.2/ezre-v1.0.2.zip) _Portable zip release for Linux_
+
+*   [EzRe v1.0.2.deb](https://github.com/alex-free/ezre/releases/download/v1.0.2/ezre-v1.0.2.deb) _Portable deb release for Linux_
+
+## Usage
+
+1) The EZRE releases come with 2 commands, `ezre` and `ezre-dl`. If you execute the `ezre` command it will copy the ezre template files into your source directory (prompting for overwrites). If you execute the `ezre-dl` command it will download the latest ezre template files from github into your source directory (prompting for overwrites). 
+
+
+2) Edit `control-i386`, `control-x86_64`, and `variables.mk`  with your project information. For most use cases, you do not need to edit the `Makefile` at all! Additionally, [build.md](https://github.com/alex-free/ezre/blob/master/) has been written in a generic way, so that in most cases you don't need to write docs on how to build your software using the EZRE build system.
 
 ## Example
 
-The [example](https://github.com/alex-free/ezre/blob/master/example) directory contains a test use case for EzRe (hello world in C). You can get a grasp of what is possible by trying it out and reading the edited [control-i386](https://github.com/alex-free/ezre/blob/master/example/control-i386), [control-x86_64](https://github.com/alex-free/ezre/blob/master/example/control-x86_64), and [variables.mk](https://github.com/alex-free/ezre/blob/master/example/variables.mk) files to see a working implementation. The [Makefile](https://github.com/alex-free/ezre/blob/master/example/Makefile) was not edited at all for this example.
-
-`cd example`
-
-`make deps-apt` to install the build dependencies required to compile the example
-
-`make` creates a `hello` executable for x86_64 Linux (the host platform set) in the specified `build` directory found in the root of the source tree where all the EzRe files are copied to.
-
-`make clean` delete only the generated executable file created by only executing `make`.
-
-`make clean-build` deletes the generated `build` directory in it's entirety.
-
-`make all` will generate all of the following in the `build` directory found in the root of the source tree:
-
-### For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)
-
-*   Windows i686 static executable file
-*   Portable Windows i386 release .zip file
-
-### For Windows x86_64 (64 bit)
-
-*   Windows x86_64 static executable file
-*   Portable Windows x86_64 release .zip file
-
-### For Linux 3.2.0 and above, 386 CPU minimum (32 bit)
-
-*   Linux i386 static executable file
-*   Portable Linux i386 release .zip file
-*   Linux i386 release .deb file
-
-### For Linux 3.2.0 and above, x86_64 (64 bit)
-
-*   Linux x86_64 static executable file
-*   Portable Linux x86_64 release .zip file
-*   Linux x86_64 release .deb file
+The [example](https://github.com/alex-free/ezre/blob/master/example) directory contains a test use case for EzRe (hello world in C). You can get a grasp of what is possible by trying it out and reading the edited [control-i386](https://github.com/alex-free/ezre/blob/master/example/control-i386), [control-x86_64](https://github.com/alex-free/ezre/blob/master/example/control-x86_64), and [variables.mk](https://github.com/alex-free/ezre/blob/master/example/variables.mk) files to see a working implementation. The [Makefile](https://github.com/alex-free/ezre/blob/master/example/Makefile) and [build.md](https://github.com/alex-free/ezre/blob/master/example/build.md) was not edited at all for this example.
 
 ## License
 
