@@ -1,28 +1,28 @@
-# [alex-free.github.io](https://alex-free.github.io)
+# [alex-free.github.io](https://alex-free.github.io) -> Software Recommendations
 
 
-## Operating Systems Recommendations
+## Operating Systems
 
 [Pop!OS](https://pop.system76.com/)
 
-[Windows 11](https://www.microsoft.com/en-us/windows/windows-11)
-
-## Software Recommendations
+## Browsers
 
 [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 
-_With these extensions:_
+[Ungoogled Chromium](https://github.com/ungoogled-software/ungoogled-chromium)
 
-- [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
+## Browser Extensions
 
-- [Single File](https://addons.mozilla.org/en-US/firefox/addon/single-file/)
+- [uBlock Origin](https://ublockorigin.com/) (enable cookie filters in settings).
 
-- [I Don't Care About Cookies](https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies/)
+- [Single File](https://github.com/gildas-lormeau/SingleFile)
 
-[Msys2](https://www.msys2.org/)
+- [Sponser Block](https://sponsor.ajay.app/)
 
-[qBittorent](https://www.qbittorrent.org/)
+## Torrent Clients
 
-[Rufus](https://rufus.ie/en/)
+- [qBittorent](https://www.qbittorrent.org/)
 
-[Visual Studio Code](https://code.visualstudio.com/)
+## Text Editors/IDEs
+
+- [VS Codium](https://vscodium.com/)

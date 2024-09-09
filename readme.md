@@ -31,6 +31,8 @@
 
 * [EzRe](ezre) - A simple and sane build system for Linux (i386 and x86_64) and Windows (i686 and x86_64) targets, tailored to rapid development and deployment of simple C/C++ programs from a Linux OS.
 
+* [Github SSH Setup](gsshs) - setup SSH for Github in flash.
+
 * [Portable Linux Executable Directory (PLED)](pled) - PLED makes a Linux executable run on any Linux distribution with the same architecture by creating a directory containing all linked shared libraries, the LD loader itself, and a wrapper which executes the real Linux executable with the included LD loader and shared libraries.
 
 ## Misc
