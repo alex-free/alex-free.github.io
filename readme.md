@@ -1,13 +1,19 @@
+Welcome to the personal website of an open source software developer! I do this is as fun hobby/passion. Any [donations](https://github.com/sponsors/alex-free) are much appreciated and help fund more cool free open stuff!
+
+-----------------------------------------
+Find me @:
+
+| [GitHub User](https://github.com/alex-free) | [PSXPlace Forum User](https://www.psx-place.com/members/alexfree.127641/) | [GBATemp Forum User](https://gbatemp.net/members/alexfree.573749/) |
 
 -----------------------------------------
 
-| [GitHub](https://github.com/alex-free) | [What's New?](https://github.com/alex-free/alex-free.github.io/commits/master) | [Donate](https://github.com/sponsors/alex-free) | [PSXPlace Forum User](https://www.psx-place.com/members/alexfree.127641/) | [GBATemp Forum User](https://gbatemp.net/members/alexfree.573749/) | 
-
------------------------------------------
+Checkout the different stuff I cover here:
 
 | [Dreamcast](#dreamcast) | [iOS](#ios) | [Linux Development Tools](#linux-development-tools) | [Misc](#misc) | [Portable Linux x86_64 Builds Of Existing Software](#portable-linux-x86_64-builds-of-existing-software) | [PSX](#psx) |
 
 -----------------------------------------
+
+Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.github.io/commits/master)
 
 ## Dreamcast
 
