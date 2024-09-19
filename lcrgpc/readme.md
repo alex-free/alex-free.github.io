@@ -43,7 +43,7 @@ _For Linux users using Lutris:_
 3) Cick the up arrow symbol at the bottom of the window and then click `Run EXE inside Wine prefix`.
 4) Select the `lcrgpc.exe` file from the downloaded release.
 
-![lc](images/lc-1.png)
+![lollipop chainsaw repop graphics preset changer 1](images/lcrgpc-1.png)
 
 _For Linux users using the command line_
 
@@ -53,9 +53,14 @@ _For Linux users using the command line_
 
 Example:
 
-`env WINEPREFIX='/home/alex/Games/lollipop-chainsaw-repop/' wine '/home/alex/dev/lollipop-chainsaw-graphics-preset-changer/build/lcrgpc.x86_64.exe'` 
+`env WINEPREFIX=/home/alex/Games/lollipop-chainsaw-repop /home/alex/.local/share/lutris/runners/wine/wine-ge-8-26-x86_64/bin/wine '/home/alex/dev/lollipop-chainsaw-graphics-preset-changer/build/lcrgpc-v1.0-windows-x86_64-static/lcrgpc.exe`
 
-![lc](images/lc-2.png)
+It is extremly important to use the same wine executable that the Lollipop Chainsaw RePOP prefix is set to use. In this example, it was `/home/alex/.local/share/lutris/runners/wine/wine-ge-8-26-x86_64/bin/wine`. If you specify just `wine` for `<your wine executable>`, you might accidentally reconfigure the prefix with a different version of wine (the default system version that comes with your package manager, which is probably much older then the one configured for the game). If you accidentally use a different version of wine, just force the prefix to be re-configured for the same version of wine that was set for use by Lollipop Chainsaw RePOP, which can be done by running the command again with the correct wine executable for the prefix.
+
+
+![lollipop chainsaw repop graphics preset changer 2](images/lcrgpc-2.png)
+
+![lollipop chainsaw repop graphics preset changer 3](images/lcrgpc-3.png)
 
 _Notes:_
 
