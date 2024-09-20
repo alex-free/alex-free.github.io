@@ -15,19 +15,21 @@ Transfer all of your current [qBittorrent](https://www.qbittorrent.org/) data to
 
 ## Downloads
 
-### Version 1.0 (8/19/2024)
+### Version 1.0.1 (9/16/2024)
 
 Changes:
 
-* Initial release.
+* Fixed restore mode, and improved overall code.
 
 ---------------------------------------
 
-* [qbtbar-v1.0.zip](https://github.com/alex-free/qbittorrent-backup-and-restore/releases/download/v1.0/qbtbar-v1.0.zip) _Portable Release for Linux._
+* [qbtbar-v1.0.1.zip](https://github.com/alex-free/qbittorrent-backup-and-restore/releases/download/v1.0.1/qbtbar-v1.0.1.zip) _Portable Release for Linux._
 
-* [qbtbar-v1.0.deb](https://github.com/alex-free/qbittorrent-backup-and-restore/releases/download/v1.0/qbtbar-v1.0.deb) _Deb package file for Linux._
+* [qbtbar-v1.0.1.deb](https://github.com/alex-free/qbittorrent-backup-and-restore/releases/download/v1.0.1/qbtbar-v1.0.1.deb) _Deb package file for Linux._
 
 ---------------------------------------
+
+[Previous versions](changelog.md)
 
 ## Usage
 
@@ -44,6 +46,11 @@ Changes:
 ---------------------------------------
 
 Execute `./program <mode> <directory` found in the portable release using a Terminal application. Alternatively if you have install the `.deb` package file `qbtbar` will be available as a global user command to the system, so just `qbtbar <mode> <directory` works fine.
+
+Notes:
+
+* If you use external drives to store any torrents, please make sure they have the same mount point as when the backup was originally taken. 
+* It is always best practice to make sure any external drives containing torrents are mounted in the OS before starting qBittorrent.
 
 ![qbtbar](images/qbtbar.png)
 
