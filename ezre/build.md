@@ -4,6 +4,6 @@
 
 1) Change into the source directory.
 
-2) Execute `./build` to generate a Linux deb file and a portable zip release.
+2) Execute `./build` to generate a Linux deb file, Linux RPM file, and a portable zip release.
 
 If you want to clean the built releases, execute `./build clean`.
