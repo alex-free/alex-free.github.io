@@ -65,6 +65,10 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 -----------------------------------------
 
+## PowerPC Mac
+
+* [Legacy SSH Enabler](lsshe) - Allow your newer OpenSSH client and server to talk with older SSH clients and servers, system-wide. 
+
 ## PSX
 
 * [APrip](aprip) - Patch out additional anti-piracy copy protection routines found in some later PSX games.
