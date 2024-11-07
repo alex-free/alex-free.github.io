@@ -9,11 +9,15 @@ Find me @:
 
 Checkout the different stuff I cover here:
 
-| [Dreamcast](#dreamcast) | [iOS](#ios) | [Linux Development Tools](#linux-development-tools) | [Misc](#misc) | [Portable Linux x86_64 Builds Of Existing Software](#portable-linux-x86_64-builds-of-existing-software) | [PSX](#psx) |
+| [Blog](#blog) | [Dreamcast](#dreamcast) | [iOS](#ios) | [Linux Development Tools](#linux-development-tools) | [Misc](#misc) | [Portable Linux x86_64 Builds Of Existing Software](#portable-linux-x86_64-builds-of-existing-software) | [PSX](#psx) |
 
 -----------------------------------------
 
 Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.github.io/commits/master)
+
+## Blog
+
+* [You Should Switch To Ungoogled Chromium](blog/you-should-switch-to-ungoogled-chromium).
 
 ## Dreamcast
 
