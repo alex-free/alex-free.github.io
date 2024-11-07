@@ -9,7 +9,7 @@ Find me @:
 
 Checkout the different stuff I cover here:
 
-| [Blog](#blog) | [Dreamcast](#dreamcast) | [iOS](#ios) | [Linux Development Tools](#linux-development-tools) | [Misc](#misc) | [Portable Linux x86_64 Builds Of Existing Software](#portable-linux-x86_64-builds-of-existing-software) | [PSX](#psx) |
+| [Blog](#blog) | [Dreamcast](#dreamcast) | [iOS](#ios) | [Linux Development Tools](#linux-development-tools) | [Misc](#misc) | [Portable Linux x86_64 Builds Of Existing Software](#portable-linux-x86_64-builds-of-existing-software) | [PowerPC Mac](#powerpc-mac) | [PSX](#psx) |
 
 -----------------------------------------
 
@@ -71,7 +71,9 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 ## PowerPC Mac
 
-* [Legacy SSH Enabler](lsshe) - Allow your newer OpenSSH client and server to talk with older SSH clients and servers, system-wide. 
+* [Legacy SSH Enabler](lsshe) - Allow your newer OpenSSH client and server to talk with older SSH clients and servers, system-wide.
+
+* [PowerPC Media Center 7](ppcmc7) - YouTube/Twitch downloader/streamer/web interface for PowerPC Mac OS X 10.3.9-10.5.8.
 
 ## PSX
 
