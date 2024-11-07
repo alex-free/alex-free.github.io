@@ -19,6 +19,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [You Should Switch To Ungoogled Chromium](blog/you-should-switch-to-ungoogled-chromium).
 
+* [You Should Remove Your iBook G4 Battery](blog/you-should-remove-your-ibook-g4-battery/).
+
 ## Dreamcast
 
 * [Dreamcast CDI Burner](dcdib) - Burn any Sega Dreamcast .CDI file on Linux .
