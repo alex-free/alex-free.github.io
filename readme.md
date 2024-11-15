@@ -3,7 +3,7 @@ Welcome to the personal website of an open source software developer! I do this 
 -----------------------------------------
 Find me @:
 
-| [GitHub](https://github.com/alex-free) | [PSXPlace Forum](https://www.psx-place.com/members/alexfree.127641/) | [GBATemp Forum](https://gbatemp.net/members/alexfree.573749/) |
+| [GitHub](https://github.com/alex-free) | [PSXPlace Forum](https://www.psx-place.com/members/alexfree.127641/) | [GBATemp Forum](https://gbatemp.net/members/alexfree.573749/) | [MacRumors Forums](https://forums.macrumors.com/members/alex_free.1207497/) |
 
 -----------------------------------------
 
