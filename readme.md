@@ -86,6 +86,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [PowerPC Media Center 7](ppcmc7) - YouTube/Twitch downloader/streamer/web interface for PowerPC Mac OS X 10.3.9-10.5.8.
 
+* [Source Engine Fork](source-engine) - modified to compile on Mac OS with MacPorts and case-sensitive filesystems.
+
 ## PSX
 
 * [APrip](aprip) - Patch out additional anti-piracy copy protection routines found in some later PSX games.
