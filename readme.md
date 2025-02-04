@@ -84,6 +84,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [Mac Mini Late 2012 Triple Boot](mac-mini-late-2012-triple-boot) - How I triple boot a [late 2012 Mac mini](https://everymac.com/systems/apple/mac_mini/specs/mac-mini-core-i5-2.5-late-2012-specs.html) with Mac OS, Windows 7, and Fedora Linux.
 
+* [Portable Mac Directory (PMacD)](portable-mac-directory) - Makes Mac OS executables portable. Release dynamically linked Mac OS executables with ‘Windows-like software portability’.
+
 * [PowerPC Media Center 7](ppcmc7) - YouTube/Twitch downloader/streamer/web interface for PowerPC Mac OS X 10.3.9-10.5.8.
 
 * [Source Engine Fork](source-engine) - modified to compile on Mac OS with MacPorts and case-sensitive filesystems.
