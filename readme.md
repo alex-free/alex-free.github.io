@@ -90,6 +90,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [Source Engine Fork](source-engine) - modified to compile on Mac OS with MacPorts and case-sensitive filesystems.
 
+* [Source Engine Mac App](source-engine-mac-app) - Play Half-Life 2 on modern Mac OS!
+
 ## PSX
 
 * [APrip](aprip) - Patch out additional anti-piracy copy protection routines found in some later PSX games.
