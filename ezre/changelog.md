@@ -1,5 +1,31 @@
 # [EzRe](readme.md) -> Changelog
 
+## Version 1.0.3 (9/27/2024)
+
+Changes:
+
+* Added support for building `.rpm` package files for i386 and x86_64 Linux.
+
+* Added `.rpm` release of EzRe itself.
+
+* Added sanity checks for if required variables are not set.
+
+* Changed some variables for naming consistency.
+
+* Added executable stripping by default.
+
+* Removed `ezre-dl` command variant,
+
+* The `ezre` command now prompts you for info so that it can create the `control-i386`, `control-x86_64`, `ezre.spec`, and `variables.mk` files for you with your project information automatically.
+
+---------------------------------------------
+
+*   [ezre-v1.0.3.zip](https://github.com/alex-free/ezre/releases/download/v1.0.3/ezre-v1.0.3.zip) _Portable zip release for Linux_
+
+*   [ezre-v1.0.3.deb](https://github.com/alex-free/ezre/releases/download/v1.0.3/ezre-v1.0.3.deb) _Portable deb release for Linux_
+
+*   [ezre-1.0.3-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.0.3/ezre-1.0.3-1.noarch.rpm) _Portable rpm release for Linux_
+
 ## Version 1.0.2 (7/8/2024)
 
 Changes:

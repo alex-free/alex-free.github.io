@@ -7,3 +7,5 @@
 2) Execute `./build` to generate a Linux deb file, Linux RPM file, and a portable zip release.
 
 If you want to clean the built releases, execute `./build clean`.
+
+Currently need Linux to do this since it needs to build the deb and rpm files.

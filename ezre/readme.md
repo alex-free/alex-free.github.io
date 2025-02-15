@@ -2,7 +2,7 @@
 
 _By Alex Free_
 
-EzRe (Easy Release) provides a simple and sane build system for Linux (i386 and x86_64) and Windows (i686 and x86_64) targets, tailored to rapid development and deployment of C/C++ programs from a Linux OS. Consisting of a generalized GNU `Makefile` configured by a user-edited `variables.mk` file, it can easily be expanded to work for other languages, architectures, and operating systems. EZRE has been written in a way to minimize the amount of user-supplied information required to build all the packages and releases for all these systems.
+EzRe (Easy Release) provides a simple and sane build system for Linux (i386 and x86_64), Windows (i686 and x86_64), and Mac OS (PowerPC, Intel, ARM) targets, tailored to rapid development and deployment of C/C++ programs from a Linux or Mac OS computer. It includes an easy to use configuration tool and installer that automatically writes GNU Makefiles using the information you provide. EZRE has been written in a way to minimize the amount of user-supplied information required to build all the packages and releases for all these systems.
 
 | [Homepage](https://alex-free.github.io/ezre) | [Github](https://github.com/alex-free/ezre) |
 
@@ -18,19 +18,21 @@ EzRe (Easy Release) provides a simple and sane build system for Linux (i386 and 
 
 * The only pre-requisite is having [GNUMake](https://www.gnu.org/software/make/) installed.
 
-* Installation consist of changing into your source directory, and executing a command.
+* Installation consist of changing into your source directory, and executing the `ezre` command found in the releases.
 
 * No need to write or edit a Makefile for most use cases.
 
 * No need to write or edit a "how to build" document for most use cases, as a generic `build.md` is provided.
 
-* Specify build dependencies for various package managers. Currently both `dnf` and `apt` are supported.
+* Specify build dependencies for various package managers. Currently both `dnf` and `apt` are supported for Linux. Mac OS uses MacPorts.
 
 * Generate `.deb` packages (i386 and x86_64) for Debian based Linux distributions.
 
 * Generate `.rpm` packages (i386 and x86_64) for Redhat based Linux distributions).
 
 * Generate portable release .zip files for Windows (i686 and x86_64) and Linux (i386 and x86_64).
+
+* Generate Mac OS executables and release .zip files for any arch (PowerPC, Intel, ARM).
 
 * Passes a `VERSION` string to source files (no need to edit the version number directly in source files).
 
@@ -40,31 +42,27 @@ EzRe (Easy Release) provides a simple and sane build system for Linux (i386 and 
 
 ## Downloads
 
-### Version 1.0.3 (9/27/2024)
+### Version 1.0.4 (2/14/2025)
 
 Changes:
 
-* Added support for building `.rpm` package files for i386 and x86_64 Linux.
+* Added Mac OS support. PowerPC, Intel, and ARM Macs can all make Mac OS builds as hosts.
 
-* Added `.rpm` release of EzRe itself.
+* Updated the `ezre` command to save the info you give it about your software. This allows you to seamlessly update to newer versions of `ezre` when they come out.
 
-* Added sanity checks for if required variables are not set.
+* The `ezre` command now can set all required variables.
 
-* Changed some variables for naming consistency.
+* Implemented the `-u argument` to update the version of your project easily.
 
-* Added executable stripping by default.
-
-* Removed `ezre-dl` command variant,
-
-* The `ezre` command now prompts you for info so that it can create the `control-i386`, `control-x86_64`, `ezre.spec`, and `variables.mk` files for you with your project information automatically.
+* Added missing dnf dependencies.
 
 ---------------------------------------------
 
-*   [ezre-v1.0.3.zip](https://github.com/alex-free/ezre/releases/download/v1.0.3/ezre-v1.0.3.zip) _Portable zip release for Linux_
+*   [ezre-v1.0.4.zip](https://github.com/alex-free/ezre/releases/download/v1.0.4/ezre-v1.0.4.zip) _Portable zip release for Linux and Mac OS_
 
-*   [ezre-v1.0.3.deb](https://github.com/alex-free/ezre/releases/download/v1.0.3/ezre-v1.0.3.deb) _Portable deb release for Linux_
+*   [ezre-v1.0.4.deb](https://github.com/alex-free/ezre/releases/download/v1.0.4/ezre-v1.0.4.deb) _Portable deb release for Linux_
 
-*   [ezre-1.0.3-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.0.3/ezre-1.0.3-1.noarch.rpm) _Portable rpm release for Linux_
+*   [ezre-1.0.4-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.0.4/ezre-1.0.4-1.noarch.rpm) _Portable rpm release for Linux_
 
 ## Usage
 
@@ -78,7 +76,11 @@ Note: Currently, EzRe expects a Linux x86_64 host system.
 
 4) Type `make` to build your software. Type `make all` to build your software for all targets (see [build.md](template-files/build.md)).
 
-For most use cases, you do not need to edit the `Makefile` or `variables.mk` at all! Additionally, [build.md](https://github.com/alex-free/ezre/blob/master/) has been written in a generic way, so that in most cases you don't need to write docs on how to build your software using the EZRE build system if you don't want to.
+For more advanced use cases, you can edit the `Makefile` and `variables.mk` files generated by EzRe for your project.
+
+To update the EzRe build system in your software, run `ezre` again in your source directory.
+
+To update the version number, run `ezre -u <version number>`. For example,  `ezre -u 1.0.1` will change the version number of your project to 1.0.1.
 
 ## Example
 
