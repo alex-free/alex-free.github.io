@@ -1,5 +1,27 @@
 # [EzRe](readme.md) -> Changelog
 
+## Version 1.0.4 (2/14/2025)
+
+Changes:
+
+* Added Mac OS support. PowerPC, Intel, and ARM Macs can all make Mac OS builds as hosts.
+
+* Updated the `ezre` command to save the info you give it about your software. This allows you to seamlessly update to newer versions of `ezre` when they come out.
+
+* The `ezre` command now can set all required variables.
+
+* Implemented the `-u argument` to update the version of your project easily.
+
+* Added missing dnf dependencies.
+
+---------------------------------------------
+
+*   [ezre-v1.0.4.zip](https://github.com/alex-free/ezre/releases/download/v1.0.4/ezre-v1.0.4.zip) _Portable zip release for Linux and Mac OS_
+
+*   [ezre-v1.0.4.deb](https://github.com/alex-free/ezre/releases/download/v1.0.4/ezre-v1.0.4.deb) _Portable deb release for Linux_
+
+*   [ezre-1.0.4-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.0.4/ezre-1.0.4-1.noarch.rpm) _Portable rpm release for Linux_
+
 ## Version 1.0.3 (9/27/2024)
 
 Changes:

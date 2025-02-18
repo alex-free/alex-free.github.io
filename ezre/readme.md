@@ -42,27 +42,23 @@ EzRe (Easy Release) provides a simple and sane build system for Linux (i386 and 
 
 ## Downloads
 
-### Version 1.0.4 (2/14/2025)
+### Version 1.0.5 (2/18/2025)
 
 Changes:
 
-* Added Mac OS support. PowerPC, Intel, and ARM Macs can all make Mac OS builds as hosts.
+* Better BSD vs GNU sed detection/compatibility.
 
-* Updated the `ezre` command to save the info you give it about your software. This allows you to seamlessly update to newer versions of `ezre` when they come out.
+* Improved Makefile and variables.mk.
 
-* The `ezre` command now can set all required variables.
-
-* Implemented the `-u argument` to update the version of your project easily.
-
-* Added missing dnf dependencies.
+* Added `-y` option to auto-confirm overwriting existing files.
 
 ---------------------------------------------
 
-*   [ezre-v1.0.4.zip](https://github.com/alex-free/ezre/releases/download/v1.0.4/ezre-v1.0.4.zip) _Portable zip release for Linux and Mac OS_
+*   [ezre-v1.0.5.zip](https://github.com/alex-free/ezre/releases/download/v1.0.5/ezre-v1.0.5.zip) _Portable zip release for Linux and Mac OS_
 
-*   [ezre-v1.0.4.deb](https://github.com/alex-free/ezre/releases/download/v1.0.4/ezre-v1.0.4.deb) _Portable deb release for Linux_
+*   [ezre-v1.0.5.deb](https://github.com/alex-free/ezre/releases/download/v1.0.5/ezre-v1.0.5.deb) _Portable deb release for Linux_
 
-*   [ezre-1.0.4-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.0.4/ezre-1.0.4-1.noarch.rpm) _Portable rpm release for Linux_
+*   [ezre-1.0.5-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.0.5/ezre-1.0.5-1.noarch.rpm) _Portable rpm release for Linux_
 
 ## Usage
 
@@ -82,10 +78,12 @@ To update the EzRe build system in your software, run `ezre` again in your sourc
 
 To update the version number, run `ezre -u <version number>`. For example,  `ezre -u 1.0.1` will change the version number of your project to 1.0.1.
 
+To auto-confirm overwriting existing EzRe generated files, run `ezre -y`.
+
 ## Example
 
 The [example](https://github.com/alex-free/ezre/blob/master/example) directory contains a test use case for EzRe (hello world in C). You can get a grasp of what is possible by trying it out.
 
 ## License
 
-EzRe is released with the 3-BSD license, see [license.md](https://github.com/alex-free/ezre/blob/master/license.md).
+EzRe is released with the 3-BSD license, see [license.md](license.md).
