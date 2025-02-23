@@ -42,23 +42,25 @@ EzRe (Easy Release) provides a simple and sane build system for Linux (i386 and 
 
 ## Downloads
 
-### Version 1.0.5 (2/18/2025)
+### Version 1.0.6 (2/23/2025)
 
 Changes:
 
-* Better BSD vs GNU sed detection/compatibility.
+* Fixed `ezre` command not setting RELEASE_FILES var.
 
-* Improved Makefile and variables.mk.
+* Added info about specifying -y if it wasn't specified.
 
-* Added `-y` option to auto-confirm overwriting existing files.
+* Fixed GNU sed compatibility making garbage backup files, not setting VERSION with -u <version>, and other issues.
+
+* Improved build.md template file.
 
 ---------------------------------------------
 
-*   [ezre-v1.0.5.zip](https://github.com/alex-free/ezre/releases/download/v1.0.5/ezre-v1.0.5.zip) _Portable zip release for Linux and Mac OS_
+*   [ezre-v1.0.6.zip](https://github.com/alex-free/ezre/releases/download/v1.0.6/ezre-v1.0.6.zip) _Portable zip release for Linux and Mac OS_
 
-*   [ezre-v1.0.5.deb](https://github.com/alex-free/ezre/releases/download/v1.0.5/ezre-v1.0.5.deb) _Portable deb release for Linux_
+*   [ezre-v1.0.6.deb](https://github.com/alex-free/ezre/releases/download/v1.0.6/ezre-v1.0.6.deb) _Portable deb release for Linux_
 
-*   [ezre-1.0.5-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.0.5/ezre-1.0.5-1.noarch.rpm) _Portable rpm release for Linux_
+*   [ezre-1.0.6-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.0.6/ezre-1.0.6-1.noarch.rpm) _Portable rpm release for Linux_
 
 ## Usage
 
