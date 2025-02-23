@@ -21,6 +21,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [You Should Remove Your iBook G4 Battery](blog/you-should-remove-your-ibook-g4-battery/).
 
+* [Mac Mini Late 2012 Fedora Wifi](mac-mini-late-2012-fedora-wifi)
+
 * [Fixing The Sims 4 FitGirl Repack On Lutris](blog/fixing-the-sims-4-fitgirl-repack-on-lutris/).
 
 ## Dreamcast
