@@ -21,9 +21,13 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [You Should Remove Your iBook G4 Battery](blog/you-should-remove-your-ibook-g4-battery/).
 
-* [Mac Mini Late 2012 Fedora Wifi](mac-mini-late-2012-fedora-wifi)
+* [Mac Mini Late 2012 Fedora Wifi](mac-mini-late-2012-fedora-wifi).
 
 * [Fixing The Sims 4 FitGirl Repack On Lutris](blog/fixing-the-sims-4-fitgirl-repack-on-lutris/).
+
+* [Annoying PIA VPN Linux Crash Fix](blog/pia-vpn-linux-crash-fix/).
+
+* [iPhone 6S Plus Palera1n Shenanigans](blog/iphone-6s-plus-palera1n-shenanigans).
 
 ## Dreamcast
 
@@ -40,8 +44,6 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 * [iOS Repo](ios-repo) - Software and tweaks for jailbroken iOS devices.
 
 * [IPA2DEB](ipa2deb) - Convert iOS `.ipa` app files to the `.deb` format. Bulk, recursive conversion is supported.
-
-* [iPhone 6S Plus Shenanigans](iphone-6s-plus-palera1n-shenanigans) - A guide on how to use Palera1n to jailbreak an iPhone 6S Plus.
 
 -----------------------------------------
 
