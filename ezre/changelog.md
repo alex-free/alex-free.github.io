@@ -1,5 +1,23 @@
 # [EzRe](readme.md) -> Changelog
 
+## Version 1.0.5 (2/18/2025)
+
+Changes:
+
+* Better BSD vs GNU sed detection/compatibility.
+
+* Improved Makefile and variables.mk.
+
+* Added `-y` option to auto-confirm overwriting existing files.
+
+---------------------------------------------
+
+*   [ezre-v1.0.5.zip](https://github.com/alex-free/ezre/releases/download/v1.0.5/ezre-v1.0.5.zip) _Portable zip release for Linux and Mac OS_
+
+*   [ezre-v1.0.5.deb](https://github.com/alex-free/ezre/releases/download/v1.0.5/ezre-v1.0.5.deb) _Portable deb release for Linux_
+
+*   [ezre-1.0.5-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.0.5/ezre-1.0.5-1.noarch.rpm) _Portable rpm release for Linux_
+
 ## Version 1.0.4 (2/14/2025)
 
 Changes:
