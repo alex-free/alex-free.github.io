@@ -2,7 +2,7 @@
 
 _By Alex Free_.
 
-Legacy SSH Enabler fixes errors encountered when using a newer OpenSSH client to connect to an older SSH server (i.e. `Unable to negotiate with 10.0.0.72 port 22: no matching key exchange method found. Their offer: diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1`). It also fixes errors encounter when using an older SSH client to connect to a newer OpenSSH server (i.e. `no kex alg`).
+Legacy SSH Enabler fixes errors encountered when using a newer OpenSSH client to connect to an older SSH server (i.e. `Unable to negotiate with 10.0.0.72 port 22: no matching key exchange method found. Their offer: diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1`). It also fixes errors encounter when using an older SSH client to connect to a newer OpenSSH server (i.e. `no kex alg`). Mac OS and Linux are supported!
 
 | [Homepage](https://alex-free.github.io/lsshe) | [Github](https://github.com/alex-free/legacy-ssh-enabler) |
 
@@ -14,28 +14,40 @@ Legacy SSH Enabler fixes errors encountered when using a newer OpenSSH client to
 * [After Legacy SSH Enabler](#after-legacy-ssh-enabler)
 * [Why Is This Needed?](#why-is-this-needed)
 * [How Does This Work?](#how-does-this-work)
-* [License](#license)
+* [License](license.md)
 * [Building](build.md)
 
 ## Downloads
 
-### Version 1.0 (10/3/2024)
+### Version 1.0.1 (3/6/2025)
+
+Changes:
+
+* Implemented proper support for RedHat Linux distros (Fedora, CentOS, RHEL). RSAMinSize is now set to 768, and update-crypto-policies is now set to LEGACY.
+
+* It works on Mac OS! It already did, but I didn't expect it to or document it (just needs SIP disabled).
 
 ----------------------------------------------------
 
-*   [legacy-ssh-enabler-v1.0.zip](https://github.com/alex-free/legacy-ssh-enabler/releases/download/v1.0/legacy-ssh-enabler-v1.0.zip) _Portable zip release for Linux_
+*   [legacy-ssh-enabler-v1.0.1.zip](https://github.com/alex-free/legacy-ssh-enabler/releases/download/v1.0.1/legacy-ssh-enabler-v1.0.1.zip) _Portable zip release for Linux and Mac OS_
 
-*   [legacy-ssh-enabler-v1.0.deb](https://github.com/alex-free/legacy-ssh-enabler/releases/download/v1.0/legacy-ssh-enabler-v1.0.deb) _Portable deb release for Linux_
+*   [legacy-ssh-enabler-v1.0.1.deb](https://github.com/alex-free/legacy-ssh-enabler/releases/download/v1.0.1/legacy-ssh-enabler-v1.0.1.deb) _DEB package file for Linux_
 
-*   [legacy-ssh-enabler-1.0-1.noarch.rpm](https://github.com/alex-free/legacy-ssh-enabler/releases/download/v1.0/legacy-ssh-enabler-1.0-1.noarch.rpm) _Portable rpm release for Linux_
+*   [legacy-ssh-enabler-1.0-1.noarch.rpm](https://github.com/alex-free/legacy-ssh-enabler/releases/download/v1.0.1/legacy-ssh-enabler-1.0.1-1.noarch.rpm) _RPM package file for Linux_
 
 ---------------------------------------
 
+[Previous versions](changelog.md).
+
 ## Usage
+
+If you have Mac OS, you need to [disable SIP](https://developer.apple.com/documentation/security/disabling-and-enabling-system-integrity-protection) (System Integrity Protection) before continuing.
 
 Execute the `lsshe` command to allow your system to work with older OpenSSH clients and servers. If you want to restore the default behavior (newer OpenSSH clients and servers block connecting with older OpenSSH clients and servers), then execute `lsshe` again.
 
 If you don't have OpenSSH server installed and setup when you run `lsshe`, but end up installing it later, no worries. The OpenSSH server will automatically pick up Legacy SSH Enabler's custom configuration files.
+
+If you have a RedHat Linux distribution (Fedora, CentOS, RHEL) you need to reboot your system after running `lsshe` for it to take effect.
 
 ## Before Legacy SSH Enabler
 
@@ -72,8 +84,3 @@ There are other solutions that require you to add a bunch of arguments to your s
 * You still can't connect to your main system's modern SSH server from your older SSH client (i.e. I can't SSH into my Linux laptop from Mac OS X 10.4's default `ssh` command).
 
 You can do so much better then wrapper scripts. What Legacy SSH Enabler does is adds 2 custom configuration files to your `/etc/ssh/ssh_config.d` and `/etc/ssh/sshd_config.d` directories. **This doesn't modify any existing OpenSSH configuration files directly, super cool.** In addition, if the OpenSSH server is installed, it restarts the server with the new configuration files included automatically so that the changes take effect. The configuration files are not hardcoded, but rather generated dynamically based on of the capabilities of the currently installed OpenSSH client on your main machine. This is great future proofing design wise. Essentially, Legacy SSH Enabler asks for all of the KexAlgorithms, PubkeyAcceptedAlgorithms, HostKeyAlgorithms, and Ciphers supported by OpenSSH (irregardless of if they are not enabled by default). It then simply tells your OpenSSH to work with all of them!
-
-## License
-
-Legacy SSH Enabler is released as open source software under the 3-BSD license. See the file [license.md](license.md) for more info.
-
