@@ -134,4 +134,6 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [Tonyhax International](tonyhax-international) - Fork of Tonyhax that adds support for all Japanese PS1 consoles, early Japanese PS2 consoles, ROM support, and more!
 
+* [Tonyhax International GameShark Generator](tonyhax-international-gameshark-generator) - Generates save game files containing GameShark codes for Tonyhax International.
+
 * [Unofficial PS1 CD Drive Service Manual](unofficial-ps1-cd-drive-service-manual) - Fix disc read issues on PS1 consoles.
