@@ -15,19 +15,19 @@ Recursively convert a folder of FLAC files to one containing 320kbs stereo MP3 f
 
 ## Downloads
 
-### Version 1.0 (1/6/2025)
+### Version 1.0.1(3/11/2025)
 
 Changes:
 
-* Initial release.
+* Changed dnf dependency check to install ffmpeg non-free via rpm fusion, to fix automatic installation checking on Fedora.
 
 ----------------------------------------------------
 
-* [flac2mp3-v1.0.zip](https://github.com/alex-free/flac2mp3/releases/download/v1.0/flac2mp3-v1.0.zip) _Portable zip release_
+* [flac2mp3-v1.0.1.zip](https://github.com/alex-free/flac2mp3/releases/download/v1.0.1/flac2mp3-v1.0.1.zip) _Portable zip release_
 
-* [flac2mp3-v1.0.deb](https://github.com/alex-free/flac2mp3/releases/download/v1.0/flac2mp3-v1.0.deb) _Portable deb release_
+* [flac2mp3-v1.0.1.deb](https://github.com/alex-free/flac2mp3/releases/download/v1.0.1/flac2mp3-v1.0.1.deb) _Portable deb release_
 
-* [flac2mp3-1.0-1.fc40.noarch.rpm](https://github.com/alex-free/flac2mp3/releases/download/v1.0/flac2mp3-1.0-1.fc40.noarch.rpm) _Portable rpm release_
+* [flac2mp3-1.0.1-1.noarch.rpm](https://github.com/alex-free/flac2mp3/releases/download/v1.0.1/flac2mp3-1.0.1-1.noarch.rpm) _Portable rpm release_
 
 ---------------------------------------
 
