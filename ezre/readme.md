@@ -11,7 +11,7 @@ EzRe (Easy Release) provides a simple and sane build system for Linux (i386 and 
 * [Downloads](#downloads)
 * [Usage](#usage)
 * [Additional Info](#additional-info)
-* [Example](#example)
+* [Examples](#examples)
 * [License](#license)
 * [Building](build.md)
 
@@ -19,51 +19,47 @@ EzRe (Easy Release) provides a simple and sane build system for Linux (i386 and 
 
 * The only pre-requisite is having [GNUMake](https://www.gnu.org/software/make/) installed.
 
-* Installation consist of changing into your source directory, and executing the `ezre` command found in the releases.
+* Installation [consists](#usage) of changing into your source directory, and executing the `ezre` command found in the releases.
 
-* No need to write or edit a Makefile! Input your values into an easy to use configuration text file to configure the Makefile.
+* No need to write or edit a GNUMakefile! Simply input your values into an easy to use [configuration](https://github.com/alex-free/ezre/blob/master/template-files/variables.mk) text file.
 
-* No need to write or edit a "how to build" document for most use cases, as a generic `build.md` is provided.
+* No need to write or edit a "how to build" document for most use cases, as a generic [build.md](https://github.com/alex-free/ezre/blob/master/template-files/build.md) is provided.
 
-* Specify build dependencies for various package managers. Currently both `dnf` and `apt` are supported for Linux. Mac OS uses MacPorts.
+* Specify build dependencies for various package managers. Currently both `dnf` and `apt` are supported for Linux. Mac OS supports MacPorts.
 
 * Generate `.deb` packages (i386 and x86_64) for Debian based Linux distributions.
 
-* Generate `.rpm` packages (i386 and x86_64) for Redhat based Linux distributions).
+* Generate `.rpm` packages (i386 and x86_64) for RedHat based Linux distributions.
 
-* Generate portable release .zip files for Windows (i686 and x86_64) and Linux (i386 and x86_64).
+* Generate release zip files for Windows (i686 and x86_64), Mac OS (any arch/version), and Linux (i386 and x86_64).
 
-* Generate Mac OS executables and release .zip files for any arch (PowerPC, Intel, ARM). Provides 2 different value sets with a `LEGACY=TRUE` argument to make after any rules (i.e. `make mac-os-release LEGACY=TRUE`).
+* Provides 2 different value sets for Mac OS with a `LEGACY=TRUE` argument after any rules (i.e. `make mac-os-release LEGACY=TRUE`).
 
 * Passes a `VERSION` string to source files (no need to edit the version number directly in source files).
 
-* Cross compiling for Windows from Linux and Mac OS (i686 and x86_64) built in.
+* Cross compiling for Windows from Linux and Mac OS (i686 and x86_64) is built in.
+
+* Ability to execute a sequence of commands and or a script before building any target.
 
 * Target specific values.
 
 ## Downloads
 
-### Version 1.0.8 (3/13/2025)
+### Version 1.0.9 (3/13/2025)
 
 Changes:
 
-* Major rewrite. EzRe no longer walks you through writing `variable-values.txt`, as that file has been obsoleted. EzRe now obtains your values from any existing `variables.mk` file and moves them to an up to date one. If this is a fresh source directory not containing EzRe at all, then you are expected to edit the `variables.mk` file yourself. From v1.0.8+ onwards, all `variables.mk` files will be forwards compatible with future versions. Versions 1.0.7 and below need some manual editing after an upgrade to v1.0.8+.
+* Ability to execute a sequence of commands or a script before compiling any target. New values include `SCRIPT_HOST`, `SCRIPT_MAC`, `SCRIPT_MAC_LEGACY`, `SCRIPT_WINDOWS_I686`, and `SCRIPT_WINDOWS_X86_64`. This is perfect for building libraries with your software in combination with `LDFLAGS_HOST`, `LDFLAGS_MAC`, `LDFLAGS_MAC_LEGACY`, `LDFLAGS_WINDOWS_I686`, and `LDFLAGS_WINDOWS_X86_64`.
 
-* Ability to set custom `CFLAGS`, `LDFLAGS`, `COMPILERS`, and `STRIP` for different targets.
-
-* Added new target, `MAC_LEGACY`. On Mac OS you may do i.e. `make LEGACY=TRUE` or `make mac-os-release LEGACY=TRUE` for special values on older Mac OS versions (i.e. PowerPC).
-
-* Removed `BUILD_LIB`. Idea is to compile any libraries you want first separately and then link them with custom `LDFLAGS` values.
-
-* Improved `build.md` template file.
+* Improved the [Examples](#examples) section.
 
 ---------------------------------------------
 
-*   [ezre-v1.0.8.zip](https://github.com/alex-free/ezre/releases/download/v1.0.8/ezre-v1.0.8.zip) _Portable zip release for Linux and Mac OS_
+*   [ezre-v1.0.9.zip](https://github.com/alex-free/ezre/releases/download/v1.0.9/ezre-v1.0.9.zip) _Portable zip release for Linux and Mac OS_
 
-*   [ezre-v1.0.8.deb](https://github.com/alex-free/ezre/releases/download/v1.0.8/ezre-v1.0.8.deb) _Portable deb release for Linux_
+*   [ezre-v1.0.9.deb](https://github.com/alex-free/ezre/releases/download/v1.0.9/ezre-v1.0.9.deb) _Portable deb release for Linux_
 
-*   [ezre-v1.0.8-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.0.8/ezre-v1.0.8-1.noarch.rpm) _Portable rpm release for Linux_
+*   [ezre-v1.0.9-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.0.9/ezre-v1.0.9-1.noarch.rpm) _Portable rpm release for Linux_
 
 ---------------------------------------------
 
@@ -93,9 +89,21 @@ To update the version number, run `ezre -u <version number>`. For example,  `ezr
 
 To auto-confirm overwriting existing EzRe generated files, run `ezre -y`.
 
-## Example
+If you want to build a library and link it with each target executable, you can easily do so by using the `SCRIPT_HOST`, `SCRIPT_MAC`, `SCRIPT_MAC_LEGACY`, `SCRIPT_WINDOWS_I686`, and `SCRIPT_WINDOWS_X86_64` values in combination with `LDFLAGS_HOST`, `LDFLAGS_MAC`, `LDFLAGS_MAC_LEGACY`, `LDFLAGS_WINDOWS_I686`, and `LDFLAGS_WINDOWS_X86_64`.
+
+## Examples
 
 The [example](https://github.com/alex-free/ezre/blob/master/example) directory contains a test use case for EzRe (hello world in C). You can get a grasp of what is possible by trying it out.
+
+In addition to the above example, I use this for many of my portable C/C++ projects. I'm still working on upgrading the build system in these to the current version, as well as implementing it in some of my other projects. But this shows how tested and it is and other implementation details:
+
+* [Tonyhax International GameShark Generator](https://github.com/alex-free/tonyhax-international-gameshark-generator).
+* [LibCrypt Patcher](https://github.com/alex-free/libcrypt-patcher).
+* [EDCRE](https://github.com/alex-free/edcre).
+* [PSX80MP](https://github.com/alex-free/psx80mp).
+* [Open95Keygen](https://github.com/alex-free/open95keygen).
+* [PSX Undither](https://github.com/alex-free/psx-undither).
+* [Aprip](https://github.com/alex-free/aprip).
 
 ## License
 

@@ -1,5 +1,29 @@
 # [EzRe](readme.md) -> Changelog
 
+## Version 1.0.8 (3/13/2025)
+
+Changes:
+
+* Major rewrite. EzRe no longer walks you through writing `variable-values.txt`, as that file has been obsoleted. EzRe now obtains your values from any existing `variables.mk` file and moves them to an up to date one. If this is a fresh source directory not containing EzRe at all, then you are expected to edit the `variables.mk` file yourself. From v1.0.8+ onwards, all `variables.mk` files will be forwards compatible with future versions. Versions 1.0.7 and below need some manual editing after an upgrade to v1.0.8+.
+
+* Ability to set custom `CFLAGS`, `LDFLAGS`, `COMPILERS`, and `STRIP` for different targets.
+
+* Added new target, `MAC_LEGACY`. On Mac OS you may do i.e. `make LEGACY=TRUE` or `make mac-os-release LEGACY=TRUE` for special values on older Mac OS versions (i.e. PowerPC).
+
+* Removed `BUILD_LIB`. Idea is to compile any libraries you want first separately and then link them with custom `LDFLAGS` values.
+
+* Improved `build.md` template file.
+
+---------------------------------------------
+
+*   [ezre-v1.0.8.zip](https://github.com/alex-free/ezre/releases/download/v1.0.8/ezre-v1.0.8.zip) _Portable zip release for Linux and Mac OS_
+
+*   [ezre-v1.0.8.deb](https://github.com/alex-free/ezre/releases/download/v1.0.8/ezre-v1.0.8.deb) _Portable deb release for Linux_
+
+*   [ezre-v1.0.8-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.0.8/ezre-v1.0.8-1.noarch.rpm) _Portable rpm release for Linux_
+
+---------------------------------------------
+
 ## Version 1.0.7 (2/26/2025)
 
 Changes:
