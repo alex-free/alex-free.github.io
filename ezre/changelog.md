@@ -1,5 +1,19 @@
 # [EzRe](readme.md) -> Changelog
 
+## Version 1.0.7 (2/26/2025)
+
+Changes:
+
+* Fixed Makefile not prepending a v to version string.
+
+---------------------------------------------
+
+*   [ezre-v1.0.7.zip](https://github.com/alex-free/ezre/releases/download/v1.0.7/ezre-v1.0.7.zip) _Portable zip release for Linux and Mac OS_
+
+*   [ezre-v1.0.7.deb](https://github.com/alex-free/ezre/releases/download/v1.0.7/ezre-v1.0.7.deb) _Portable deb release for Linux_
+
+*   [ezre-1.0.7-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.0.7/ezre-1.0.7-1.noarch.rpm) _Portable rpm release for Linux_
+
 ## Version 1.0.6 (2/23/2025)
 
 Changes:
