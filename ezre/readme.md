@@ -45,21 +45,21 @@ EzRe (Easy Release) provides a simple and sane build system for Linux (i386 and 
 
 ## Downloads
 
-### Version 1.0.9 (3/13/2025)
+### Version 1.1.0 (3/15/2025)
 
 Changes:
 
-* Ability to execute a sequence of commands or a script before compiling any target. New values include `SCRIPT_HOST`, `SCRIPT_MAC`, `SCRIPT_MAC_LEGACY`, `SCRIPT_WINDOWS_I686`, and `SCRIPT_WINDOWS_X86_64`. This is perfect for building libraries with your software in combination with `LDFLAGS_HOST`, `LDFLAGS_MAC`, `LDFLAGS_MAC_LEGACY`, `LDFLAGS_WINDOWS_I686`, and `LDFLAGS_WINDOWS_X86_64`.
+* Restored VERSION being quoted in define flag (fix for g++).
 
-* Improved the [Examples](#examples) section.
+* Moved certain sanity checks back into the main rulec so that they work correctly again.
 
 ---------------------------------------------
 
-*   [ezre-v1.0.9.zip](https://github.com/alex-free/ezre/releases/download/v1.0.9/ezre-v1.0.9.zip) _Portable zip release for Linux and Mac OS_
+* [ezre-v1.1.0.zip](https://github.com/alex-free/ezre/releases/download/v1.1.0/ezre-v1.1.0.zip) _Portable zip release for Linux and Mac OS_
 
-*   [ezre-v1.0.9.deb](https://github.com/alex-free/ezre/releases/download/v1.0.9/ezre-v1.0.9.deb) _Portable deb release for Linux_
+* [ezre-v1.1.0.deb](https://github.com/alex-free/ezre/releases/download/v1.1.0/ezre-v1.1.0.deb) _Portable deb release for Linux_
 
-*   [ezre-v1.0.9-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.0.9/ezre-v1.0.9-1.noarch.rpm) _Portable rpm release for Linux_
+* [ezre-v1.1.0-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.1.0/ezre-v1.1.0-1.noarch.rpm) _Portable rpm release for Linux_
 
 ---------------------------------------------
 

@@ -1,5 +1,23 @@
 # [EzRe](readme.md) -> Changelog
 
+## Version 1.0.9 (3/13/2025)
+
+Changes:
+
+* Ability to execute a sequence of commands or a script before compiling any target. New values include `SCRIPT_HOST`, `SCRIPT_MAC`, `SCRIPT_MAC_LEGACY`, `SCRIPT_WINDOWS_I686`, and `SCRIPT_WINDOWS_X86_64`. This is perfect for building libraries with your software in combination with `LDFLAGS_HOST`, `LDFLAGS_MAC`, `LDFLAGS_MAC_LEGACY`, `LDFLAGS_WINDOWS_I686`, and `LDFLAGS_WINDOWS_X86_64`.
+
+* Improved the [Examples](#examples) section.
+
+---------------------------------------------
+
+*   [ezre-v1.0.9.zip](https://github.com/alex-free/ezre/releases/download/v1.0.9/ezre-v1.0.9.zip) _Portable zip release for Linux and Mac OS_
+
+*   [ezre-v1.0.9.deb](https://github.com/alex-free/ezre/releases/download/v1.0.9/ezre-v1.0.9.deb) _Portable deb release for Linux_
+
+*   [ezre-v1.0.9-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.0.9/ezre-v1.0.9-1.noarch.rpm) _Portable rpm release for Linux_
+
+---------------------------------------------
+
 ## Version 1.0.8 (3/13/2025)
 
 Changes:
