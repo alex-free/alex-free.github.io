@@ -1,8 +1,8 @@
-# EzRe
+# EzRe (Easy Release)
 
 _By Alex Free_
 
-EzRe (Easy Release) provides a simple and sane build system for Linux (i386 and x86_64), Windows (i686 and x86_64), and Mac OS (PowerPC, Intel, ARM) targets, tailored to rapid development and deployment of C/C++ programs from a Linux or Mac OS computer. It includes an easy to use configuration tool and installer that automatically writes GNU Makefiles using the information you provide. EZRE has been written in a way to minimize the amount of user-supplied information required to build all the packages and releases for all these systems.
+Do you hate writing GNU Makefiles, but love the simplicity and portability they allow? Then your gonna this simple and sane build system targeting all major operating systems, that writes those pesky GNU Makefiles for you! All you need to do is fill in some variables into a text file after installing this build system. Linux (i386 and x86_64), Windows (i686 and x86_64), and Mac OS (PowerPC, Intel, ARM) targets are supported, enabling rapid development and deployment of C and C++ programs from a Linux or Mac OS computer. Cross Compiling for Windows works on either. Worry about code, not releases!
 
 | [Homepage](https://alex-free.github.io/ezre) | [Github](https://github.com/alex-free/ezre) |
 
@@ -12,6 +12,7 @@ EzRe (Easy Release) provides a simple and sane build system for Linux (i386 and 
 * [Usage](#usage)
 * [Additional Info](#additional-info)
 * [Examples](#examples)
+* [EzRe For Shell Scripts](#ezre-for-shell-scripts)
 * [License](#license)
 * [Building](build.md)
 
@@ -37,29 +38,29 @@ EzRe (Easy Release) provides a simple and sane build system for Linux (i386 and 
 
 * Passes a `VERSION` string to source files (no need to edit the version number directly in source files).
 
-* Cross compiling for Windows from Linux and Mac OS (i686 and x86_64) is built in.
-
-* Ability to execute a sequence of commands and or a script before building any target.
-
-* Target specific values.
-
 ## Downloads
 
-### Version 1.1.0 (3/15/2025)
+### Version 1.1.1 (3/16/2025)
 
 Changes:
 
-* Restored VERSION being quoted in define flag (fix for g++).
+* Fixed updating version with `ezre -u <version>`. This now also updates `variables.mk` for you.
 
-* Moved certain sanity checks back into the main rulec so that they work correctly again.
+* Rewrote GNU Sed vs BSD Sed handling.
+
+* Improved EzRe's [build](https://github.com/alex-free/ezre/blob/master/build) script. The build script for EzRe itself is insanely useful for releasing bash scripts in the same vain that EzRe is to releasing C and C++ programs!
+
+* Added support for older RPM versions, such as 4.4.9 which ships with MacPorts. This was done by simply adding a `Group: Unspecified` field to the spec files.
+
+* Specifies `--define "_tmppath $PWD/rpm-tmp"` when building rpm packages for compatibility with older RPM versions and Mac OS X.
 
 ---------------------------------------------
 
-* [ezre-v1.1.0.zip](https://github.com/alex-free/ezre/releases/download/v1.1.0/ezre-v1.1.0.zip) _Portable zip release for Linux and Mac OS_
+* [ezre-v1.1.1.zip](https://github.com/alex-free/ezre/releases/download/v1.1.1/ezre-v1.1.1.zip) _Portable zip release for Linux and Mac OS_
 
-* [ezre-v1.1.0.deb](https://github.com/alex-free/ezre/releases/download/v1.1.0/ezre-v1.1.0.deb) _Portable deb release for Linux_
+* [ezre-v1.1.1.deb](https://github.com/alex-free/ezre/releases/download/v1.1.1/ezre-v1.1.1.deb) _Deb package for Linux_
 
-* [ezre-v1.1.0-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.1.0/ezre-v1.1.0-1.noarch.rpm) _Portable rpm release for Linux_
+* [ezre-v1.1.1-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.1.1/ezre-v1.1.1-1.noarch.rpm) _RPM package for Linux_
 
 ---------------------------------------------
 
@@ -75,17 +76,17 @@ Note: Currently, EzRe expects either a Linux or Mac OS host system.
 
 3) Open the `variables.mk` file copied into your source directory by the `ezre` command in your favorite text editor.
 
-4) Fill in any and all required information in the `variables.mk` file and save it.
+4) Fill in all required information in the `variables.mk` file and save it.
 
-5) Run `ezre` again to update to apply information you entered to the linux package files.
+5) Execute the `ezre` command again to apply the information you entered in `variables.mk`.
 
 6) Type `make` to build your software. Type `make all` to build your software for all targets (see [build.md](template-files/build.md)).
 
 ## Additional Info
 
-To update the EzRe build system in your software, run `ezre` again in your source directory. As of EzRe v1.0.8, all future versions are forward compatible this way.
+To update the EzRe build system in the future for your software, execute the `ezre` again in your source directory. As of EzRe v1.0.8, all future versions are forward compatible this way.
 
-To update the version number, run `ezre -u <version number>`. For example,  `ezre -u 1.0.1` will change the version number of your project to 1.0.1.
+To update the version number of your program, run `ezre -u <version number>`. For example,  `ezre -u 1.0.1` will change the version number of your project to 1.0.1 from whatever it was previously.
 
 To auto-confirm overwriting existing EzRe generated files, run `ezre -y`.
 
@@ -97,13 +98,17 @@ The [example](https://github.com/alex-free/ezre/blob/master/example) directory c
 
 In addition to the above example, I use this for many of my portable C/C++ projects. I'm still working on upgrading the build system in these to the current version, as well as implementing it in some of my other projects. But this shows how tested and it is and other implementation details:
 
-* [Tonyhax International GameShark Generator](https://github.com/alex-free/tonyhax-international-gameshark-generator).
-* [LibCrypt Patcher](https://github.com/alex-free/libcrypt-patcher).
-* [EDCRE](https://github.com/alex-free/edcre).
-* [PSX80MP](https://github.com/alex-free/psx80mp).
-* [Open95Keygen](https://github.com/alex-free/open95keygen).
-* [PSX Undither](https://github.com/alex-free/psx-undither).
-* [Aprip](https://github.com/alex-free/aprip).
+* [Tonyhax International GameShark Generator](https://github.com/alex-free/tonyhax-international-gameshark-generator)
+* [LibCrypt Patcher](https://github.com/alex-free/libcrypt-patcher)
+* [EDCRE](https://github.com/alex-free/edcre)
+* [PSX80MP](https://github.com/alex-free/psx80mp)
+* [Open95Keygen](https://github.com/alex-free/open95keygen)
+* [PSX Undither](https://github.com/alex-free/psx-undither)
+* [Aprip](https://github.com/alex-free/aprip)
+
+## EzRe For Shell Scripts
+
+For releasing shell scripts, please modify the [build](https://github.com/alex-free/ezre/blob/master/build) script! This is what builds ezre itself, but obviously it can be used for other things (which I will probably end up doing for my own scripts). You need `control` and `ezre.spec` too though.
 
 ## License
 

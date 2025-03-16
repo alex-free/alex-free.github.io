@@ -4,8 +4,9 @@
 
 1) Change into the source directory.
 
-2) Execute `./build` to generate a Linux deb file, Linux RPM file, and a portable zip release.
+2) Execute `./build deps` to install the required build dependencies. This supports the apt and dnf package managers on Linux. On Mac OS, MacPorts is supported.
+
+3) Execute `./build` to generate a Linux deb file, Linux RPM file, and a portable zip release for Mac OS and Linux.
 
 If you want to clean the built releases, execute `./build clean`.
 
-Currently need Linux to do this since it needs to build the deb and rpm files.

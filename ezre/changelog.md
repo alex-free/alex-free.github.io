@@ -1,5 +1,23 @@
 # [EzRe](readme.md) -> Changelog
 
+## Version 1.1.0 (3/15/2025)
+
+Changes:
+
+* Restored VERSION being quoted in define flag (fix for g++).
+
+* Moved certain sanity checks back into the main rulec so that they work correctly again.
+
+---------------------------------------------
+
+* [ezre-v1.1.0.zip](https://github.com/alex-free/ezre/releases/download/v1.1.0/ezre-v1.1.0.zip) _Portable zip release for Linux and Mac OS_
+
+* [ezre-v1.1.0.deb](https://github.com/alex-free/ezre/releases/download/v1.1.0/ezre-v1.1.0.deb) _Portable deb release for Linux_
+
+* [ezre-v1.1.0-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.1.0/ezre-v1.1.0-1.noarch.rpm) _Portable rpm release for Linux_
+
+---------------------------------------------
+
 ## Version 1.0.9 (3/13/2025)
 
 Changes:
