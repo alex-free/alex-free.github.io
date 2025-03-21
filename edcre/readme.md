@@ -17,35 +17,39 @@ An advanced solution to detect and or update EDC/ECC data to match any edits don
 
 ## Downloads
 
-### Version 1.0.9 (2/11/2025)
+### Version 1.1.0 (3/20/2025)
 
 Changes:
 
-* Fixed Windows builds, closing [issue #3](https://github.com/alex-free/edcre/issues/3).
+* The verbose (`-v`) argument now displays the sector number being processed in addition to the percentage.
 
-* For all operating systems, if test only mode is given (`-t`) then the input file is opened as read only, which is more correct. Otherwise it is open as read write so that EDC/ECC can be updated if needed.
+* Scan report now only displayed if verbose (`-v`) argument is given.
 
-* The verbose (`-v`) argument now displays which sectors/lbas are invalid, if any are. Without specifying verbose mode, it is no longer printed by default which exact sectors need updating of EDC/ECC and you just get the scan report at the end saying how many were. This is more consistent with how verbose mode already only displays which sectors/lbas were fixed, rather then just a sum of how many in the scan report.
+* New [test](test.md) suite.
 
-* Updated EzRe build system to v1.0.3. RPM package files are now generated for i386 and x86_64 Linux.
+* Updated the [EzRe](https://github.com/alex-free/ezre) build system to v1.1.2. PowerPC Mac OS X builds are now available.
 
 ----------------------------------------------------
 
-*	[edcre-v1.0.9-windows-i686-static.zip](https://github.com/alex-free/edcre/releases/download/v1.0.9/edcre-v1.0.9-windows-i686-static.zip) _Portable Release For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)_
+*	[edcre-v1.1.0-windows-i686-static.zip](https://github.com/alex-free/edcre/releases/download/v1.1.0/edcre-v1.1.0-windows-i686-static.zip) _Portable Release For Windows 95 OSR 2.5 and above, Pentium CPU minimum (32 bit)_
 
-*	[edcre-v1.0.9-windows-x86\_64-static.zip](https://github.com/alex-free/edcre/releases/download/v1.0.9/edcre-v1.0.9-windows-x86_64-static.zip) _Portable Release For x86_64 Windows (64 bit)_
+*	[edcre-v1.1.0-windows-x86\_64-static.zip](https://github.com/alex-free/edcre/releases/download/v1.1.0/edcre-v1.1.0-windows-x86_64-static.zip) _Portable Release For x86_64 Windows (64 bit)_
 
-*	[edcre-v1.0.9-linux-i386-static.zip](https://github.com/alex-free/edcre/releases/download/v1.0.9/edcre-v1.0.9-linux-i386-static.zip) _Portable Release For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+* [edcre-v1.1.0-mac-os-x86\_64.zip](https://github.com/alex-free/edcre/releases/download/v1.1.0/edcre-v1.1.0-mac-os-x86_64.zip) _Portable Release For Mac OS 10.12 and above, x86\_64 (64 bit)_
 
-*	[edcre-v1.0.9-linux-i386-static.deb](https://github.com/alex-free/edcre/releases/download/v1.0.9/edcre-v1.0.9-linux-i386-static.deb) _Deb package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
+* [edcre-v1.1.0-mac-os-powerpc.zip](https://github.com/alex-free/edcre/releases/download/v1.1.0/edcre-v1.1.0-mac-os-powerpc.zip) _Portable Release For Mac OS 10.4-10.6.8, PowerPC G3/G4/G5 (32 bit)_
 
-*	[edcre-1.0.9-1.fc41.i386.rpm](https://github.com/alex-free/edcre/releases/download/v1.0.9/edcre-1.0.9-1.fc41.i386.rpm) _RPM package file For i386 Linux 3.2.0 and above (32 bit)_
+*	[edcre-v1.1.0-linux-i386-static.zip](https://github.com/alex-free/edcre/releases/download/v1.1.0/edcre-v1.1.0-linux-i386-static.zip) _Portable Release For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
 
-*	[edcre-v1.0.9-linux-x86\_64-static.zip](https://github.com/alex-free/edcre/releases/download/v1.0.9/edcre-v1.0.9-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux 3.2.0 and above (64 bit)_
+*	[edcre-v1.1.0-linux-i386-static.deb](https://github.com/alex-free/edcre/releases/download/v1.1.0/edcre-v1.1.0-linux-i386-static.deb) _Deb package file For Linux 3.2.0 and above, 386 CPU minimum (32 bit)_
 
-*	[edcre-v1.0.9-linux-x86\_64-static.deb](https://github.com/alex-free/edcre/releases/download/v1.0.9/edcre-v1.0.9-linux-x86_64-static.deb) _Deb package file for x86_64 Linux 3.2.0 and above (64 bit)_
+*	[edcre-1.1.0-1.fc41.i386.rpm](https://github.com/alex-free/edcre/releases/download/v1.1.0/edcre-1.1.0-1.fc41.i386.rpm) _RPM package file For i386 Linux 3.2.0 and above (32 bit)_
 
-*	[edcre-1.0.9-1.fc41.x86_64.rpm](https://github.com/alex-free/edcre/releases/download/v1.0.9/edcre-1.0.9-1.fc41.x86_64.rpm) _RPM package file For x86_64 Linux 3.2.0 and above (64 bit)_
+*	[edcre-v1.1.0-linux-x86\_64-static.zip](https://github.com/alex-free/edcre/releases/download/v1.1.0/edcre-v1.1.0-linux-x86_64-static.zip) _Portable Release For x86\_64 Linux 3.2.0 and above (64 bit)_
+
+*	[edcre-v1.1.0-linux-x86\_64-static.deb](https://github.com/alex-free/edcre/releases/download/v1.1.0/edcre-v1.1.0-linux-x86_64-static.deb) _Deb package file for x86_64 Linux 3.2.0 and above (64 bit)_
+
+*	[edcre-1.1.0-1.fc41.x86_64.rpm](https://github.com/alex-free/edcre/releases/download/v1.1.0/edcre-1.1.0-1.fc41.x86_64.rpm) _RPM package file For x86_64 Linux 3.2.0 and above (64 bit)_
 
 ----------------------------------------------------
 
