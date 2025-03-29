@@ -9,7 +9,7 @@ Find me @:
 
 Checkout the different stuff I cover here:
 
-| [Blog](#blog) | [Dreamcast](#dreamcast) | [iOS](#ios) | [Linux Development Tools](#linux-development-tools) | [Misc](#misc) | [Portable Linux x86_64 Builds Of Existing Software](#portable-linux-x86_64-builds-of-existing-software) | [Mac](#mac) | [PSX](#psx) |
+| [Blog](#blog) | [Dreamcast](#dreamcast) | [iOS](#ios) | [Linux Development Tools](#linux-development-tools) | [Misc](#misc) | [Portable Linux x86_64 Builds Of Existing Software](#portable-linux-x86_64-builds-of-existing-software) | [Mac](#mac) | [PSX](#psx) | [Xbox 360](#xbox-360) |
 
 -----------------------------------------
 
@@ -140,4 +140,6 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 # Xbox 360
 
-* [Xbox 360 Hack Pack](xbox-360-hack-pack) - Everything you need to hack an Xbox 360, ready to be copied onto a USB drive in one download!
+* [360 Hack Pack](360-hack-pack) - Everything you need to hack an Xbox 360, ready to be copied onto a USB drive in one download!
+
+* [Simple 360 Nand Flasher Fork](https://github.com/alex-free/XDK_Projects) - This is my fork of Simple 360 Nand Flasher. The [changes](https://github.com/Swizzy/XDK_Projects/pull/7) made it into [upstream](https://github.com/Swizzy/XDK_Projects), but I have a Read Only build for BadUpdate consoles in the [releases](https://github.com/alex-free/XDK_Projects/releases) you might want.
