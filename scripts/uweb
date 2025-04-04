@@ -6,6 +6,7 @@ if [ $# -ne 1 ]; then
 fi
 
 web_page="/home/alex/dev/alex-free.github.io/$1"
+mkdir -p "$web_page"
 
 if [ -d "$web_page" ]; then
 	cp -rv *.md "$web_page"

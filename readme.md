@@ -143,3 +143,5 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 * [360 Hack Pack](360-hack-pack) - Everything you need to hack an Xbox 360, ready to be copied onto a USB drive in one download!
 
 * [Simple 360 Nand Flasher Fork](https://github.com/alex-free/XDK_Projects) - This is my fork of Simple 360 Nand Flasher. The [changes](https://github.com/Swizzy/XDK_Projects/pull/7) made it into [upstream](https://github.com/Swizzy/XDK_Projects), but I have a Read Only build for BadUpdate consoles in the [releases](https://github.com/alex-free/XDK_Projects/releases) you might want.
+
+* [Xbox 360 Media Center](xbox-360-media-center) - Local file conversion + YouTube downloader specialized in creating media files compatible with the native Xbox 360 video player, with 1080p support. Said output files can be streamed from a PC server over your LAN, copied to a USB flash drive, or FTP'd to the HDD.
