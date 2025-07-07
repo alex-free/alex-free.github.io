@@ -140,6 +140,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 # Xbox 360
 
+* [NXISO](nxiso) -  A portable open source program for the creation, modification, and extraction of [XISOs](https://consolemods.org/wiki/Xbox:Playing_Game_Backups#%22XISO%22) (an original Xbox and Xbox 360 ISO format). Nextract-XISO is a fork of Extract-XISO, which was orginally created by [in](mailto:in@fishtank.com), and then maintained and modernized by the [XboxDev organization](https://github.com/XboxDev/XboxDev). Forked for code clean up and portability.
+
 * [360 Hack Pack](360-hack-pack) - Everything you need to hack an Xbox 360, ready to be copied onto a USB drive in one download!
 
 * [Simple 360 Nand Flasher Fork](https://github.com/alex-free/XDK_Projects) - This is my fork of Simple 360 Nand Flasher. The [changes](https://github.com/Swizzy/XDK_Projects/pull/7) made it into [upstream](https://github.com/Swizzy/XDK_Projects), but I have a Read Only build for BadUpdate consoles in the [releases](https://github.com/alex-free/XDK_Projects/releases) you might want.
