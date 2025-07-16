@@ -2,7 +2,7 @@
 
 _By Alex Free_.
 
-Setup Github SSH in a flash!
+Fast and easy SSH setup for Github on Mac OS and Linux.
 
 | [Homepage](https://alex-free.github.io/gsshs) | [Github](https://github.com/alex-free/github-ssh-setup) |
 
@@ -10,22 +10,32 @@ Setup Github SSH in a flash!
 
 * [Downloads](#downloads)
 * [Usage](#usage)
-* [License](#license)
+* [License](license.md)
 * [Building](build.md)
 
 ## Downloads
 
-### Version 1.0 (9/8/2024)
+### Version 1.0.1 (7/15/2025)
 
 Changes:
 
-* Initial release.
+* Mac OS support.
+
+* Improved build script.
+
+* RPM package file release available.
+
+* Sets `user.name` and `user.email` git globals.
+
+* Checks that `git` is installed.
 
 ---------------------------------------
 
-* [gsshs-v1.0.zip](https://github.com/alex-free/github-ssh-setup/releases/download/v1.0/gsshs-v1.0.zip) _Portable Zip file for Linux._
+* [gsshs-v1.0.1.zip](https://github.com/alex-free/github-ssh-setup/releases/download/v1.0.1/gsshs-v1.0.1.zip) _Portable Zip file for Mac OS and Linux._
 
-* [gsshs-v1.0.deb](https://github.com/alex-free/github-ssh-setup/releases/download/v1.0/gsshs-v1.0.deb) _Portable Deb package file for Linux._
+* [gsshs-v1.0.1.deb](https://github.com/alex-free/github-ssh-setup/releases/download/v1.0.1/gsshs-v1.0.1.deb) _Deb package file for Linux._
+
+* [gsshs-v1.0.1-1.noarch.rpm](https://github.com/alex-free/github-ssh-setup/releases/download/v1.0.1/gsshs-v1.0.1-1.noarch.rpm) _RPM package file for Linux._
 
 ---------------------------------------
 
@@ -33,15 +43,12 @@ Changes:
 
 `Usage:`
 
-`gsshs	<github account email>`
+`gsshs	<github account email> <github user name>`
 
 ---------------------------------------
 
 1) Save your login for Github in your default browser.
-2) Execute `./gsshs <github account email>` found in the portable release using a Terminal application. Alternatively if you have install the `.deb` package file `gsshs` will be available as a global user command to the system, so just `gsshs <github account email>` works fine.
+
+2) Execute `./gsshs <github account email> <github user name>` found in the portable release using a Terminal application. Alternatively if you have install the `.deb` or `.rpm` package files,ß `gsshs` will be available as a global user command to the system, so just `gsshs <github account email> <github user name>` works fine.
+
 3) Your default browser will open to the Github SSH key page. Your new SSH key was copied to the clipboard by `gsshs`, so just paste the key and add it. Done.
-
-## License
-
-Github SSH Setup (gsshs) is released as open source software under the [3-BSD license](license.md).
-
