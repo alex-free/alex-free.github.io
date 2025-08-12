@@ -39,6 +39,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 ## iOS
 
+* [A999 Activator](a999-activator) - A completely automatic solution that tether downgrades to iOS 9.2-9.3.3, jailbreaks, and activates any iPhone 6S, iPhone 6S Plus, or iPhone SE.
+
 * [Headphone Notification Disabler](headphone-notification-disabler) - Turn off the loud music notification Apple added in iOS 14.
 
 * [iOS Repo](ios-repo) - Software and tweaks for jailbroken iOS devices.
