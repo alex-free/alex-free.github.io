@@ -86,7 +86,11 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [Legacy SSH Enabler](lsshe) - Allow your newer OpenSSH client and server to talk with older SSH clients and servers, system-wide.
 
+* [Leopard SDL2](https://github.com/alex-free/leopard-sdl2) - SDL v2.0.6 for Mac OS X 10.5, PowerPC/Intel.
+
 * [Mac Mini Late 2012 Triple Boot](mac-mini-late-2012-triple-boot) - How I triple boot a [late 2012 Mac mini](https://everymac.com/systems/apple/mac_mini/specs/mac-mini-core-i5-2.5-late-2012-specs.html) with Mac OS, Windows 7, and Fedora Linux.
+
+* [Panther SDL2](https://github.com/alex-free/panther-sdl2) - SDL v2.0.3 for Mac OS X 10.3.9/Mac OS X 10.4, PowerPC/Intel.
 
 * [Portable Mac Directory (PMacD)](portable-mac-directory) - Makes Mac OS executables portable. Release dynamically linked Mac OS executables with ‘Windows-like software portability’.
 
