@@ -120,6 +120,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [PlayStation Disc Burner](psdb) - Patch and burn PS2/PS1 discs on Linux.
 
+* [PicoMemcard For FreePSXBoot](picomemcard) - a special fork for optimal use with the FreePSXBoot memory card.
+
 * [PSX Undither](psx-undither) - Patch PlayStation 1 games to turn off the dithering effect by either modifying the CD image directly, or generating GameShark codes from a DuckStation RAM dump.
 
 * [PS1 DemoSwap Patcher](ps1demoswap) - By MottZilla, ported by me to many more operating systems. This is the holly grail of what [TOCPerfect](tocperfect) was made to do. Modifies Playstation games to use the correct TOC and unlocks the CD drive after using a swap trick. Can also patch demo discs to enable an easy single swap trick for backups on all consoles.
