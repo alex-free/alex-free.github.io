@@ -1,5 +1,17 @@
 # [A999 Activator: A9, iOS 9, 9 Years Later](readme.md) -> Changelog
 
+## Version 1.0.2 (6/7/2025)
+
+* [a999activator-v1.0.2-mac-os-universal.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.2/a999-activator-v1.0.2-mac-os-universal.zip) _For Mac OS 10.12 and newer_
+
+Changes:
+
+* Improved activate launch daemon. Activation files are now set to super user immutable to prevent overwrite/deletion/deactivation by iOS.
+
+* Changed activation data cache format. Do not use an existing `data` folder generated with either v1.0.1 or v1.0 with v1.0.2.
+
+* Added support for untethered restores. Give blobs like `./a999 -b myblob.shsh`. NOTE: I do not have blobs so this is untested, please open an issue if you expierence any problems using blobs.
+
 ## Version 1.0.1 (5/29/2025)
 
 * [a999activator-v1.0.1-mac-os-universal.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.1/a999-activator-v1.0.1-mac-os-universal.zip) _For Mac OS 10.12 and newer_

@@ -22,17 +22,27 @@ For those unfamilar, A9 iOS 9 activation doesn't work normally anymore for many 
 
 ## Downloads
 
-### Version 1.0.2 (6/7/2025)
+### Version 1.0.3 (10/3/2025)
 
-* [a999activator-v1.0.2-mac-os-universal.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.2/a999-activator-v1.0.2-mac-os-universal.zip) _For Mac OS 10.12 and newer_
+* [a999activator-v1.0.3-mac-os-universal.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.3/a999-activator-v1.0.3-mac-os-universal.zip) _For Mac OS 10.12 and newer_
 
 Changes:
 
-* Improved activate launch daemon. Activation files are now set to super user immutable to prevent overwrite/deletion/deactivation by iOS.
+* Fixes [issue 4](https://github.com/alex-free/a999activator/issues/4) which caused an iPhone 6S set to downgrade to iOS 9.2 to mistakenly downgrade to iOS 9.2.1 instead.
 
-* Changed activation data cache format. Do not use an existing `data` folder generated with either v1.0.1 or v1.0 with v1.0.2.
+* Fixes issue where booting iOS 9 into Normal Mode on some Mac OS versions got stuck and never progressed the script.
 
-* Added support for untethered restores. Give blobs like `./a999 -b myblob.shsh`. NOTE: I do not have blobs so this is untested, please open an issue if you expierence any problems using blobs.
+* Now downgrades to iOS 10.2.1 before going to target iOS 9 version. Previously this was iOS 10.3.3, but due to issues during the restore to iOS 9 as well as booting the ramdisk iOS 10.2.1 is now used (issue is caused most likely because iOS 10.3.3 is APFS while 10.2.1 was still JHFS+). Huge thanks to [BuyLife4267](https://reddit.com/user/BuyLife4267/) for this fix. Fixes [issue 6](https://github.com/alex-free/a999activator/issues/6) and [issue 7](https://github.com/alex-free/a999activator/issues/5).
+
+* Updated turdus_ra1n to [v1.1](https://sep.lol/), fixing the iPhone SE no cellular on iOS 9 problem and many others. This fixes [issue 1](https://github.com/alex-free/a999activator/issues/1) and [issue 7](https://github.com/alex-free/a999activator/issues/7).
+
+* Updated latest iOS initial stage to use iOS 15.8.5 fixing issues with getting activation files from a signed iOS, [fixing this isue](https://github.com/alex-free/a999activator/issues/7).
+
+* Improved UX when intially detecting if iPhone is in Normal Mode, Recovery Mode, or Recovery Mode.
+
+* Improved activation file detection. This change fixes an issue where if the user didn't follow instructions and sign in to iCloud, complete Setup.app, get to the home screen, have an active carrier SIM in (if wanting to use a carrier once on iOS 9) and make sure Find My iPhone has been turned off the downgrade could fail.
+
+* Improved getting activation files to make it more automatic.
 
 [Previous versions](changelog.md).
 
@@ -43,6 +53,8 @@ The following information will be given to you while A999Activator is running as
 * You can't sign into iCloud initially when you get to Setup.app on iOS 9.2 and iOS 9.2.1. If you attempt to sign-in to your iCloud while in Setup.app on these versions it will never complete and you'll need to reboot the iPhone. **Instead on these versions don't sign into iCloud until after you complete Setup.app. Go to the Settings.app from the home screen and sign into iCloud there.**
 
 * You can't sign into iMessage or FaceTime on iOS 9.3, iOS 9.3.1, iOS 9.3.2, and iOS 9.3.3. **There is no workaround (yet??) other then to use iOS 9.2 or iOS 9.2.1 (if not an iPhone SE user) which can sign in and work.**
+
+* You can't setup Touch-ID in Setup.app. **Complete Setup.app and then setup Touch ID in Settings.app.**
 
 | iOS Version | Cellular | WiFi | iMessage | FaceTime | App Store | iCloud Sign in (Setup.app) | iCloud Sign in (Settings app) | Sideloading |
 |-------------|----------|------|----------|----------|-----------|----------------------------|------------------------------|-------------|
@@ -55,7 +67,7 @@ The following information will be given to you while A999Activator is running as
 
 ## Usage
 
-Requirements: You need Mac OS 10.12 or newer, and you need either the [MacPorts](https://www.macports.org/install.php) or  [Homebrew](https://brew.sh/) package manager installed.
+Requirements: You need Mac OS 10.12 or newer, and you need either the [MacPorts](https://www.macports.org/install.php) or [Homebrew](https://brew.sh/) package manager installed.
 
 1) Download the latest release and extract it.
 
@@ -73,7 +85,7 @@ _For untethered restores (with blobs)_ **(UNTESTED PLEASE OPEN AN [ISSUE](https:
 
 ## Additional Info
 
-* It is important to sign out of Find My iPhone on iOS 15.8.4 before the downgrade. If you forget to do this, you will have strange iMessage and Facetime notification behavior. If your on iOS 9 and forgot to do this, turn it off and then back on in the Settings app to fix it (this can take some time to take effect though and 'fix' it, so I recommend just re-doing the downgrade with Find My iPhone off).
+* It is important to sign out of Find My iPhone on iOS 15 before the downgrade. If you forget to do this, you will have strange iMessage and Facetime notification behavior. If your on iOS 9 and forgot to do this, turn it off and then back on in the Settings app to fix it (this can take some time to take effect though and 'fix' it, so I recommend just re-doing the downgrade with Find My iPhone off).
 
 * On the first run of a999activator, there are many additional steps in the proccess that will trigger automatically for you. Subsequent runs will be signifigantly shorter and take fewer steps as it caches needed data from the first run locally in the `data` folder. That `data` folder is very important and personalized to your iPhone. You should back it up because you can put it back in any future a999activator release and it will use that data when it detects your iPhone!.
 
@@ -83,21 +95,21 @@ _For untethered restores (with blobs)_ **(UNTESTED PLEASE OPEN AN [ISSUE](https:
 
 * Very rarely Turdus Merula fails to restore iOS 9. This is an A9 Turdus Merula issue. If this occurs you will see a bunch of errors when the ramdisk boots up the second time. In this case, `ctrl+c` out of a999activator and run it again.
 
-* I have extensively tested a999activator with 2 different iPhone 6S Pluses. I have literally activated iOS 15.8.4 100+ times with the same Apple ID. I have written support for iPhone 6S and iPhone SE because it should work the same. iPads in theory can work too in a future update, as well as any other A9 device not currently supported. But if your having some issues with a 6S or SE let me know because I don't have those yet. Also I use MacPorts, I added Homebrew support and it should work fine but again that wasn't tested...
+* I have extensively tested a999activator with 2 different iPhone 6S Pluses. I have literally activated iOS 15 100+ times with the same Apple ID. I have written support for iPhone 6S and iPhone SE because it should work the same. iPads in theory can work too in a future update, as well as any other A9 device not currently supported. But if your having some issues with a 6S or SE let me know because I don't have those yet.
 
-* A999activator will ALWAY restore iOS 10.3.3 first, even if your already on iOS 9. This is required because espically on iOS 9.3.x you might get greyed out WiFi even after being on 9.3.x already.
+* A999activator will ALWAY restore iOS 10.2.1 first, even if your already on iOS 9. This is required because on iOS 9.3.x you might get greyed out WiFi even after being on 9.3.x already, and it ensures the final iOS 9 restore works correctly.
 
 ## How This Works
 
 Remember, this is all automatic (as possible)!
 
-1) Restores iOS 15.8.4 if iPhone is not on iOS 15.8.4 and activation files have not yet been backed up.
+1) Restores the latest iOS if your iPhone is not on the latest iOS and activation files have not yet been backed up.
 
-2) Prompt user to activate, sign into iCloud on iOS 15.8.4 if activation check returns it has not been activated, and complete Setup.app. Additionally, If the user has a SIM with active service and desire to use it on the target iOS version, it needs to be installed while activating or when they first activated the device with iOS 15.8.4 so there is an option to restore iOS 15.8.4 here even if iOS 15.8.4 is detected.
+2) Prompts user to activate, sign into iCloud, complete Setup.app, and turn off Find My iPhone if activation files have not yet been backed up. Additionally, if you want to use an active SIM card with your carrier it mentions that should be working on the latest iOS before continuing.
 
-3) Checks activation status of iOS 15.8.4, then boots a custom ramdisk in Recovery mode to create iOS 15.8.4 activation tarball files which are transferred to the computer.
+3) Boots a custom ramdisk in Recovery mode to create iOS 15 activation tarball files which are transferred to the computer.
 
-4) Downgrades to iOS 10.3.3 1st to work around 2 issues (random rebooting to Recovery Mode and random disabled Wifi in iOS 9.3.x). This is also the first step if activation files have been backed up.
+4) Downgrades to iOS 10.3.3 to work around 2 issues (random rebooting to Recovery Mode and random disabled Wifi in iOS 9.3.x). This is the first step if activation files have already been backed up.
 
 5) Downgrades to target iOS (9.2-9.3.3).
 
