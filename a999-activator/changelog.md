@@ -1,5 +1,39 @@
 # [A999 Activator: A9, iOS 9, 9 Years Later](readme.md) -> Changelog
 
+## Version 1.0.4 (10/3/2025)
+
+* [a999activator-v1.0.4-mac-os-universal.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.4/a999-activator-v1.0.4-mac-os-universal.zip) _For Mac OS 10.12 and newer_
+
+Changes:
+
+* Improved UX prompts and messags.
+
+* Preperations for Linux release.
+
+* Improved documentation.
+
+## Version 1.0.3 (10/3/2025)
+
+* [a999activator-v1.0.3-mac-os-universal.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.3/a999-activator-v1.0.3-mac-os-universal.zip) _For Mac OS 10.12 and newer_
+
+Changes:
+
+* Fixes [issue 4](https://github.com/alex-free/a999activator/issues/4) which caused an iPhone 6S set to downgrade to iOS 9.2 to mistakenly downgrade to iOS 9.2.1 instead.
+
+* Fixes issue where booting iOS 9 into Normal Mode on some Mac OS versions got stuck and never progressed the script.
+
+* Now downgrades to iOS 10.2.1 before going to target iOS 9 version. Previously this was iOS 10.3.3, but due to issues during the restore to iOS 9 as well as booting the ramdisk iOS 10.2.1 is now used (issue is caused most likely because iOS 10.3.3 is APFS while 10.2.1 was still JHFS+). Huge thanks to [BuyLife4267](https://reddit.com/user/BuyLife4267/) for this fix. Fixes [issue 6](https://github.com/alex-free/a999activator/issues/6) and [issue 7](https://github.com/alex-free/a999activator/issues/5).
+
+* Updated turdus_ra1n to [v1.1](https://sep.lol/), fixing the iPhone SE no cellular on iOS 9 problem and many others. This fixes [issue 1](https://github.com/alex-free/a999activator/issues/1) and [issue 7](https://github.com/alex-free/a999activator/issues/7).
+
+* Updated latest iOS initial stage to use iOS 15.8.5 fixing issues with getting activation files from a signed iOS, [fixing this isue](https://github.com/alex-free/a999activator/issues/7).
+
+* Improved UX when intially detecting if iPhone is in Normal Mode, Recovery Mode, or Recovery Mode.
+
+* Improved activation file detection. This change fixes an issue where if the user didn't follow instructions and sign in to iCloud, complete Setup.app, get to the home screen, have an active carrier SIM in (if wanting to use a carrier once on iOS 9) and make sure Find My iPhone has been turned off the downgrade could fail.
+
+* Improved getting activation files to make it more automatic.
+
 ## Version 1.0.2 (6/7/2025)
 
 * [a999activator-v1.0.2-mac-os-universal.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.2/a999-activator-v1.0.2-mac-os-universal.zip) _For Mac OS 10.12 and newer_
