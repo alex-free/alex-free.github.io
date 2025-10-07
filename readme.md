@@ -1,157 +1,201 @@
-Welcome to the personal website of an open source software developer! I do this is as fun hobby/passion. Any [donations](https://github.com/sponsors/alex-free) are much appreciated and help fund more cool free open stuff!
+# A999 Activator: A9, iOS 9, 9 Years Later
 
------------------------------------------
-Find me @:
+_By Alex Free_
 
-| [GitHub](https://github.com/alex-free) | [PSXPlace Forum](https://www.psx-place.com/members/alexfree.127641/) | [GBATemp Forum](https://gbatemp.net/members/alexfree.573749/) | [MacRumors Forums](https://forums.macrumors.com/members/alex_free.1207497/) |
+A completely automatic solution that tether downgrades to iOS 9.2-9.3.3, jailbreaks, and activates any iPhone 6S, iPhone 6S Plus, or iPhone SE. Made possible by the work of many [others](#credits). iOS 9 WILL NEVER DIE. I had an iPhone 6S that I jailbroke with Pangu 9 on iOS 9.0.something back in the day, hence why I made this.
 
------------------------------------------
+For those unfamilar, A9 iOS 9 activation doesn't work normally anymore for many iPhones and no one really knows why. Apple seems to have broken something during downgrade party. After [turdus_merula](https://sep.lol) dropped there were more iOS 9 users then there had been in years, many now expierencing the activation issue (including myself). A999Activator takes all the public knowlege on activating A9 iOS 9 devices and uses some [new](#how-this-works) techniques to make the proccess as seemless as possible for the end user. I hope you enjoy this as much as I. I've been out of the scene mostly for years, so if you can contribute to this and make it better please do!
 
-Checkout the different stuff I cover here:
+* There's many things you can do on iOS 9 that perhaps you didn't think you still could, here's just a [few](#interesting-things-to-do-on-ios-9).
 
-| [Blog](#blog) | [Dreamcast](#dreamcast) | [iOS](#ios) | [Linux Development Tools](#linux-development-tools) | [Misc](#misc) | [Portable Linux x86_64 Builds Of Existing Software](#portable-linux-x86_64-builds-of-existing-software) | [Mac](#mac) | [PSX](#psx) | [Xbox 360](#xbox-360) |
+* To find out what iOS version is right for you to downgrade to, please check the [Important Info](#important-info) section.
 
------------------------------------------
+* If your curious how this works, please check the [How This Works](#how-this-works) section.
 
-Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.github.io/commits/master)
+* Please check the [FAQ](#faq) section for more information and solutions. If you have an issue, please open a [Github issue](https://github.com/alex-free/a999activator/issues/new?template=issue.md) and fill out the information.
 
-## Blog
+| [Github](https://github.com/alex-free/a999activator) | [Homepage](https://github.com/alex-free/a999activator) | [Reddit Post](https://www.reddit.com/r/setupapp/comments/1kux73s/a999activator_automatic_downgrade_to_ios_9_with/) |
 
-* [You Should Switch To Ungoogled Chromium](blog/you-should-switch-to-ungoogled-chromium).
+# Table Of Contents
 
-* [You Should Remove Your iBook G4 Battery](blog/you-should-remove-your-ibook-g4-battery/).
+* [Downloads](#downloads)
+* [Important Info](#important-info)
+* [Usage](#usage)
+* [FAQ](#faq)
+* [How This Works](#how-this-works)
+* [Credits](#credits)
+* [License](#license)
+* [Building](build.md)
 
-* [Mac Mini Late 2012 Fedora Wifi](mac-mini-late-2012-fedora-wifi).
+## Downloads
 
-* [Fixing The Sims 4 FitGirl Repack On Lutris](blog/fixing-the-sims-4-fitgirl-repack-on-lutris/).
+### Version 1.0.5 (10/5/2025)
 
-* [Annoying PIA VPN Linux Crash Fix](blog/pia-vpn-linux-crash-fix/).
+* [a999activator-v1.0.5.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.5/a999-activator-v1.0.5.zip) _For Mac OS and for Linux_
 
-* [iPhone 6S Plus Palera1n Shenanigans](blog/iphone-6s-plus-palera1n-shenanigans).
+A999 Activator is designed to work on Debian, Fedora, and Mac OS 10.12 or newer. x86_64 and ARM64 arches are supported.
 
-## Dreamcast
+Changes:
 
-* [Dreamcast CDI Burner](dcdib) - Burn any Sega Dreamcast .CDI file on Linux .
+* Linux support for x86_64 and arm64.
 
-* [Video2DreamcastDisc](video2dreamcastdisc) - Convert **any media file** for high quality playback on a real Sega Dreamcast.
+* Improved `get_activation()` function with better error detection.
 
------------------------------------------
+* Uses installed tools on your computer first before falling back to internal ones.
 
-## iOS
+* Changed how dependencies are installed on first run.
 
-* [A999 Activator](a999-activator) - A completely automatic solution that tether downgrades to iOS 9.2-9.3.3, jailbreaks, and activates any iPhone 6S, iPhone 6S Plus, or iPhone SE.
+* Removed untethered downgrade (no one tested it and I don't have blobs so I can't maintain it).
 
-* [Headphone Notification Disabler](headphone-notification-disabler) - Turn off the loud music notification Apple added in iOS 14.
+[Previous versions](changelog.md).
 
-* [iOS Repo](ios-repo) - Software and tweaks for jailbroken iOS devices.
+## Important Info
 
-* [IPA2DEB](ipa2deb) - Convert iOS `.ipa` app files to the `.deb` format. Bulk, recursive conversion is supported.
+If you have an iPhone 6S or iPhone 6S plus, is it is recommended to downgrade to iOS 9.2 or iOS 9.2.1. These versions have everything working:
 
------------------------------------------
+* Activation.
+* iMessage sign-in.
+* FaceTime sign-in.
+* iCloud sign-in.
+* Cellular/carrier SIM functionality.
+* Sideloading (but you can also just install cracked IPAs).
 
-## Linux Development Tools
+On iOS 9.3, 9.3.1, 9.3.2, and 9.3.3 all of the above also works, except iMessage and FaceTime sign-in. This is a known issue due to Apple making changes for iOS 9.3 and above that currently does not have a fix yet.
 
-* [EzRe](ezre) - A simple and sane build system for Linux (i386 and x86_64) and Windows (i686 and x86_64) targets, tailored to rapid development and deployment of simple C/C++ programs from a Linux OS.
+## Requirements
 
-* [Github SSH Setup](gsshs) - setup SSH for Github in flash.
+Mac requirements:
 
-* [Portable Linux Executable Directory (PLED)](pled) - PLED makes a Linux executable run on any Linux distribution with the same architecture by creating a directory containing all linked shared libraries, the LD loader itself, and a wrapper which executes the real Linux executable with the included LD loader and shared libraries.
+* Mac OS 10.12 or newer.
 
-## Misc
+* Either the [MacPorts](https://www.macports.org/install.php) or [Homebrew](https://brew.sh/) package manager installed.
 
-* [FLAC2MP3](flac2mp3) - Recursively convert a folder of FLAC files to one containing 320kbs stereo MP3 files.
- purposes.
+Linux requirements:
 
-* [Github Data Export Extactor](gdee) - Make the .tar.gz file generated by the Github data export feature more useful for archival purposes.
+* Fedora or Debian Linux (x86_64 or arm64).
 
-* [Lollipop Chainsaw RePOP Graphics Preset Changer](lcrgpc) -  Change the graphics quality from high (the default) to low and vice versa for the game Lollipop Chainsaw RePOP. 
+## Usage
 
-* [Open95Keygen](open95keygen) - Open source Windows 95/NT 4.0 keygen that can generate random retail and OEM keys.
+1) Download the latest release and extract it.
 
-* [qBittorrent Backup And Restore](qbtbar) - Transfer all of your current qBittorrent data to a different computer or new OS installation. 
+2) Execute it in Terminal (this is a command line program). Drag the `a999` command into your Terminal window and press enter. Or if you want, cd into the extracted release and:
 
-* [SuperMario64GameSharkWriter](sm64gsw) - Allows you to write and patch GameShark codes to SM64 ROM files.
+`./a999`
 
-* [Updated Windows 7 Xbox One Controller Driver](updated-windows-7-xbox-one-controller-driver) - Updated Xbox One controller driver compatible with Windows 7 that works with all existing controller models.
+Note that on Linux you must run `a999` with root privilages, i.e. `sudo ./a999`. On Mac you do not need to do this.
 
------------------------------------------
+3) Follow the prompts.
 
-## Portable Linux x86_64 Builds Of Existing Software
+## Interesting Things To Do On iOS 9
 
-* [CDRDAO-PLED](cdrdao)
+* Instagram still works from the AppStore.
 
-* [CDRTools-PLED](cdrtools)
+* YouTube in Safari works. The Safari browser in iOS 9 is so old that ads are broken and never show, but videos do play if you put the iPhone in a landscape orientation.
 
------------------------------------------
+* You can use iOS 9.2 and iOS 9.2.1 to send/recieve FaceTime calls and iMessages to your main iPhone.
 
-## Mac
+* You can use it as your main iPhone (I did for a few weeks). T-Mobile/Mint Mobile in the USA are confirmed working carriers.
 
-* [Legacy SSH Enabler](lsshe) - Allow your newer OpenSSH client and server to talk with older SSH clients and servers, system-wide.
+## FAQ
 
-* [Leopard SDL2](https://github.com/alex-free/leopard-sdl2) - SDL v2.0.6 for Mac OS X 10.5, PowerPC/Intel.
+### The Jailbreak Website Shows An Error In Safari And Reloads After Hitting Go
 
-* [Mac Mini Late 2012 Triple Boot](mac-mini-late-2012-triple-boot) - How I triple boot a [late 2012 Mac mini](https://everymac.com/systems/apple/mac_mini/specs/mac-mini-core-i5-2.5-late-2012-specs.html) with Mac OS, Windows 7, and Fedora Linux.
+You gotta hit go again. It takes a few tries sometimes.
 
-* [Panther SDL2](https://github.com/alex-free/panther-sdl2) - SDL v2.0.3 for Mac OS X 10.3.9/Mac OS X 10.4, PowerPC/Intel.
+### Stuck on Checkmate?
 
-* [Portable Mac Directory (PMacD)](portable-mac-directory) - Makes Mac OS executables portable. Release dynamically linked Mac OS executables with ‘Windows-like software portability’.
+Disconnect and reconnect the lightning cable to get past it.
 
-* [PowerPC Media Center 7](ppcmc7) - YouTube/Twitch downloader/streamer/web interface for PowerPC Mac OS X 10.3.9-10.5.8.
+### Error Failed To Open Handle (No Device) After Checkmate?
 
-* [Source Engine Fork](source-engine) - modified to compile on Mac OS with MacPorts and case-sensitive filesystems.
+This error occurs on Linux when booting iOS 9. Disconnect and reconnect the lightning cable to get past it.
 
-* [Source Engine Mac App](source-engine-mac-app) - Play Half-Life 2 on modern Mac OS!
+### Unable To Successfully Restore Device
 
-## PSX
+This can happen on Linux due to turdus merula. Wait until your prompted to enter DFU Mode again, and before you do disconnect and reconnect the lightning cable.
 
-* [APrip](aprip) - Patch out additional anti-piracy copy protection routines found in some later PSX games.
+### My iPhone Is Stuck In The Ramdisk Ran Right After iOS 9 Is Restored.
 
-* [EDCRE](edcre) - Regenerate EDC/EEC data in edited/patched/modified CD images (also circumvents EDC protection in patched EDC protected PSX games).
+This means turdus merula didn't restore iOS 9 correctly (known issue) and the ramdisk couldn't mount the filesystem correctly in order to continue. Exit out of the `a999` command  (`ctrl+c`) and execute the `a999` command again to get past it. 
 
-* [GSHAX Tool](gshax-tool) - Create PSX GameShark codes that gain code execution mid-game.
+### How Do I Boot My Downgraded iOS 9 iPhone If The Battery Dies Or I Turn It Off?
 
-* [LibCrypt Patcher](libcrypt-patcher) - Universal patcher for LibCrypt protected PSX games.
+In the same folder that the `a999` command is in, there will be a new command starting with `boot` which is generated after a successful downgrade automatically. All you have to do is execute that command starting with `boot` while your iPhone is in Recovery Mode and connected to your computer.
 
-* [Lib PPF](lib-ppf) - A C library that can be used in your program to apply or undo ppf patches self-contained in the executable file itself.
+### Why Is My iPhone Not Detected?
 
-* [Lib PS-CD-ID](lib-ps-cd-id) - A C library to identify PlayStation 1 and 2 disc images.
+Make sure your using a USB-A to lightning cable. If you have to, you can also use a USB-C to USB-A adapter with the USB-A lightning cable plugged into it. If you are using a USBA-A lightning cable correctly, try unplugging the cable and then plugging it back in. Then execute `a999` again.
 
-* [Open95KeygenPSX](open95keygen-psx) - Homebrew port of [Open95Keygen](https://github.com/alex-free/open95keygen) to the Playstation 1 console.
+### iMessage and or FaceTime not activating on iOS 9.2/iOS 9.2.1, I thought they worked on those versions?
 
-* [PlayStation Disc Burner](psdb) - Patch and burn PS2/PS1 discs on Linux.
+Sometimes it can take a few tries for it to login correctly. If that is not working, this can also happen because Find My iPhone was left on. It is important to sign out of Find My iPhone on iOS 15 before the downgrade. If you forget to do this, you will have strange iMessage and Facetime notification behavior. If your on iOS 9 and forgot to do this, turn it off and then back on in the Settings app to fix it (this can take some time to take effect though and 'fix' it, so I recommend just re-doing the downgrade with Find My iPhone off).
 
-* [PicoMemcard For FreePSXBoot](picomemcard) - a special fork for optimal use with the FreePSXBoot memory card.
+### Why Does It Take So Long? You Say It's Much Faster The Next Time You Run It?
 
-* [PSX Undither](psx-undither) - Patch PlayStation 1 games to turn off the dithering effect by either modifying the CD image directly, or generating GameShark codes from a DuckStation RAM dump.
+On the first run of a999activator, there are many additional steps in the proccess that will trigger automatically for you. **Subsequent runs will be signifigantly shorter and take fewer steps as it caches needed data from the first run locally in the `data` folder.** That `data` folder is very important and personalized to your iPhone. You should back it up because you can put it back in any future a999activator release and it will use that data when it detects your iPhone!
 
-* [PS1 DemoSwap Patcher](ps1demoswap) - By MottZilla, ported by me to many more operating systems. This is the holly grail of what [TOCPerfect](tocperfect) was made to do. Modifies Playstation games to use the correct TOC and unlocks the CD drive after using a swap trick. Can also patch demo discs to enable an easy single swap trick for backups on all consoles.
+Similar to the data folder are the `boot*` scripts. These get generated once your iPhone downgrades successfully automatically, and are also personalized to your iPhone and should be backed up so you can reboot the iPhone from Recovery Mode if it dies or your turn it off.
 
-* [PS1 DVD Logo Demo](ps1-dvd-logo-demo) - A demo for the original PS1 console that bounces the DVD logo around with various gimmicks and visual effects.
+You can also use the `a999` command to transfer your `data` and `boot*` files from a previous release of A999 Activator:
 
-* [PSEXE2ROM](psexe2rom) - Convert PSX 1 executables to flash-able GameShark compatible ROM files.
+`./a999 -u <path to new update of a999 activator>`
 
-* [PSN00bSDK Builder](psn00bsdk-builder) - Script that builds the PSN00bSDK by Lameguy64 on Linux.
+### How Are Errors Handled?
 
-* [PSX80MP](psx80mp) - Patch PSX games so that they work on early PS2 consoles when burned to 80 minute CD-R media.
+Certian aspects of Turdus_ra1n (exploiting SEP, booting exploited iOS) can fail the first time. This is why A999activator has very extensive if-fail-then-retry logic. It will eventually work, and it won't continue the proccess until it does. So don't be discouraged when it says `Something went wrong, lets try that again` because it's really just working as intended and trying again (sometimes many times to get that PTEBlock) does eventually work out. One exception to this is if turdusra1n/turdus_merula crashes at `- <Log> checkm8 setup stage`. If your stuck here for a long time (more then 30 seconds) I would `ctrl+c` to exit a999activator, unpulg the USB-A to Lightning cable from the USB port on the Mac, then plug it back in before running the `a999` command again. Unfortunately I don't have a better solution for this yet as it is a turdus merula problem. In a similar vein to above, if you fail to enter DFU mode when prompted or the custom ramdisk fails to boot a999activator notices this and goes back to correct it.
 
-* [The Ultimate Guide To PSX CD-Rs](psx-cdr) - Everything you need to know on burning PSX CD-Rs in modern year.
+### What Has A999Activator Been Tested On?
 
-* [Protected PSX Games List](tonyhax-international/anti-piracy-bypass) - The most accurate and extensive list of protected PSX games ever put together.
+I have extensively tested a999activator with 2 different iPhone 6S Pluses with MacBook Airs on Mac OS 12 as well as a Mac mini on Mac OS 10.12. It is reported to work on even the latest Mac OS. Linux support was developed on Fedora Linux.
 
-* [TOCPerfect](tocperfect)  - Patch a CD image directly to use the Tonyhax International loader as a way to remove some of the limitations of using the CD Player Swap Trick as a boot method.
+I have literally activated iOS 15 100+ times with the same Apple ID. I have written support for iPhone 6S and iPhone SE because it should work the same. 
 
-* [Tonyhax International](tonyhax-international) - Fork of Tonyhax that adds support for all Japanese PS1 consoles, early Japanese PS2 consoles, ROM support, and more!
+### What About iPads with A9(X)?
 
-* [Tonyhax International GameShark Generator](tonyhax-international-gameshark-generator) - Generates save game files containing GameShark codes for Tonyhax International.
+iPads in theory can work too in a future update, as well as any other A9 device not currently supported.
 
-* [Unofficial PS1 CD Drive Service Manual](unofficial-ps1-cd-drive-service-manual) - Fix disc read issues on PS1 consoles.
+### What about iOS 9.0.x/9.1/9.3.4/9.3.5??
 
-# Xbox 360
+So iOS 9.0.x/iOS 9.1/9.3.4/9.3.5 have jailbreaks. The problem here is that these jailbreaks require an activated iOS 9 iPhone. Chicken and egg problem, we need a jailbreak to activate. This could be developed in the future if it can be done from a ramdisk entrypoint similar to how iOS 9.2-9.3.3 are handled and then triggered with some kind of untether or Safari exploit.
 
-* [NXISO](nxiso) -  A portable open source program for the creation, modification, and extraction of [XISOs](https://consolemods.org/wiki/Xbox:Playing_Game_Backups#%22XISO%22) (an original Xbox and Xbox 360 ISO format). Nextract-XISO is a fork of Extract-XISO, which was orginally created by [in](mailto:in@fishtank.com), and then maintained and modernized by the [XboxDev organization](https://github.com/XboxDev/XboxDev). Forked for code clean up and portability.
+## How This Works
 
-* [360 Hack Pack](360-hack-pack) - Everything you need to hack an Xbox 360, ready to be copied onto a USB drive in one download!
+Remember, this is all automatic (as possible)!
 
-* [Simple 360 Nand Flasher Fork](https://github.com/alex-free/XDK_Projects) - This is my fork of Simple 360 Nand Flasher. The [changes](https://github.com/Swizzy/XDK_Projects/pull/7) made it into [upstream](https://github.com/Swizzy/XDK_Projects), but I have a Read Only build for BadUpdate consoles in the [releases](https://github.com/alex-free/XDK_Projects/releases) you might want.
+1) Restores the latest iOS if your iPhone is not on the latest iOS and activation files have not yet been backed up.
 
-* [Xbox 360 Media Center](xbox-360-media-center) - Local file conversion + YouTube downloader specialized in creating media files compatible with the native Xbox 360 video player, with 1080p support. Said output files can be streamed from a PC server over your LAN, copied to a USB flash drive, or FTP'd to the HDD.
+2) Prompts user to activate, sign into iCloud, complete Setup.app, and turn off Find My iPhone if activation files have not yet been backed up. Additionally, if you want to use an active SIM card with your carrier it mentions that should be working on the latest iOS before continuing.
+
+3) Boots a custom ramdisk in Recovery mode to create iOS 15 activation tarball files which are transferred to the computer.
+
+4) Downgrades to iOS 10.2.1 to work around 2 issues (random rebooting to Recovery Mode and random disabled Wifi in iOS 9.3.x). This is the first step if activation files have already been backed up.
+
+5) Downgrades to target iOS (9.2-9.3.3).
+
+6) Boots a custom ramdisk in Recovery mode that puts the activation tarball files, an activation script, and a launch daemon all on /. Jailbreaks the iPhone (needs a trigger to enable it but bootstrap is installed), disables Setup.app, and then reboots into Recovery Mode.
+
+7) Boots iOS 9.2-9.3.3.
+
+8) User is prompted to sign in to Wi-Fi and then go to http://jbme.ddw.nu to enable the Jailbreak.
+
+9) Jailbreak triggers the previously in-active launch daemon. Launch daemon extracts all activation tarball files that were put on / into the proper /var places. It then modifies a plist file for activation needed for iOS 9.3.x. After that it deletes itself and all other temp files. Setup.app is then re-enabled, and the iPhone is rebooted into Recovery mode.
+
+10) iPhone is booted into iOS 9.2-9.3.3. Activation status is checked and if successful a special boot script is created dynamically in the same directory as the a999 command which can be used to boot the device from Recovery Mode in the future.
+
+## Credits
+
+* [u/iPh0ne4s](https://www.reddit.com/user/iPh0ne4s/) and [u/_alecbaldwin](https://www.reddit.com/user/_alecbaldwin/) for the activation method posted by [u/roolw](https://www.reddit.com/user/roolw/): [How to fully activate iOS 9.2-9.3.5](https://www.reddit.com/r/setupapp/comments/1jwmv8s/how_to_fully_activate_ios_92_935/).
+
+* [@John011235](https://x.com/John011235) for this [post](https://x.com/John011235/status/1756498551385755682) about plutil.
+
+* [Sep.lol team](https://sep.lol/) for turdus merula.
+
+* [LukeZGD](https://github.com/LukeZGD) for [Legacy-iOS-Kit](https://github.com/LukeZGD/Legacy-iOS-Kit).
+
+## License
+
+A999activator itself is released under the 3-BSD license, see [license.md](license.md). A999Activator uses many other dependency programs which are not under that license, such as:
+
+* Turdus Merula (closed source, open source is planned).
+
+* Legacy-iOS-Kit (GNU GPL v3.0). This uses my [forked version](https://github.com/alex-free/Legacy-iOS-Kit) by the way.
