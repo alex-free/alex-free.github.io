@@ -29,23 +29,15 @@ For those unfamilar, A9 iOS 9 activation doesn't work normally anymore for many 
 
 ## Downloads
 
-### Version 1.0.5 (10/5/2025)
+### Version 1.0.7 (10/12/2025)
 
-* [a999activator-v1.0.5.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.5/a999-activator-v1.0.5.zip) _For Mac OS and for Linux_
+* [a999activator-v1.0.7.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.7/a999-activator-v1.0.7.zip) _For Mac OS and for Linux_
 
-A999 Activator is designed to work on Debian, Fedora, and Mac OS 10.12. x86_64 and ARM64 arches are supported.
+A999 Activator is designed to work on Debian, Fedora, and Mac OS 10.12 or newer. x86_64 and ARM64 arches are supported.
 
 Changes:
 
-* Linux support for x86_64 and arm64.
-
-* Improved `get_activation()` function with better error detection.
-
-* Uses installed tools on your computer first before falling back to internal ones.
-
-* Changed how dependencies are installed on first run.
-
-* Removed untethered downgrade (no one tested it and I don't have blobs so I can't maintain it).
+* Now uses my own [idevice-tool-kit](https://github.com/alex-free/idevice-tool-kit) function library.
 
 [Previous versions](changelog.md).
 
@@ -62,17 +54,27 @@ If you have an iPhone 6S or iPhone 6S plus, is it is recommended to downgrade to
 
 On iOS 9.3, 9.3.1, 9.3.2, and 9.3.3 all of the above also works, except iMessage and FaceTime sign-in. This is a known issue due to Apple making changes for iOS 9.3 and above that currently does not have a fix yet.
 
-## Usage
+## Requirements
 
-Requirements: You need Mac OS 10.12 or newer, and you need either the [MacPorts](https://www.macports.org/install.php) or [Homebrew](https://brew.sh/) package manager installed.
+Mac requirements:
+
+* Mac OS 10.12 or newer.
+
+* Either the [MacPorts](https://www.macports.org/install.php) or [Homebrew](https://brew.sh/) package manager installed.
+
+Linux requirements:
+
+* Fedora or Debian Linux (x86_64 or arm64).
+
+## Usage
 
 1) Download the latest release and extract it.
 
-2) Execute it in Terminal (this is a command line program).
+2) Execute it in Terminal (this is a command line program). Drag the `a999` command into your Terminal window and press enter. Or if you want, cd into the extracted release and:
 
 `./a999`
 
-On Linux you must run `a999` with root privilages, i.e. `sudo ./a999`. On Mac you do not need to do this. You can also just drag the `a999` command into the Terminal window and execute it.
+Note that on Linux you must run `a999` with root privilages, i.e. `sudo ./a999`. On Mac you do not need to do this.
 
 3) Follow the prompts.
 
@@ -88,6 +90,10 @@ On Linux you must run `a999` with root privilages, i.e. `sudo ./a999`. On Mac yo
 
 ## FAQ
 
+### My iPhone Won't Detect On Fedora Linux
+
+This may happen the first time you ever use A999 Activator on Fedora Linux. Reboot your computer, and try a999 activator again. 
+
 ### The Jailbreak Website Shows An Error In Safari And Reloads After Hitting Go
 
 You gotta hit go again. It takes a few tries sometimes.
@@ -98,11 +104,11 @@ Disconnect and reconnect the lightning cable to get past it.
 
 ### Error Failed To Open Handle (No Device) After Checkmate?
 
-This error occurs on Linux when booting iOS 9. Disconnect and reconnect the lightning cable to get past it.
+This error occurs on Linux when booting iOS 9. Disconnect and reconnect the lightning cable to get past it. The error will appear again but be non-fatal and work.
 
 ### Unable To Successfully Restore Device
 
-This can happen on Linux due to turdus merula. Wait until your prompted to enter DFU Mode again, and before you do disconnect and reconnect the lightning cable.
+Wait until your prompted to enter DFU Mode again, and before you do disconnect and reconnect the lightning cable. The next restore should work.
 
 ### My iPhone Is Stuck In The Ramdisk Ran Right After iOS 9 Is Restored.
 

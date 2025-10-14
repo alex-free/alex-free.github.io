@@ -1,5 +1,39 @@
 # [A999 Activator: A9, iOS 9, 9 Years Later](readme.md) -> Changelog
 
+## Version 1.0.6 (10/10/2025)
+
+* [a999activator-v1.0.6
+
+.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.6/a999-activator-v1.0.6.zip) _For Mac OS and for Linux_
+
+A999 Activator is designed to work on Debian, Fedora, and Mac OS 10.12 or newer. x86_64 and ARM64 arches are supported.
+
+Changes:
+
+* Improved Linux support, closing [issue 8](https://github.com/alex-free/a999activator/issues/8).
+
+* Big rewrite for Turdus Merula v1.1.1. Also takes less steps!
+
+* Improved activation file application by launch daemon, now waits 5 seconds to ensure it has wrote all changes before rebooting. This solves an issue where sometimes the launch daemon didn't delete itself correctly causing your iPhone to go into Recovery Mode after jailbreaking it after it had already been activated and in normal use.
+
+## Version 1.0.5 (10/5/2025)
+
+* [a999activator-v1.0.5.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.5/a999-activator-v1.0.5.zip) _For Mac OS and for Linux_
+
+A999 Activator is designed to work on Debian, Fedora, and Mac OS 10.12 or newer. x86_64 and ARM64 arches are supported.
+
+Changes:
+
+* Linux support for x86_64 and arm64.
+
+* Improved `get_activation()` function with better error detection.
+
+* Uses installed tools on your computer first before falling back to internal ones.
+
+* Changed how dependencies are installed on first run.
+
+* Removed untethered downgrade (no one tested it and I don't have blobs so I can't maintain it).
+
 ## Version 1.0.4 (10/3/2025)
 
 * [a999activator-v1.0.4-mac-os-universal.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.4/a999-activator-v1.0.4-mac-os-universal.zip) _For Mac OS 10.12 and newer_
