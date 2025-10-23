@@ -2,13 +2,11 @@
 
 _By Alex Free_
 
-A completely automatic solution that tether downgrades to iOS 9.2-9.3.3, jailbreaks, and activates any iPhone 6S, iPhone 6S Plus, or iPhone SE. Made possible by the work of many [others](#credits). iOS 9 WILL NEVER DIE. I had an iPhone 6S that I jailbroke with Pangu 9 on iOS 9.0.something back in the day, hence why I made this.
+A completely automatic solution that tether downgrades to iOS 9.2.x, jailbreaks, and activates any iPhone 6S or iPhone 6S Plus. Made possible by the work of many [others](#credits). iOS 9 WILL NEVER DIE. I had an iPhone 6S that I jailbroke with Pangu 9 on iOS 9.0.something back in the day, hence why I made this.
 
 For those unfamilar, A9 iOS 9 activation doesn't work normally anymore for many iPhones and no one really knows why. Apple seems to have broken something during downgrade party. After [turdus_merula](https://sep.lol) dropped there were more iOS 9 users then there had been in years, many now expierencing the activation issue (including myself). A999Activator takes all the public knowlege on activating A9 iOS 9 devices and uses some [new](#how-this-works) techniques to make the proccess as seemless as possible for the end user. I hope you enjoy this as much as I. I've been out of the scene mostly for years, so if you can contribute to this and make it better please do!
 
 * There's many things you can do on iOS 9 that perhaps you didn't think you still could, here's just a [few](#interesting-things-to-do-on-ios-9).
-
-* To find out what iOS version is right for you to downgrade to, please check the [Important Info](#important-info) section.
 
 * If your curious how this works, please check the [How This Works](#how-this-works) section.
 
@@ -19,7 +17,6 @@ For those unfamilar, A9 iOS 9 activation doesn't work normally anymore for many 
 # Table Of Contents
 
 * [Downloads](#downloads)
-* [Important Info](#important-info)
 * [Usage](#usage)
 * [FAQ](#faq)
 * [How This Works](#how-this-works)
@@ -29,30 +26,17 @@ For those unfamilar, A9 iOS 9 activation doesn't work normally anymore for many 
 
 ## Downloads
 
-### Version 1.0.7 (10/12/2025)
+### Version 1.0.9 (10/22/2025)
 
-* [a999activator-v1.0.7.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.7/a999-activator-v1.0.7.zip) _For Mac OS and for Linux_
+* [a999activator-v1.0.9.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.9/a999-activator-v1.0.9.zip) _For Mac OS and for Linux_
 
 A999 Activator is designed to work on Debian, Fedora, and Mac OS 10.12 or newer. x86_64 and ARM64 arches are supported.
 
 Changes:
 
-* Now uses my own [idevice-tool-kit](https://github.com/alex-free/idevice-tool-kit) function library.
+* Fixes issue with using newer SCP/SFTP it is expected that the destination already exists when transferring folders, which prevented activation.
 
 [Previous versions](changelog.md).
-
-## Important Info
-
-If you have an iPhone 6S or iPhone 6S plus, is it is recommended to downgrade to iOS 9.2 or iOS 9.2.1. These versions have everything working:
-
-* Activation.
-* iMessage sign-in.
-* FaceTime sign-in.
-* iCloud sign-in.
-* Cellular/carrier SIM functionality.
-* Sideloading (but you can also just install cracked IPAs).
-
-On iOS 9.3, 9.3.1, 9.3.2, and 9.3.3 all of the above also works, except iMessage and FaceTime sign-in. This is a known issue due to Apple making changes for iOS 9.3 and above that currently does not have a fix yet.
 
 ## Requirements
 
@@ -108,9 +92,9 @@ This error occurs on Linux when booting iOS 9. Disconnect and reconnect the ligh
 
 ### Unable To Successfully Restore Device
 
-Wait until your prompted to enter DFU Mode again, and before you do disconnect and reconnect the lightning cable. The next restore should work.
+If your iPhone is stuck, force it into Recovery Mode. Then wait until your prompted to enter DFU Mode again, and try agan when it automatically prompts you.
 
-### My iPhone Is Stuck In The Ramdisk Ran Right After iOS 9 Is Restored.
+### Ramdisk Errors On iOS 9.
 
 This means turdus merula didn't restore iOS 9 correctly (known issue) and the ramdisk couldn't mount the filesystem correctly in order to continue. Exit out of the `a999` command  (`ctrl+c`) and execute the `a999` command again to get past it. 
 
@@ -121,10 +105,6 @@ In the same folder that the `a999` command is in, there will be a new command st
 ### Why Is My iPhone Not Detected?
 
 Make sure your using a USB-A to lightning cable. If you have to, you can also use a USB-C to USB-A adapter with the USB-A lightning cable plugged into it. If you are using a USBA-A lightning cable correctly, try unplugging the cable and then plugging it back in. Then execute `a999` again.
-
-### iMessage and or FaceTime not activating on iOS 9.2/iOS 9.2.1, I thought they worked on those versions?
-
-Sometimes it can take a few tries for it to login correctly. If that is not working, this can also happen because Find My iPhone was left on. It is important to sign out of Find My iPhone on iOS 15 before the downgrade. If you forget to do this, you will have strange iMessage and Facetime notification behavior. If your on iOS 9 and forgot to do this, turn it off and then back on in the Settings app to fix it (this can take some time to take effect though and 'fix' it, so I recommend just re-doing the downgrade with Find My iPhone off).
 
 ### Why Does It Take So Long? You Say It's Much Faster The Next Time You Run It?
 
@@ -150,10 +130,6 @@ I have literally activated iOS 15 100+ times with the same Apple ID. I have writ
 
 iPads in theory can work too in a future update, as well as any other A9 device not currently supported.
 
-### What about iOS 9.0.x/9.1/9.3.4/9.3.5??
-
-So iOS 9.0.x/iOS 9.1/9.3.4/9.3.5 have jailbreaks. The problem here is that these jailbreaks require an activated iOS 9 iPhone. Chicken and egg problem, we need a jailbreak to activate. This could be developed in the future if it can be done from a ramdisk entrypoint similar to how iOS 9.2-9.3.3 are handled and then triggered with some kind of untether or Safari exploit.
-
 ## How This Works
 
 Remember, this is all automatic (as possible)!
@@ -164,25 +140,23 @@ Remember, this is all automatic (as possible)!
 
 3) Boots a custom ramdisk in Recovery mode to create iOS 15 activation tarball files which are transferred to the computer.
 
-4) Downgrades to iOS 10.2.1 to work around 2 issues (random rebooting to Recovery Mode and random disabled Wifi in iOS 9.3.x). This is the first step if activation files have already been backed up.
+4) Downgrades to iOS 10.2.1 to work around random rebooting to Recovery Mode and restore fails. This is the first step if activation files have already been backed up.
 
-5) Downgrades to target iOS (9.2-9.3.3).
+5) Downgrades to target iOS 9.2.x.
 
 6) Boots a custom ramdisk in Recovery mode that puts the activation tarball files, an activation script, and a launch daemon all on /. Jailbreaks the iPhone (needs a trigger to enable it but bootstrap is installed), disables Setup.app, and then reboots into Recovery Mode.
 
-7) Boots iOS 9.2-9.3.3.
+7) Boots iOS 9.2.x.
 
 8) User is prompted to sign in to Wi-Fi and then go to http://jbme.ddw.nu to enable the Jailbreak.
 
-9) Jailbreak triggers the previously in-active launch daemon. Launch daemon extracts all activation tarball files that were put on / into the proper /var places. It then modifies a plist file for activation needed for iOS 9.3.x. After that it deletes itself and all other temp files. Setup.app is then re-enabled, and the iPhone is rebooted into Recovery mode.
+9) Jailbreak triggers the previously in-active launch daemon. Launch daemon extracts all activation tarball files that were put on / into the proper /var places. After that it deletes itself and all other temp files. Setup.app is then re-enabled, and the iPhone is rebooted into Recovery mode.
 
-10) iPhone is booted into iOS 9.2-9.3.3. Activation status is checked and if successful a special boot script is created dynamically in the same directory as the a999 command which can be used to boot the device from Recovery Mode in the future.
+10) iPhone is booted into iOS 9.2.x. Activation status is checked and if successful a special boot script is created dynamically in the same directory as the a999 command which can be used to boot the device from Recovery Mode in the future.
 
 ## Credits
 
 * [u/iPh0ne4s](https://www.reddit.com/user/iPh0ne4s/) and [u/_alecbaldwin](https://www.reddit.com/user/_alecbaldwin/) for the activation method posted by [u/roolw](https://www.reddit.com/user/roolw/): [How to fully activate iOS 9.2-9.3.5](https://www.reddit.com/r/setupapp/comments/1jwmv8s/how_to_fully_activate_ios_92_935/).
-
-* [@John011235](https://x.com/John011235) for this [post](https://x.com/John011235/status/1756498551385755682) about plutil.
 
 * [Sep.lol team](https://sep.lol/) for turdus merula.
 
