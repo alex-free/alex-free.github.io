@@ -12,6 +12,8 @@ For those unfamilar, A9 iOS 9 activation doesn't work normally anymore for many 
 
 * Please check the [FAQ](#faq) section for more information and solutions. If you have an issue, please open a [Github issue](https://github.com/alex-free/a999activator/issues/new?template=issue.md) and fill out the information.
 
+**NOTE:** v1.0.7 and below of a999 supported iOS 9.3.x 'hacktivation'. This was removed after it was realized that it was not true activation, and that iMessage/FaceTime/cellular was broken on iOS 9.3.x without any possible fix. **THERE IS NO PUBLIC TRUE ACTIVATION METHOD FOR IOS 9.3.x**. A999 truely activates iOS 9.2 and iOS 9.2.1, and everything works including FaceTime/iMessage/Cellular.
+
 | [Github](https://github.com/alex-free/a999activator) | [Homepage](https://github.com/alex-free/a999activator) | [Reddit Post](https://www.reddit.com/r/setupapp/comments/1kux73s/a999activator_automatic_downgrade_to_ios_9_with/) |
 
 # Table Of Contents
@@ -120,15 +122,9 @@ You can also use the `a999` command to transfer your `data` and `boot*` files fr
 
 Certian aspects of Turdus_ra1n (exploiting SEP, booting exploited iOS) can fail the first time. This is why A999activator has very extensive if-fail-then-retry logic. It will eventually work, and it won't continue the proccess until it does. So don't be discouraged when it says `Something went wrong, lets try that again` because it's really just working as intended and trying again (sometimes many times to get that PTEBlock) does eventually work out. One exception to this is if turdusra1n/turdus_merula crashes at `- <Log> checkm8 setup stage`. If your stuck here for a long time (more then 30 seconds) I would `ctrl+c` to exit a999activator, unpulg the USB-A to Lightning cable from the USB port on the Mac, then plug it back in before running the `a999` command again. Unfortunately I don't have a better solution for this yet as it is a turdus merula problem. In a similar vein to above, if you fail to enter DFU mode when prompted or the custom ramdisk fails to boot a999activator notices this and goes back to correct it.
 
-### What Has A999Activator Been Tested On?
-
-I have extensively tested a999activator with 2 different iPhone 6S Pluses with MacBook Airs on Mac OS 12 as well as a Mac mini on Mac OS 10.12. It is reported to work on even the latest Mac OS. Linux support was developed on Fedora Linux.
-
-I have literally activated iOS 15 100+ times with the same Apple ID. I have written support for iPhone 6S and iPhone SE because it should work the same. 
-
 ### What About iPads with A9(X)?
 
-iPads in theory can work too in a future update, as well as any other A9 device not currently supported.
+iPad Pro 1st gen 12.7 inch in theory can work too in a future update. iPad Pro 1st gen 9.7 inch shipped with iOS 9.3, which is unable to be activated with my method, or any public method for that matter.
 
 ## How This Works
 
