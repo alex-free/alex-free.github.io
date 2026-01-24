@@ -40,27 +40,19 @@ Do you hate writing GNU Makefiles, but love the simplicity and portability they 
 
 ## Downloads
 
-### Version 1.1.1 (3/16/2025)
+### Version 1.1.6 (1/24/2026)
 
 Changes:
 
-* Fixed updating version with `ezre -u <version>`. This now also updates `variables.mk` for you.
-
-* Rewrote GNU Sed vs BSD Sed handling.
-
-* Improved EzRe's [build](https://github.com/alex-free/ezre/blob/master/build) script. The build script for EzRe itself is insanely useful for releasing bash scripts in the same vain that EzRe is to releasing C and C++ programs!
-
-* Added support for older RPM versions, such as 4.4.9 which ships with MacPorts. This was done by simply adding a `Group: Unspecified` field to the spec files.
-
-* Specifies `--define "_tmppath $PWD/rpm-tmp"` when building rpm packages for compatibility with older RPM versions and Mac OS X.
+* Append `-DVERSION` to HOST_32_BIT target.
 
 ---------------------------------------------
 
-* [ezre-v1.1.1.zip](https://github.com/alex-free/ezre/releases/download/v1.1.1/ezre-v1.1.1.zip) _Portable zip release for Linux and Mac OS_
+* [ezre-v1.1.6.zip](https://github.com/alex-free/ezre/releases/download/v1.1.6/ezre-v1.1.6.zip) _Portable zip release for Linux and Mac OS_
 
-* [ezre-v1.1.1.deb](https://github.com/alex-free/ezre/releases/download/v1.1.1/ezre-v1.1.1.deb) _Deb package for Linux_
+* [ezre-v1.1.6.deb](https://github.com/alex-free/ezre/releases/download/v1.1.6/ezre-v1.1.6.deb) _Deb package for Linux_
 
-* [ezre-v1.1.1-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.1.1/ezre-v1.1.1-1.noarch.rpm) _RPM package for Linux_
+* [ezre-v1.1.6-1.noarch.rpm](https://github.com/alex-free/ezre/releases/download/v1.1.6/ezre-v1.1.6-1.noarch.rpm) _RPM package for Linux_
 
 ---------------------------------------------
 
@@ -84,7 +76,9 @@ Note: Currently, EzRe expects either a Linux or Mac OS host system.
 
 ## Additional Info
 
-To update the EzRe build system in the future for your software, execute the `ezre` again in your source directory. As of EzRe v1.0.8, all future versions are forward compatible this way.
+To update the EzRe build system in the future for your software, execute the `ezre` command again in your source directory. As of EzRe v1.0.8, all future versions are forward compatible this way.
+
+To apply new information modified/entered into `variables.mk`, execute the `ezre` command again in your source directory.
 
 To update the version number of your program, run `ezre -u <version number>`. For example,  `ezre -u 1.0.1` will change the version number of your project to 1.0.1 from whatever it was previously.
 
