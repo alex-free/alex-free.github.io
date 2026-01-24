@@ -114,9 +114,7 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [LibCrypt Patcher](libcrypt-patcher) - Universal patcher for LibCrypt protected PSX games.
 
-* [Lib PPF](lib-ppf) - A C library that can be used in your program to apply or undo ppf patches self-contained in the executable file itself.
-
-* [Lib PS-CD-ID](lib-ps-cd-id) - A C library to identify PlayStation 1 and 2 disc images.
+* [Lib Enigma](lib-enigma) - A PlayStation 1/2 CD Image C Library For Patching And Identification (Spiritual Successor To PPF).
 
 * [Open95KeygenPSX](open95keygen-psx) - Homebrew port of [Open95Keygen](https://github.com/alex-free/open95keygen) to the Playstation 1 console.
 
