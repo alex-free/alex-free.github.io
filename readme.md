@@ -9,7 +9,7 @@ Find me @:
 
 Checkout the different stuff I cover here:
 
-| [Blog](#blog) | [Dreamcast](#dreamcast) | [iOS](#ios) | [Linux Development Tools](#linux-development-tools) | [Misc](#misc) | [Portable Linux x86_64 Builds Of Existing Software](#portable-linux-x86_64-builds-of-existing-software) | [Mac](#mac) | [PSX](#psx) | [Xbox 360](#xbox-360) |
+| [Blog](#blog) | [Dreamcast](#dreamcast) | [iOS](#ios) | [Linux Development Tools](#linux-development-tools) | [Misc](#misc) | [Mods](#mods) | [Portable Linux x86_64 Builds Of Existing Software](#portable-linux-x86_64-builds-of-existing-software) | [Mac](#mac) | [PSX](#psx) | [Xbox 360](#xbox-360) |
 
 -----------------------------------------
 
@@ -75,6 +75,10 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 * [SuperMario64GameSharkWriter](sm64gsw) - Allows you to write and patch GameShark codes to SM64 ROM files.
 
 * [Updated Windows 7 Xbox One Controller Driver](updated-windows-7-xbox-one-controller-driver) - Updated Xbox One controller driver compatible with Windows 7 that works with all existing controller models.
+
+## Mods
+
+* [Miria Must Live!](miria-must-live-fo2-mod) - Allows you to play Fallout 2 v1.02d (PC) and v1.02a (Mac) without having to kill your Wife or divorce her to complete the game.
 
 -----------------------------------------
 
