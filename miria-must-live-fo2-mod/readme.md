@@ -12,15 +12,25 @@ Allow you to play Fallout 2 v1.02d (PC) and v1.02a (Mac) without having to kill 
 
 ## Downloads
 
-### v1.0 (1/31/2026)
+### v1.0.1 (2/2/2026)
 
-* [mira-must-live-fo2-mod-v1.0](https://github.com/alex-free/alex-free.github.io/raw/refs/heads/master/miria-must-live-fo2-mod/mira-must-live-fo2-mod-v1.0.zip)
+Changes:
 
-## Installation
+* Windows Installer.
+* Better installation instructions.
 
-The Mac version requires you to copy the `patch000.dat` file found in the `mac` folder to `/Applications/Fallout2.app/Contents/Resources/GameData/patch000.dat`. Should have the latest Mac patch (v1.02a) already installed beforehand.
+* [mira-must-live-fo2-mod-v1.0.1](https://github.com/alex-free/alex-free.github.io/raw/refs/heads/master/miria-must-live-fo2-mod/mira-must-live-fo2-mod-v1.0.1.zip)
 
-The Windows version requires you to copy the Data folder to `C:\Program Files\BlackIsle\Fallout2\', or wherever Fallout 2 is. Should have the latest Windows official patch (v1.02d) already installed beforehand. Overwrite any files if prompted.
+[Previous Versions](changelog.md).
+
+## Installation (Extracted Dat Method)
+
+1) Install Fallout 2.
+2) Extract master.dat, critters.dat, and extract patch000.dat last. It is important to extract patch000.dat last because it replaces some of the files you extract from master.dat and critters.dat.
+3) Delete or rename patch000.dat to disable it.
+4) Run the installer (Windows) or copy the `patch000.dat` (Mac) to /Applications/Fallout2.app/Contents/Resources/GameData.
+
+Note: The Windows installer will overwrite Scripts/CCDRGRD.int and Scripts/qcSecBot.int, so if you want to back those up you should do so before running the installer.
 
 ## Back Story
 
