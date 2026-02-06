@@ -12,25 +12,36 @@ Allow you to play Fallout 2 v1.02d (PC) and v1.02a (Mac) without having to kill 
 
 ## Downloads
 
-### v1.0.1 (2/2/2026)
+### v1.0.2 (2/5/2026)
 
 Changes:
 
-* Windows Installer.
-* Better installation instructions.
+* Removed Windows installer.
 
-* [mira-must-live-fo2-mod-v1.0.1](https://github.com/alex-free/alex-free.github.io/raw/refs/heads/master/miria-must-live-fo2-mod/mira-must-live-fo2-mod-v1.0.1.zip)
+* Mac version now compatible with [Fallout 2 Mac Mod Enabler](https://github.com/alex-free/fallout-2-mac-mod-enabler).
+
+* [mira-must-live-fo2-mod-v1.0.2](https://github.com/alex-free/alex-free.github.io/raw/refs/heads/master/miria-must-live-fo2-mod/mira-must-live-fo2-mod-v1.0.2.zip)
 
 [Previous Versions](changelog.md).
 
-## Installation (Extracted Dat Method)
+## Windows Installation
 
 1) Install Fallout 2.
+
 2) Extract master.dat, critters.dat, and extract patch000.dat last. It is important to extract patch000.dat last because it replaces some of the files you extract from master.dat and critters.dat.
 3) Delete or rename patch000.dat to disable it.
-4) Run the installer (Windows) or copy the `patch000.dat` (Mac) to /Applications/Fallout2.app/Contents/Resources/GameData.
 
-Note: The Windows installer will overwrite Scripts/CCDRGRD.int and Scripts/qcSecBot.int, so if you want to back those up you should do so before running the installer.
+4) Copy the `Data` folder into the `Fallout 2` folder.
+
+Note: This mod will overwrite Scripts/CCDRGRD.int and Scripts/qcSecBot.int, so if you want to back those up you should do so before running the installer.
+
+## Mac Installation
+
+1) Install Fallout 2 by copying `Fallout 2.app` to `/Applications/Fallout 2.app`.
+
+2) Run the [Fallout 2 Mac Mod Enabler](https://github.com/alex-free/fallout-2-mac-mod-enabler).
+
+3) Copy the `scripts` folder to `/Applications/Fallout 2 Mods`.
 
 ## Back Story
 
@@ -74,4 +85,4 @@ It wouldn't be strange if TWO people had power armour in the oil rig. So I edite
 
 So then I thought about Navarro. Same thing, who says we can't have 2 recruits walking around? Not neccesarily both would have power armour (or any of them), and at this point in the game I only had one suit of power armour I got inside Navarro. So I looked at the gaurd's script and saw if K-9 is a companion the gaurd doesn't go hostile. So I added Miria to those same checks, and sure enough I can walk right up to him and have a conversation for the first time with Miria in tow.
 
-So with just 2 small script additions, you can now complete v1.02 like v1.0 with Miria. I checked like I mentioned before and both these scripts were different between the 2002 Mac v1.02a patch and the Windows v1.02d patch. So I did modified scripts and mods for both. The Mac version is weird, your supposed to be able to use `~/Library/Application Support/Fallout2/Data/scripts` and be able to put your own `.int` scripts there. This worked for the commander's gaurd, but not for the sentry bots. So I ended up just editing the `patch000.dat` (which already included both these scripts` and putting them in there. By replacing `/Applications/Fallout2.app/Contents/Resources/GameData/patch000.dat` with my own finally on Mac I was able to get this behavior and mod working.
+So with just 2 small script additions, you can now complete v1.02 like v1.0 with Miria. I checked like I mentioned before and both these scripts were different between the 2002 Mac v1.02a patch and the Windows v1.02d patch. So I did modified scripts and mods for both. 
