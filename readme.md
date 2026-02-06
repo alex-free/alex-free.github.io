@@ -78,6 +78,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 ## Mods
 
+* [Fallout 2 Mac Mod Enabler](fallout-2-mac-mod-enabler) - Enable mods for the Mac OS X PowerPC native port of Fallout 2 released in 2002.
+
 * [Miria Must Live!](miria-must-live-fo2-mod) - Allows you to play Fallout 2 v1.02d (PC) and v1.02a (Mac) without having to kill your Wife or divorce her to complete the game.
 
 -----------------------------------------
