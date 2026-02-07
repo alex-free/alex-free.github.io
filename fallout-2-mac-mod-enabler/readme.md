@@ -4,7 +4,7 @@ _By Alex Free_
 
 Enables mod support for Fallout 2's native PowerPC Mac OS X port, released in 2002.
 
-Initially Fallout 2 was going to release simultaniously on Mac and PC, like Fallout 2 did. But due to poor sales, this would be cancelled, then uncancelled and released in [2002](https://web.archive.org/web/20050220065242/http://www.macplay.com/press/pr-fallout2-ships.php). This port hasn't seen alot of attention in the modding community, so I decided to make an easy to use mod-enabler.
+Initially Fallout 2 was going to release simultaniously on Mac and PC, like Fallout 1 did. But due to poor sales, this would be cancelled, then uncancelled and released in [2002](https://web.archive.org/web/20050220065242/http://www.macplay.com/press/pr-fallout2-ships.php). This port hasn't seen alot of attention in the modding community, so I decided to make an easy to use mod-enabler.
 
 | [Github](https://github.com/alex-free/fallout-2-mac-mod-enabler) | [Website](https://alex-free.github.io/fallout-2-mac-mod-enabler) |
 
