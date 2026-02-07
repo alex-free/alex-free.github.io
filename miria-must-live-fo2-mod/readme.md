@@ -1,4 +1,4 @@
-# Mira Must Live - A Fallout 2 Mod
+# Miria Must Live - A Fallout 2 Mod
 
 _The first mod by Alex Free_
 
