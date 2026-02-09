@@ -82,6 +82,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [Miria Must Live!](miria-must-live-fo2-mod) - Allows you to play Fallout 2 v1.02d (PC) and v1.02a (Mac) without having to kill your Wife or divorce her to complete the game.
 
+* [Hero Appearance Mod Fallout 2 Vanilla](hero-appearance-fo2-mod-vanilla) - Hero Appearance mod without SFall requirement, working on v1.0, v1.02d, and 2002 PowerPC mac releases of Fallout 2 without any unofficial patches.
+
 -----------------------------------------
 
 ## Portable Linux x86_64 Builds Of Existing Software
