@@ -1,5 +1,15 @@
 # [A999 Activator: A9, iOS 9, 9 Years Later](readme.md) -> Changelog
 
+## Version 1.0.9 (10/22/2025)
+
+* [a999activator-v1.0.9.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.9/a999-activator-v1.0.9.zip) _For Mac OS and for Linux_
+
+A999 Activator is designed to work on Debian, Fedora, and Mac OS 10.12 or newer. x86_64 and ARM64 arches are supported.
+
+Changes:
+
+* Fixes issue with using newer SCP/SFTP it is expected that the destination already exists when transferring folders, which prevented activation.
+
 ## Version 1.0.8 (10/21/2025)
 
 * [a999activator-v1.0.8.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.8/a999-activator-v1.0.8.zip) _For Mac OS and for Linux_

@@ -10,9 +10,7 @@ For those unfamilar, A9 iOS 9 activation doesn't work normally anymore for many 
 
 * If your curious how this works, please check the [How This Works](#how-this-works) section.
 
-* Please check the [FAQ](#faq) section for more information and solutions. If you have an issue, please open a [Github issue](https://github.com/alex-free/a999activator/issues/new?template=issue.md) and fill out the information.
-
-**NOTE:** v1.0.7 and below of a999 supported iOS 9.3.x 'hacktivation'. This was removed after it was realized that it was not true activation, and that iMessage/FaceTime/cellular was broken on iOS 9.3.x without any possible fix. **THERE IS NO PUBLIC TRUE ACTIVATION METHOD FOR IOS 9.3.x**. A999 truely activates iOS 9.2 and iOS 9.2.1, and everything works including FaceTime/iMessage/Cellular.
+* **Please check the [FAQ](#faq) section for more information, common problems encountered, and solutions**. If you have an issue **not covered in the F.A.Q**, please open a [Github issue](https://github.com/alex-free/a999activator/issues/new?template=issue.md) and fill out the information.
 
 | [Github](https://github.com/alex-free/a999activator) | [Homepage](https://github.com/alex-free/a999activator) | [Reddit Post](https://www.reddit.com/r/setupapp/comments/1kux73s/a999activator_automatic_downgrade_to_ios_9_with/) |
 
@@ -28,15 +26,19 @@ For those unfamilar, A9 iOS 9 activation doesn't work normally anymore for many 
 
 ## Downloads
 
-### Version 1.0.9 (10/22/2025)
+### Version 1.1.0 (3/13/2026)
 
-* [a999activator-v1.0.9.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.9/a999-activator-v1.0.9.zip) _For Mac OS and for Linux_
+* [a999activator-v1.1.0.zip](https://github.com/alex-free/a999activator/releases/download/v1.1.0/a999-activator-v1.1.0.zip) _For Mac OS and for Linux_
 
 A999 Activator is designed to work on Debian, Fedora, and Mac OS 10.12 or newer. x86_64 and ARM64 arches are supported.
 
 Changes:
 
-* Fixes issue with using newer SCP/SFTP it is expected that the destination already exists when transferring folders, which prevented activation.
+* Updated latest iOS version restore function to iOS 15.8.7, fixing issues with this not working since January when iOS 15.8.5 became unsigned.
+
+* The tool gives more info on common pitfalls.
+
+* Fedora Linux reliability improvements thanks to updated [idevice-tool-kit](https://github.com/alex-free/idevice-tool-kit).
 
 [Previous versions](changelog.md).
 
@@ -76,9 +78,13 @@ Note that on Linux you must run `a999` with root privilages, i.e. `sudo ./a999`.
 
 ## FAQ
 
+### Segfault on Linux
+
+Reboot the iPhone into Recovery Mode and do it again.
+
 ### My iPhone Won't Detect On Fedora Linux
 
-This may happen the first time you ever use A999 Activator on Fedora Linux. Reboot your computer, and try a999 activator again. 
+This may happen the first time you ever use A999 Activator on Fedora Linux, or if you later update Fedora Linux. After `a999` fails to run, reboot your computer, and try a999 activator again. 
 
 ### The Jailbreak Website Shows An Error In Safari And Reloads After Hitting Go
 
