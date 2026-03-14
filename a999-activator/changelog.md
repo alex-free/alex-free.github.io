@@ -1,5 +1,19 @@
 # [A999 Activator: A9, iOS 9, 9 Years Later](readme.md) -> Changelog
 
+## Version 1.1.0 (3/13/2026)
+
+* [a999activator-v1.1.0.zip](https://github.com/alex-free/a999activator/releases/download/v1.1.0/a999-activator-v1.1.0.zip) _For Mac OS and for Linux_
+
+A999 Activator is designed to work on Debian, Fedora, and Mac OS 10.12 or newer. x86_64 and ARM64 arches are supported.
+
+Changes:
+
+* Updated latest iOS version restore function to iOS 15.8.7, fixing issues with this not working since January when iOS 15.8.5 became unsigned.
+
+* The tool gives more info on common pitfalls.
+
+* Fedora Linux reliability improvements thanks to updated [idevice-tool-kit](https://github.com/alex-free/idevice-tool-kit).
+
 ## Version 1.0.9 (10/22/2025)
 
 * [a999activator-v1.0.9.zip](https://github.com/alex-free/a999activator/releases/download/v1.0.9/a999-activator-v1.0.9.zip) _For Mac OS and for Linux_

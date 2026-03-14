@@ -2,7 +2,11 @@
 
 _By Alex Free_
 
-A completely automatic solution that tether downgrades to iOS 9.2.x, jailbreaks, and activates any iPhone 6S or iPhone 6S Plus. Made possible by the work of many [others](#credits). iOS 9 WILL NEVER DIE. I had an iPhone 6S that I jailbroke with Pangu 9 on iOS 9.0.something back in the day, hence why I made this.
+A completely automatic solution that tether downgrades to iOS 9.2.x, jailbreaks, and activates any iPhone 6S or iPhone 6S Plus. No blobs needed! Made possible by the work of many [others](#credits). iOS 9 WILL NEVER DIE. I had an iPhone 6S that I jailbroke with Pangu 9 on iOS 9.0.something back in the day, hence why I made this.
+
+Want this but for iOS 10.0 and up? Check out the sister project [Dusk Downgrade](https://github.com/alex-free/dusk-downgrade). Dusk Downgrade even works on iPhone 7 and iPhone 7 Plus.
+
+## Background Info
 
 For those unfamilar, A9 iOS 9 activation doesn't work normally anymore for many iPhones and no one really knows why. Apple seems to have broken something during downgrade party. After [turdus_merula](https://sep.lol) dropped there were more iOS 9 users then there had been in years, many now expierencing the activation issue (including myself). A999Activator takes all the public knowlege on activating A9 iOS 9 devices and uses some [new](#how-this-works) techniques to make the proccess as seemless as possible for the end user. I hope you enjoy this as much as I. I've been out of the scene mostly for years, so if you can contribute to this and make it better please do!
 
@@ -12,7 +16,7 @@ For those unfamilar, A9 iOS 9 activation doesn't work normally anymore for many 
 
 * **Please check the [FAQ](#faq) section for more information, common problems encountered, and solutions**. If you have an issue **not covered in the F.A.Q**, please open a [Github issue](https://github.com/alex-free/a999activator/issues/new?template=issue.md) and fill out the information.
 
-| [Github](https://github.com/alex-free/a999activator) | [Homepage](https://github.com/alex-free/a999activator) | [Reddit Post](https://www.reddit.com/r/setupapp/comments/1kux73s/a999activator_automatic_downgrade_to_ios_9_with/) |
+| [Github](https://github.com/alex-free/a999activator) | [Homepage](https://github.com/alex-free/a999activator) |
 
 # Table Of Contents
 
@@ -26,19 +30,17 @@ For those unfamilar, A9 iOS 9 activation doesn't work normally anymore for many 
 
 ## Downloads
 
-### Version 1.1.0 (3/13/2026)
+A999 Activator is designed to work on Debian, Fedora, and Mac OS 10.12 or newer. x86_64 and ARM64 arches are supported. Other Linux distros are not yet supported.
 
-* [a999activator-v1.1.0.zip](https://github.com/alex-free/a999activator/releases/download/v1.1.0/a999-activator-v1.1.0.zip) _For Mac OS and for Linux_
+### Version 1.1.1 (3/14/2026)
 
-A999 Activator is designed to work on Debian, Fedora, and Mac OS 10.12 or newer. x86_64 and ARM64 arches are supported.
+* [a999activator-v1.1.1.zip](https://github.com/alex-free/a999activator/releases/download/v1.1.1/a999-activator-v1.1.1.zip) _For Mac OS and for Linux_
 
 Changes:
 
-* Updated latest iOS version restore function to iOS 15.8.7, fixing issues with this not working since January when iOS 15.8.5 became unsigned.
+* Massive rewrite in ramdisk handling. This fixes issues such as errors connecting to the ramdisk to execute commands/send files, files not transferring completely causing incomplete jailbreak and or activation, and much more. This is a huge reliability improvement.
 
-* The tool gives more info on common pitfalls.
-
-* Fedora Linux reliability improvements thanks to updated [idevice-tool-kit](https://github.com/alex-free/idevice-tool-kit).
+* Added additional syncs and 30 second wait to launch daemon payload to ensure it Jailbreaks correctly on first launch.
 
 [Previous versions](changelog.md).
 
@@ -70,7 +72,7 @@ Note that on Linux you must run `a999` with root privilages, i.e. `sudo ./a999`.
 
 * Instagram still works from the AppStore.
 
-* YouTube in Safari works. The Safari browser in iOS 9 is so old that ads are broken and never show, but videos do play if you put the iPhone in a landscape orientation.
+* YouTube in Safari works. The Safari browser in iOS 9 is so old that ads are broken and never show, but videos do play if you put the iPhone in a landscape orientation. It's pretty broken at this point in portarait mode, but landscape is good and search even works.
 
 * You can use iOS 9.2 and iOS 9.2.1 to send/recieve FaceTime calls and iMessages to your main iPhone.
 
@@ -78,9 +80,9 @@ Note that on Linux you must run `a999` with root privilages, i.e. `sudo ./a999`.
 
 ## FAQ
 
-### Segfault on Linux
+### Segfault on Linux With Turdusra1n
 
-Reboot the iPhone into Recovery Mode and do it again.
+Try disconnecting and reconnecting the USB-A lightning cable.
 
 ### My iPhone Won't Detect On Fedora Linux
 
@@ -100,7 +102,7 @@ This error occurs on Linux when booting iOS 9. Disconnect and reconnect the ligh
 
 ### Unable To Successfully Restore Device
 
-If your iPhone is stuck, force it into Recovery Mode. Then wait until your prompted to enter DFU Mode again, and try agan when it automatically prompts you.
+CTRL-C out of a999 to stop it. This should also put your iPhone back into Recovery Mode. If it doesn't after some time, then just force it into Recovery Mode. Then Execute `./a999` again.
 
 ### Ramdisk Errors On iOS 9.
 
