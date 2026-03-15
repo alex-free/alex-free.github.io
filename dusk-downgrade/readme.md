@@ -4,6 +4,8 @@ _By Alex Free_
 
 Apple sunsets your iDevice? Introducing Dusk Downgrade. A completely automatic solution that tether downgrades to iOS 10-iOS 15 for A9 and A10 devices. Made possible by the work of many [others](#credits).
 
+If your looking for iOS 9 on iPhone 6S or iPhone 6S Plus, check out my other project [A999 Activator](https://github.com/alex-free/a999activator).
+
 * There's many things you can do on iOS 10+ that perhaps you didn't think you still could, here's just a [few](#interesting-things-to-do-on-legacy-ios).
 
 * To find out what iOS version is right for you to downgrade to, please check the [Important Info](#important-info) section.
@@ -32,15 +34,15 @@ Supported devices:
 
 ## Downloads
 
-### Version 2.0.2 (10/18/2025)
+A999 Activator is designed to work on Debian, Fedora, and Mac OS 10.12 or newer. x86_64 and ARM64 arches are supported. Other Linux distros are not yet supported.
 
-* [dusk-downgrade-v2.0.2.zip](https://github.com/alex-free/dusk-downgrade/releases/download/v2.0.2/dusk-downgrade-v2.0.2.zip) _For Mac OS and for Linux_
+### Version 2.0.4 (3/14/2026)
 
-Dusk Downgrade is designed to work on Debian, Fedora, and Mac OS 10.12 or newer. x86_64 and ARM64 arches are supported.
+* [dusk-downgrade-v2.0.4.zip](https://github.com/alex-free/dusk-downgrade/releases/download/v2.0.4/dusk-downgrade-v2.0.4.zip) _For Mac OS and for Linux_
 
 Changes:
 
-* Better usbmuxd handling on Linux.
+* Fedora Linux reliability improvements thanks to updated [idevice-tool-kit](https://github.com/alex-free/idevice-tool-kit).
 
 [Previous versions](changelog.md)
 
@@ -85,6 +87,10 @@ Note that on Linux you must run `dusk` with root privilages, i.e. `sudo ./dusk <
 * You can use it as your main iPhone (I did for a few weeks on a 6S Plus). T-Mobile/Mint Mobile in the USA are confirmed working carriers for even the lowest iOS this supports.
 
 ## FAQ
+
+### Stuck At Waiting For Restore Mode
+
+Force restart (power+volume down for iPhone 7/+ or home+power for 6S/+) then try again. May take multiple tries, espically with early iOS 11 builds and A10.
 
 ### My iPhone Won't Detect On Fedora Linux
 

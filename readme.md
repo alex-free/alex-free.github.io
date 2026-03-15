@@ -39,7 +39,7 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 ## iOS
 
-* [A999 Activator](a999-activator) - A completely automatic solution that tether downgrades to iOS 9.2-9.3.3, jailbreaks, and activates any iPhone 6S, iPhone 6S Plus, or iPhone SE.
+* [A999 Activator](a999-activator) - A completely automatic solution that tether downgrades to iOS 9.2.x, jailbreaks, and activates any iPhone 6S or iPhone 6S Plus.
 
 * [Dusk Downgrade](dusk-downgrade) -  A completely automatic solution that tether downgrades to iOS 10-iOS 15 for A9 and A10 devices.
 
