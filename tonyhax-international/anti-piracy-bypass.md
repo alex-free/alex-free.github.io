@@ -121,7 +121,7 @@ _List Notes:_
 | [Dino Crisis 2 (France)](http://redump.org/disc/29514/) | None | - | - |
 | [Dino Crisis 2 (Germany)](http://redump.org/disc/10641/) | None | - | - |
 | [Dino Crisis 2 (Italy)](http://redump.org/disc/45993/) | None | - | - |
-| [Dino Crisis 2 (Japan Demo)](http://redump.org/disc/4407/) | [APv2](#apv2) | On the disclaimer screen after the game boots. | YES. Note: This demo contains an earlier beta build of the [**entire game**](https://youtu.be/Mjh0S8df0fo?si=oTA49oUVvEQwCiKd&t=343). Saving and loading even work, with the idea that one could buy the full retail game on release and continue your progress. The only limitation is a 45 minute timer. This timer is disabled by the anti-piracy bypass system in addition to the standard APv2 protection. |
+| [Dino Crisis 2 (Japan Demo)](http://redump.org/disc/4407/) | [APv2](#apv2) | On the disclaimer screen after the game boots. | YES. |
 | [Dino Crisis 2 (Japan)](http://redump.org/disc/1600/) | [APv2](#apv2) | On the disclaimer screen after the game boots. | YES |
 | [Dino Crisis 2 (Spain)](http://redump.org/disc/27941/) | None | - | - |
 | [Dino Crisis 2 (USA Demo)](http://redump.org/disc/49242/) | None | - | - |

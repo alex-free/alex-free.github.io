@@ -52,35 +52,19 @@ Tonyhax International is a fork of the [Tonyhax](https://orca.pet/tonyhax/) "Sof
 
 ## Downloads
 
-### Version 1.6.0 (3/4/2026)
+### Version 1.6.2 (3/21/2026)
 
-* [tonyhax-international-v1.6.0](https://github.com/alex-free/tonyhax/releases/download/v1.6.0i/tonyhax-international-v1.6.0.zip)
+* [tonyhax-international-v1.6.2](https://github.com/alex-free/tonyhax/releases/download/v1.6.2i/tonyhax-international-v1.6.2.zip)
 
 ----------------------------------
 
 Changes:
 
-* Improved the [game-id.md](https://github.com/alex-free/tonyhax/blob/master/gameid.md) documentation. I now have made mu own [custom firmware](https://github.com/alex-free/PicoMemcard) which works better then any other for FreePSXBoot exploit using a BitFunxMemCard Pro.
+* Reverted [ps1packer](https://github.com/pcsx-redux/support) to commit [f264aa053095f949e4b16ae40a64dd6cff9ac04b](https://github.com/pcsx-redux/support/tree/f264aa053095f949e4b16ae40a64dd6cff9ac04b), fixing [save game exploits](save-game-exploit.md) and [gshax](gameshark-code.md) entrypoints that were not working in v1.6.0 and v1.6.1.
 
-* [Addie no Okurimono: To Moze from Addie](http://redump.org/disc/8373/) APv2 protection bypass and PAL BIOS protection bypass! AFAIK no one has ever been able to play this on a PAL console before now. This is an EDC protected game as well though so make sure you are using either [PlayStation Disc Burner](https://github.com/alex-free/playstation-disc-burner) in [raw mode](https://github.com/alex-free/playstation-disc-burner?tab=readme-ov-file#raw-writing) or Alcohol 120% in protected mode (SafeDisc v1 equievelent) to burn it. This game is the first to introduce MottZilla's idea of the 'PS-EXE' write system, where for some anti-piracy bypasses we don't need to use GameShark codes at all but rather can patch the loaded EXE in RAM.
+* Added [save game exploit](save-game-exploit.md) for [No Fear Downhill Mountain Bike Racing](http://redump.org/disc/3000/) thanks to [@ChampionLeake](https://github.com/ChampionLeake).
 
-* [J.League Jikkyou Winning Eleven 2000](http://redump.org/disc/1979/) APv2 bypass implemented!
-
-* [Dino Crisis 2 Japan Demo](http://redump.org/disc/4407/) features [APv2](https://github.com/alex-free/tonyhax/blob/master/anti-piracy-bypass.md#apv2) anti-piracy protection, which was already handled by previous versions of Tonyhax International. Something else very interesting related to it however recently came to my attention in this [YouTube video](https://youtu.be/Mjh0S8df0fo?si=oTA49oUVvEQwCiKd&t=343). This demo contains an earlier beta build of the **entire game**. Saving and loading even work, with the idea that one could buy the full retail game on release and continue your progress. The only limitation is a 45 minute timer. Well back in the day [Unicorngoulash](https://gamehacking.org/game/138029) discovered this and created a GameShark code disabling the timer. Capcom never released a demo of a full build limited by a timer ever again after that. And now, this is enabled in Tonyhax International when booting that demo disc by default!
-
-* The Tonyhax International GameShark Generator (THIGSGEN) has grown up and become it's own separate project (found [here](https://github.com/alex-free/tonyhax-international-gameshark-generator)) that is no longer bundled with the Tonyhax International releases. This is simply because I am now supporting Mac OS, and I can't cross compile for the Mac OS targets I want from Linux all in one go in the way I want it to work with the Tonyhax International build system currently. Please download it at [https://github.com/alex-free/tonyhax-international-gameshark-generator](https://github.com/alex-free/tonyhax-international-gameshark-generator). Perhaps other PSX soft-mods want to use the same format and can now link to a separate GameShark code save file generator program as well? I think this is for the best. 
-
-* Added additional anti-piracy related [info](https://github.com/alex-free/tonyhax/issues/74) to the [documentation](anti-piracy-bypass.md) thanks to [@Sukotto-1999](https://github.com/Sukotto-1999)! If anyone has more info they can add to expand the knowledge there, please open a [Github issue](https://github.com/alex-free/tonyhax/issues/new?assignees=&labels=bug&projects=&template=generic-issue.md&title=).
-
-* Updated submodules for [mkpsxiso](https://github.com/Lameguy64/mkpsxiso), [psexe2rom](https://github.com/alex-free/psexe2rom), [gshax-tool](https://github.com/alex-free/gshax-tool), and [psn00bsdk-builder](https://github.com/alex-free/psn00bsdk-builder).
-
-* Updated [F.A.Q.](#faq) question [Why does the DuckStation emulator say backdoor failed when using the boot cd?](#q-why-does-the-duckstation-emulator-say-backdoor-failed-when-using-the-boot-cd) with a new link. I really hope Stenzneck fixes this bug in DuckStation eventually. Using an old DuckStation version forever is not ideal.
-
-* Updated additonal-games.md, as socram8888 has added many of the previously Tonyhax International only fixes to the main Tonyhax.
-
-* Fixed missing `zlib-static` dependency not being installed by `make deps` on Linux distributions with the `dnf` package manager such as Fedora.
-
-* Improved `make deps` rule by making it GNUMake native. No more executing bash scripts to install dependencies.
+* Enabled 80 Minute Assist for all consoles, to help boot 80 Minute CD-Rs better.
 
 ----------------------------------
 
