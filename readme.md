@@ -21,11 +21,7 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [You Should Remove Your iBook G4 Battery](blog/you-should-remove-your-ibook-g4-battery/).
 
-* [Mac Mini Late 2012 Fedora Wifi](mac-mini-late-2012-fedora-wifi).
-
 * [Fixing The Sims 4 FitGirl Repack On Lutris](blog/fixing-the-sims-4-fitgirl-repack-on-lutris/).
-
-* [Annoying PIA VPN Linux Crash Fix](blog/pia-vpn-linux-crash-fix/).
 
 * [iPhone 6S Plus Palera1n Shenanigans](blog/iphone-6s-plus-palera1n-shenanigans).
 
@@ -99,6 +95,10 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 * [Legacy SSH Enabler](lsshe) - Allow your newer OpenSSH client and server to talk with older SSH clients and servers, system-wide.
 
 * [Leopard SDL2](https://github.com/alex-free/leopard-sdl2) - SDL v2.0.6 for Mac OS X 10.5, PowerPC/Intel.
+
+* [Mac Mini Late 2012 Fedora Wifi](mac-mini-late-2012-fedora-wifi).
+
+* [Macbook Air 2017 Fedora Wifi](macbook-air-2017-fedora-wifi).
 
 * [Mac Mini Late 2012 Triple Boot](mac-mini-late-2012-triple-boot) - How I triple boot a [late 2012 Mac mini](https://everymac.com/systems/apple/mac_mini/specs/mac-mini-core-i5-2.5-late-2012-specs.html) with Mac OS, Windows 7, and Fedora Linux.
 
