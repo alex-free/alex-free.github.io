@@ -25,7 +25,7 @@ User data - 0x800 bytes - actual data for the game or software.
 EDC - 0x04 bytes - a checksum used to check if a data read by the CD drive was successful.
 ECC - 0x114 bytes - repair data, if the EDC checksum mismatches with what is read, this data can be used to 'fix' what was read, unless it's really off.
 
-So keep in mind sectors are chained together. So you could have a byte pattern that starts at the very end of the user data on say sector 40. The data will be cut off at offset 0x818 in the sector (a total of 0x800 bytes are in the user sector, then the header itself was 0x18 bytes). So then you have your 0x04 bytes of EDC, 0x114 bytes of ECC, ANOTHER header of 0x18 bytes for sector 41, then finally you arrive at the user data of sector 41. This is where the REST of the byte pattern ends in this example. Because half of the byte pattern was cut off 0x136 bytes before the rest of it started, simple hex editor find n replace will FAIL if you encounter something like this.
+So keep in mind sectors are chained together. So you could have a byte pattern that starts at the very end of the user data on say sector 40. The data will be cut off at offset 0x818 in the sector (a total of 0x800 bytes are in the user sector, then the header itself was 0x18 bytes). So then you have your 0x04 bytes of EDC, 0x114 bytes of ECC, ANOTHER header of 0x18 bytes for sector 41, then finally you arrive at the user data of sector 41. This is where the REST of the byte pattern ends in this example. Because half of the byte pattern was cut off 0x136 bytes before the rest of it started, simple hex editor find n replace will FAIL if you encounter something like this. **Lib-enigma's** find n replace method is sector aware and works across sector boundaries**.
 
 Another thing about this feature, is you can specify offsets that you want to ignore in your byte pattern. So for example if you are looking for a byte pattern of 08, 0F, 16, 24, and after 24 you know there is going to be 6 bytes you don't care about, but then there is 1C, 37, 4A that is supported! You can tell the library to ignore certain offsets of your pattern, and it will do so! This increases the strength of finding your unique pattern, and enables more advanced find and replace. See example 3.
 
@@ -36,7 +36,7 @@ Example 1: Prints out boot file of psx game bin file, with support for early PSX
 Example 2: Single executable that uses no external files, applies english translation patch w/save fix for the game King's Field (Japan).
 Example 3: Patches LibCrypt v1 if it detects the game MediEvil (Europe) using 'lossy' patching without hardcoded offsets. If any other game is given as input it will patch APv2 protection if it is detected. This patch for APv2 protection allows the game to work with a soft-mod correctly, if their is not a non-stealth mod-chip in the console.
 
-| [Homepage](https://alex-free.github.io/lib-enigma) | [GitHub](https://github.com/alex-free/lib-enigma) |
+| [Homepage](https://alex-free.github.io/lib-enigma) | [GitHub](https://github.com/alex-free/lib-enigma) | [PSX Place Thread](https://www.psx-place.com/threads/lib-enigma-a-playstation-1-2-cd-image-c-library-for-patching-and-identification.49422/) |
 
 
 ## Table Of Contents
@@ -49,9 +49,19 @@ Example 3: Patches LibCrypt v1 if it detects the game MediEvil (Europe) using 'l
 
 ## Downloads
 
-### v1.0 (1/16/2025)
+### v1.0.1 (4/4/2026)
 
-* [v1.0.zip](https://github.com/alex-free/lib-enigma/archive/refs/tags/v1.0.zip)
+Changes: 
+
+* Added many more PSX.EXE game identifications thanks to [@Ronnie Sahlberg](https://www.psx-place.com/members/ronnie-sahlberg.86285/).
+
+* Syntax/comment cleanup.
+
+
+* [v1.0.1.zip](https://github.com/alex-free/lib-enigma/archive/refs/tags/v1.0.1.zip).
+
+---------------------------------------
+[Previous versions](changelog.md).
 
 ## Usage
 

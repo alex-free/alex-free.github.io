@@ -1,5 +1,3 @@
-# [alex-free.github.io](https://alex-free.github.io)
-
 # PSN00bSDK Builder
 
 By Alex Free
@@ -10,13 +8,15 @@ Automatically build the [PSN00bSDK](https://github.com/lameguy64/psn00bsdk) by [
 
 ## Downloads
 
-### Version 1.0.5 (1/25/2024)
+### Version 1.0.6 (4/4/2026)
 
-*   [PSN00bSDK Builder v1.0.5](https://github.com/alex-free/psn00bsdk-builder/releases/download/v1.0.5/psn00bsdk-builder-v1.0.5.zip)
+* [PSN00bSDK Builder v1.0.6](https://github.com/alex-free/psn00bsdk-builder/releases/download/v1.0.6/psn00bsdk-builder-v1.0.6.zip)
 
 Changes:
 
-*   Improved `psn00b-env`.
+* Fixes compilation on systems with GCC 15+.
+
+* Change to 3-BSD license.
 
 [Previous versions](changelog.md).
 
@@ -34,16 +34,16 @@ Supported Operating Systems:
 
 2) Download the latest release and `cd` into the extracted directory. 
 
-3) Execute `./build.sh`. This will take quite awhile to complete since on the toolchain and sdk will are all compiled from source.
+3) Execute `./build`. This will take quite awhile to complete since on the toolchain and sdk will are all compiled from source.
 
 To use the SDK/toolchain execute the `psn00b-env` to add the toolchain/sdk to your `$PATH`, and to set the `PSN00BSDK_LIBS` env var. This must be done for each new shell you want to use it with.
 
-After running the `./build.sh` script, you can use the `./sdk.sh` script to update the PSN00bSDK to the latest version at any time. This command does not rebuild the toolchain, which is much faster then running `./build.sh` again. To rebuild the toolchain and the sdk all over again, execute the `./build.sh` script once again.
+After running the `./build` script, you can use the `./sdk` script to update the PSN00bSDK to the latest version at any time. This command does not rebuild the toolchain, which is much faster then running `./build` again. To rebuild the toolchain and the sdk all over again, execute the `./build` script once again.
 
 You can also use WSL on Windows instead of MSYS2. Just follow the linux specific instructions if using WSL. 
 
-If you want to remove anything installed by either the `build.sh` or `sdk.sh` scripts at any time, just `rm -rf /usr/local/psn00bsdk`. The `build.sh` script in fact already does this when started before rebuilding everything from source.
+If you want to remove anything installed by either the `build` or `sdk` scripts at any time, just `rm -rf /usr/local/psn00bsdk`. The `build` script in fact already does this when started before rebuilding everything from source.
 
 ## License
 
-PSN00bSDK Builder itself is released into the public domain, please see the file `unlicense.txt` for more info. The PSN00bSDK is released under [various licenses](https://github.com/Lameguy64/PSn00bSDK/blob/master/LICENSE.md). The toolchain/compiler is released under the [GNU GPL v3.1](https://gcc.gnu.org/onlinedocs/libstdc++/manual/license.html).
+PSN00bSDK Builder itself is released under the 3-BSD license, please see the file [license.md](license.md) for more info. The PSN00bSDK is released under [various licenses](https://github.com/Lameguy64/PSn00bSDK/blob/master/LICENSE.md). The toolchain/compiler is released under the [GNU GPL v3.1](https://gcc.gnu.org/onlinedocs/libstdc++/manual/license.html).

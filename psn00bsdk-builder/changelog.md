@@ -1,5 +1,13 @@
 # Changelog
 
+## Version 1.0.5 (1/25/2024)
+
+*   [PSN00bSDK Builder v1.0.5](https://github.com/alex-free/psn00bsdk-builder/releases/download/v1.0.5/psn00bsdk-builder-v1.0.5.zip)
+
+Changes:
+
+*   Improved `psn00b-env`.
+
 ## Version 1.0.4 (1/23/2024)
 
 *   [PSN00bSDK Builder v1.0.4](https://github.com/alex-free/psn00bsdk-builder/releases/download/v1.0.4/psn00bsdk-builder-v1.0.4.zip)
