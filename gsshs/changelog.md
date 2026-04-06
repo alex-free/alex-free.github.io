@@ -1,5 +1,21 @@
 # [Github SSH Setup (GSSHS)](readme.md) -> Changelog
 
+### Version 1.0.2 (4/3/2026)
+
+Changes:
+
+* Improved build script.
+
+* Fixed dependency detection in `gsshs`
+
+---------------------------------------
+
+* [gsshs-v1.0.2.zip](https://github.com/alex-free/github-ssh-setup/releases/download/v1.0.2/gsshs-v1.0.2.zip) _Portable Zip file for Mac OS and Linux._
+
+* [gsshs-v1.0.2.deb](https://github.com/alex-free/github-ssh-setup/releases/download/v1.0.2/gsshs-v1.0.2.deb) _Deb package file for Linux._
+
+* [gsshs-v1.0.2-1.noarch.rpm](https://github.com/alex-free/github-ssh-setup/releases/download/v1.0.2/gsshs-v1.0.2-1.noarch.rpm) _RPM package file for Linux._
+
 ### Version 1.0.1 (7/15/2025)
 
 Changes:
