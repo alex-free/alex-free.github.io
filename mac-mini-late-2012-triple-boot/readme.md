@@ -2,11 +2,13 @@
 
 _By Alex Free_
 
-v1.0 - 1/17/2025
+v1.0.1 - 4/12/2026
 
 This guide will describe how I triple boot a [late 2012 Mac mini](https://everymac.com/systems/apple/mac_mini/specs/mac-mini-core-i5-2.5-late-2012-specs.html) with Mac OS (any version that can run), Windows 7, and Fedora Linux. 
 
-Specifically, I will be setting up a triple boot of Mac OS 10.12, Fedora Linux 41, and Windows 7 Pro (64-bit). There will also be a `Shared` `ExFat` partition, useful for file transfers between all 3 OSes. ExFat has no 4GB file size limitation, nor does it have a partition size limit of 32GB like regular FAT32.
+Specifically, I will be setting up a triple boot of Mac OS 10.12, Fedora Linux 41 (though this has been tested up to 43 with KDE and Gnome editions), and Windows 7 Pro (64-bit). There will also be a `Shared` `ExFat` partition, useful for file transfers between all 3 OSes. ExFat has no 4GB file size limitation, nor does it have a partition size limit of 32GB like regular FAT32.
+
+This guide has surpsignly been applicable to other early intel macs, including up to the Macbook Air 2017.
 
 ## Table Of Contents
 
@@ -39,7 +41,7 @@ If you are starting from scratch with no OS installed, you'll also need a a wire
 
 First, ensure the Mac is turned off. **Plug in the wired USB keyboard to the USB port closest to the HDMI cable**. It must be in that port to bring up the boot menu. Plug in the USB drive containing the Mac OS installer. Press and hold the option key (Apple keyboard) or the left alt key (PC keyboard) down and then press the power button. Keep holding the option or alt key until the boot menu appears, and then select the Mac OS installer USB drive.
 
-After booting into the Mac OS installer, open Disk Utility. Click the HDD or SSD under the `Internal` section at the left of the Disk Utility window. Click `Erase`. In the drop down, name your partition for Mac OS. I named it `Mac OS 10.12`. I changed the format from the default for Mac OS 10.12 (`Mac OS Extended (Journaled)`) to `Mac OS Extended (Case -sensitive, Journaled, Encrypted)` but this is not required and just my preference. Note that `APFS` is the default of Mac OS 10.13 and up. Keep the `Scheme` as `GUID Partition Map` and click `Erase`. Once that completes, click the red X to close the Disk Utility window and then click `Install macOS`. Click `Continue`, `Agree`, `Agree` (again), Select your newly created partition, and wait.
+After booting into the Mac OS installer, open Disk Utility. Click the HDD or SSD under the `Internal` section at the left of the Disk Utility window. Click `Erase`. In the drop down, name your partition for Mac OS. I named it `Mac OS 10.12`. I changed the format from the default for Mac OS 10.12 (`Mac OS Extended (Journaled)`) to `Mac OS Extended (Case -sensitive, Journaled, Encrypted)` but this is not required and just my preference. Note that `APFS` is the default of Mac OS 10.13 and up. However, espically for Mac OS 10.13, it may be buggy to use disk utility to format in anything APFS in a triple boot. You can in fact install Mac OS 10.13 with Mac OS Extended, Case Sensitive, Encrypted just fine and for Mac OS 10.13 I suggest just that. Keep the `Scheme` as `GUID Partition Map` and click `Erase`. Once that completes, click the red X to close the Disk Utility window and then click `Install macOS`. Click `Continue`, `Agree`, `Agree` (again), Select your newly created partition, and wait.
 
 Once installation completes, finish setting up Mac OS and then boot into it.
 
@@ -147,6 +149,8 @@ Click `Click here to create them automatically`.
 
 Click `Done` at the top left.
 
+Fedora 43+ note: they now have a share with other operating system option which works fine.
+
 ![f-13](images/f-13.png)
 
 This window will show if you have the same preference as me and previously checked `Encrypt volumes`.
@@ -166,6 +170,14 @@ Click `Begin Installation` at the bottom of the screen. Wait for the Installer t
 ![f-18](images/f-18.png)
 
 At the boot menu, select `EFI Boot` (with the internal disk icon). Finish setting up Fedora Linux.
+
+
+Notes: you can install WiFi with these guides:
+
+* [Mac Mini Late 2012 Wifi Fedora Liux](https://alex-free.github.io/mac-mini-late-2012-fedora-wifi/)
+
+* [Macbook Air 2017 Wifi Fedora Linux](https://alex-free.github.io/macbook-air-2017-fedora-wifi/)
+
 
 ## Step 5: Set Up A Hybrid MBR
 
