@@ -9,7 +9,7 @@ Find me @:
 
 Checkout the different stuff I cover here:
 
-| [Blog](#blog) | [Dreamcast](#dreamcast) | [iOS](#ios) | [Linux Development Tools](#linux-development-tools) | [Misc](#misc) | [Mods](#mods) | [Portable Linux x86_64 Builds Of Existing Software](#portable-linux-x86_64-builds-of-existing-software) | [Mac](#mac) | [PSX](#psx) | [Xbox 360](#xbox-360) |
+| [Blog](#blog) | [Dreamcast](#dreamcast) | [iOS](#ios) | [Development Tools](#development-tools) | [Misc](#misc) | [Mods](#mods) | [Portable Linux x86_64 Builds Of Existing Software](#portable-linux-x86_64-builds-of-existing-software) | [Mac](#mac) | [PSX](#psx) | [Xbox 360](#xbox-360) |
 
 -----------------------------------------
 
@@ -47,7 +47,7 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 -----------------------------------------
 
-## Linux Development Tools
+## Development Tools
 
 * [EzRe](ezre) - A simple and sane build system for Linux (i386 and x86_64) and Windows (i686 and x86_64) targets, tailored to rapid development and deployment of simple C/C++ programs from a Linux OS.
 

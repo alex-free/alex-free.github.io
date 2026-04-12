@@ -15,19 +15,19 @@ Fast and easy SSH setup for Github on Mac OS and Linux.
 
 ## Downloads
 
-### Version 1.0.3 (4/5/2026)
+### Version 1.0.4 (4/12/2026)
 
 Changes:
 
-* Automatically installs git if not installed.
+* Remove debug in release.
 
 ---------------------------------------
 
-* [gsshs-v1.0.3.zip](https://github.com/alex-free/github-ssh-setup/releases/download/v1.0.3/gsshs-v1.0.3.zip) _Portable Zip file for Mac OS and Linux._
+* [gsshs-v1.0.4.zip](https://github.com/alex-free/github-ssh-setup/releases/download/v1.0.4/gsshs-v1.0.4.zip) _Portable Zip file for Mac OS and Linux._
 
-* [gsshs-v1.0.3.deb](https://github.com/alex-free/github-ssh-setup/releases/download/v1.0.2/gsshs-v1.0.3.deb) _Deb package file for Linux._
+* [gsshs-v1.0.4.deb](https://github.com/alex-free/github-ssh-setup/releases/download/v1.0.4/gsshs-v1.0.4.deb) _Deb package file for Linux._
 
-* [gsshs-v1.0.3-1.noarch.rpm](https://github.com/alex-free/github-ssh-setup/releases/download/v1.0.3/gsshs-v1.0.3-1.noarch.rpm) _RPM package file for Linux._
+* [gsshs-v1.0.4-1.noarch.rpm](https://github.com/alex-free/github-ssh-setup/releases/download/v1.0.4/gsshs-v1.0.4-1.noarch.rpm) _RPM package file for Linux._
 
 ---------------------------------------
 
