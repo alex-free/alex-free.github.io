@@ -11,30 +11,33 @@ This is a C library that can be used in your program to:
 
 * Get the boot file name (i.e. SLUS_XXX.XX) of the disc image. PSX.EXE games are supported (some still need to be identified by the library but many already are). When a PSX.EXE game is identified, the serial/product code on the original CD case of the game is returned in the same manner as a proper boot file game. See example 1 and example 2.
 
-* Identify different disc images that share the same boot file name by checking revision differences. See example 2.
+* Identify different disc images that share the same boot file name by checking revision differences.
 
 * Identify if a bin file will fit on a 71 minute, 74 minute, or 80 minute CD-R.
 
-* Apply PARADOX PPF v1, PPF v2, and PPF v3 patches from unsigned char arrays. You can convert your PPF patch file into an unsigned char array, use the library to apply the patch, and create a standalone single executable patcher for your project/tool that requires no external files (see example 2).
+* Apply PARADOX PPF v1, PPF v2, and PPF v3 patches from unsigned char arrays. You can convert your PPF patch file into an unsigned char array, use the library to apply the patch, and create a standalone single executable patcher for your project/tool that requires no external files.
 
-* Find and replace method for byte patterns, with advanced options. Traditional find and replace with i.e. a hex editor DO NOT WORK for BIN/CUE PSX CD images because of how raw sectors are laid out:
+* Advanced, lossy find and replace method for byte patterns with options for skipping certain bytes for more verbosity and accuracy to elimate false positive patterns. Fully sector boundary aware.
 
-Full Sector (0x930/2532 bytes) layout:
-Sync header - 0x18 bytes - tells the psx what sector/where in the CD the laser is reading.
-User data - 0x800 bytes - actual data for the game or software.
-EDC - 0x04 bytes - a checksum used to check if a data read by the CD drive was successful.
-ECC - 0x114 bytes - repair data, if the EDC checksum mismatches with what is read, this data can be used to 'fix' what was read, unless it's really off.
+* Read sectors as raw data.
 
-So keep in mind sectors are chained together. So you could have a byte pattern that starts at the very end of the user data on say sector 40. The data will be cut off at offset 0x818 in the sector (a total of 0x800 bytes are in the user sector, then the header itself was 0x18 bytes). So then you have your 0x04 bytes of EDC, 0x114 bytes of ECC, ANOTHER header of 0x18 bytes for sector 41, then finally you arrive at the user data of sector 41. This is where the REST of the byte pattern ends in this example. Because half of the byte pattern was cut off 0x136 bytes before the rest of it started, simple hex editor find n replace will FAIL if you encounter something like this. **Lib-enigma's** find n replace method is sector aware and works across sector boundaries**.
+* Read sector user data only (the real data).
 
-Another thing about this feature, is you can specify offsets that you want to ignore in your byte pattern. So for example if you are looking for a byte pattern of 08, 0F, 16, 24, and after 24 you know there is going to be 6 bytes you don't care about, but then there is 1C, 37, 4A that is supported! You can tell the library to ignore certain offsets of your pattern, and it will do so! This increases the strength of finding your unique pattern, and enables more advanced find and replace. See example 3.
+* Read sector edc.
 
+* Read sector ecc data.
 
-3 examples are [available](https://github.com/alex-free/lib-enigma/releases), compiled for multiple operating systems w/source code:
+## Examples
 
-Example 1: Prints out boot file of psx game bin file, with support for early PSX.EXE games.
-Example 2: Single executable that uses no external files, applies english translation patch w/save fix for the game King's Field (Japan).
-Example 3: Patches LibCrypt v1 if it detects the game MediEvil (Europe) using 'lossy' patching without hardcoded offsets. If any other game is given as input it will patch APv2 protection if it is detected. This patch for APv2 protection allows the game to work with a soft-mod correctly, if their is not a non-stealth mod-chip in the console.
+_Note:_ these are also compiled for multiple operating systems [on the releases page under assets](https://github.com/alex-free/lib-enigma/releases).
+
+* [Example 1](https://github.com/alex-free/lib-enigma/tree/master/example-1-boot-file-printer): Prints out boot file of psx game bin file, with support for early PSX.EXE games.
+
+* [Example 2](https://github.com/alex-free/lib-enigma/tree/master/example-2-kings-field-1-english-translation-patcher): Single executable that uses no external files, applies english translation patch w/save fix for the game King's Field (Japan).
+
+* [Example 3](https://github.com/alex-free/lib-enigma/tree/master/example-3-piracy-patcher): Patches LibCrypt v1 if it detects the game MediEvil (Europe) using 'lossy' patching without hardcoded offsets. If any other game is given as input it will patch APv2 protection if it is detected. This patch for APv2 protection allows the game to work with a soft-mod correctly, if their is not a non-stealth mod-chip in the console.
+
+* [Example 4](https://github.com/alex-free/lib-enigma/tree/master/example-4-sector-viewer): View a sector's worth of data.
 
 | [Homepage](https://alex-free.github.io/lib-enigma) | [GitHub](https://github.com/alex-free/lib-enigma) | [PSX Place Thread](https://www.psx-place.com/threads/lib-enigma-a-playstation-1-2-cd-image-c-library-for-patching-and-identification.49422/) |
 
@@ -49,7 +52,11 @@ Example 3: Patches LibCrypt v1 if it detects the game MediEvil (Europe) using 'l
 
 ## Downloads
 
-### v1.0.1 (4/4/2026)
+Get the latest as a submodule for your project:
+
+`git add submodule https://github.com/alex-free/lib-enigma`.
+
+### v1.0.2 (4/22/2026)
 
 Changes: 
 
@@ -57,27 +64,54 @@ Changes:
 
 * Syntax/comment cleanup.
 
+* 4 new sector read functions.
 
-* [v1.0.1.zip](https://github.com/alex-free/lib-enigma/archive/refs/tags/v1.0.1.zip).
+
+* [v1.0.2.zip](https://github.com/alex-free/lib-enigma/archive/refs/tags/v1.0.2.zip).
+
 
 ---------------------------------------
 [Previous versions](changelog.md).
 
 ## Usage
 
-`int is_ps_cd(FILE *bin);` returns 1 if `bin` is a PlayStation 1 or 2 CD image in MODE2/2352 format. Returns 0 if it is not. Should be called before any of the functions below.
-
-`int get_volume_creation_timestamp(FILE *bin, char *volume_creation_timestamp);` Returns 1 if regualar `SYSTEM.CNF` game, or if `PSX.EXE` game was detected successfully and proper boot file return was reconstructed. Returns 2 if PSX.EXE game is not yet in library database, so you need to call get_volume_creation_timestamp manually. Returns 0 on failure.
-
-`int get_boot_file_name(FILE *bin, char *bootfile);` Returns boot file name in `bin` as `char *boot_file`. 
-
-`int id_rev(FILE *bin, const unsigned int difference_offset, const unsigned char old_byte, const unsigned char new_byte);` Returns 0 if `bin` has `old_byte` at `difference_offset`. Returns 1 if `bin` has `new_byte` at `difference_offset`. Returns 2 if neither are found at `different_offset`.
-
-`void get_volume_creation_timestamp(FILE *bin, char *volume_creation_timestamp)` sets volume_creation_timestamp with value from bin file. Useful for identifying PSX.EXE boot file games that are not yet in the library's database and are not automatically identified using get_boot_file_name(). If get_boot_file_name() returns `PSX.EXE`, you can use this to identify it uniquely, as many discs are sharing that boot file name.
-
-`int cdr_minimum_requirement(FILE *bin)` - returns 0 if the bin file will fit on a 71 minute CD-R. Returns 1 if at least a 74 minute CD-R is required. Returns 2 if an 80 minute CD-R is required.
+From [lib-enigma.h](https://github.com/alex-free/lib-enigma/blob/master/lib-enigma.h)
 
 ```
+// Structure of sector: sector_sync_header_len + sector_user_data_len + sector_edc_ecc_len.
+#define SECTOR_SYNC_HEADER_LEN 0x18
+#define SECTOR_USER_DATA_LEN 0x800
+#define SECTOR_EDC_LEN 0x04
+#define SECTOR_ECC_LEN 0x114
+#define SECTOR_RAW_LEN 0x930
+#define PREGAP 150
+
+// Sector Read Funcs
+int read_sector_raw(FILE *bin, unsigned int sector_number, unsigned char * sector_buf); // Read an entire 2352 byte sector into sector_buf. If requested sector does not exist (i.e. not enough sectors in disc image for sector requested), it returns 2. If it successfully reads the sector, it returns 1. If it fails to read the sector but the sector exists, it returns 0.
+
+int read_sector_user_data(FILE *bin, unsigned int sector_number, unsigned char * sector_buf); // Read only the user data (real data) into sector_buf. This excludes sync header, EDC, or ECC. If requested sector does not exist (i.e. not enough sectors in disc image for sector requested), it returns 2. If it successfully reads the sector, it returns 1. If it fails to read the sector but the sector exists, it returns 0.
+
+int read_sector_edc(FILE *bin, unsigned int sector_number, unsigned char * sector_buf); // Read only the edc data (checksum of the sector used by ECC during disc error repair attempts) into sector_buf. This excludes sync header, user data, or ECC. If requested sector does not exist (i.e. not enough sectors in disc image for sector requested), it returns 2. If it successfully reads the sector, it returns 1. If it fails to read the sector but the sector exists, it returns 0.
+
+int read_sector_ecc(FILE *bin, unsigned int sector_number, unsigned char * sector_buf); // Read only the ecc data (repair data used during disc error repair attempts when EDC verification mismatches) into sector_buf. This excludes sync header, user data, or EDC. If requested sector does not exist (i.e. not enough sectors in disc image for sector requested), it returns 2. If it successfully reads the sector, it returns 1. If it fails to read the sector but the sector exists, it returns 0.
+
+// Identification functions.
+const char * get_psx_exe_gameid(FILE *bin, char *volume_creation_timestamp);
+int is_ps_cd(FILE *bin); // returns 1 if `bin` is a PlayStation 1 or 2 CD image in MODE2/2352 format. Returns 0 if it is not. Should be called before any of the functions below.
+
+void get_volume_creation_timestamp(FILE *bin, char *volume_creation_timestamp); // sets volume_creation_timestamp with value from bin file. Useful for identifying PSX.EXE boot file games that are not yet in the library's database and are not automatically identified using get_boot_file_name(). If get_boot_file_name() returns `PSX.EXE`, you can use this to identify it uniquely, as many discs are sharing that boot file name.
+
+int get_boot_file_name(FILE *bin, char *bootfile); // Returns boot file name in `bin` as `char *boot_file`. Supports most if not all PSX.EXE games as well as all SYSTEM.CNF games. Returns 1 on success. Returns 0 on failure. Returns 2 if a PSX.EXE game was unable to be verified by the internal database.
+
+int id_rev(FILE *bin, const unsigned int difference_offset, const unsigned char old_byte, const unsigned char new_byte); // Returns 0 if `bin` has `old_byte` at `difference_offset`. Returns 1 if `bin` has `new_byte` at `difference_offset`. Returns 2 if neither are found at `different_offset`.
+
+// Size functions.
+
+int cdr_minimum_requirement(FILE *bin); // Returns 0 if the bin file will fit on a 71 minute CD-R. Returns 1 if at least a 74 minute CD-R is required. Returns 2 if an 80 minute CD-R is required.
+
+unsigned int number_of_sectors(FILE *bin); // Returns the number of sectors in a disc image.
+
+// Patching functions.
 void bin_patch(FILE *bin,
                const unsigned char *pattern,
                int pattern_len,
@@ -91,13 +125,12 @@ void bin_patch(FILE *bin,
                int patch_len,
 
                const unsigned char *unpatchable_byte_offsets,
-               int unpatchable_byte_offsets_len);
-``` 
-- Applies lossy patch (no hardcoded offsets). Unmatchable bytes is optional, please see example 3 for implementation details.
+               int unpatchable_byte_offsets_len); // Custom 'Lossy' Patching by myself. Applies lossy patch (no hardcoded offsets). Unmatchable bytes is optional, please see example 3 for implementation details: https://github.com/alex-free/lib-enigma/tree/master/example-3-piracy-patcher
 
-`void apply_ppf(const unsigned char ppf[], unsigned int ppf_len, FILE *bin)` - apply PPF patch from unsigned char array.
-`void undo_ppf(const unsigned char ppf[], unsigned int ppf_len, FILE *bin)` - undo PPF patch from unsigned char array.
+void apply_ppf(const unsigned char ppf[], unsigned int ppf_len, FILE *bin); // Apply PlayStation Patch File patch from unsigned char array.
 
+void undo_ppf(const unsigned char ppf[], unsigned int ppf_len, FILE *bin); // Apply PlayStation Patch File patch from unsigned char array.
+```
 
 ## History
 
