@@ -134,7 +134,7 @@ If your using FreeMyXe, you need to run `apps\OGXboxPrep.xex` on your USB flash 
 
 * [@Grimdoomer](https://github.com/grimdoomer) for [BadUpdate](https://github.com/grimdoomer/Xbox360BadUpdate).
 
-* [@shutterbug2000] for [ABadAvatar](https://github.com/shutterbug2000/ABadAvatar/)]
+* [@shutterbug2000](https://github.com/shutterbug2000) for [ABadAvatar](https://github.com/shutterbug2000/ABadAvatar/)]
 
 * [InvoxiPlayGames](https://github.com/InvoxiPlayGames) for FreeMyXe.
 
