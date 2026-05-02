@@ -1,8 +1,8 @@
-# Fedora 41 WiFi On The Macbook Air 2017
+# Fedora 41-44 WiFi On The Macbook Air 2017
 
 _By Alex Free_
 
-Last updated 4/3/2026
+Last updated 5/1/2026
 
 Note: this will almost certainly work for the 2015 Macbook Airs as well.
 

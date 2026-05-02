@@ -1,8 +1,8 @@
-# Fedora 41 WiFi On The Mac Mini Late 2012
+# Fedora 41-44 WiFi On The Mac Mini Late 2012
 
 _By Alex Free_
 
-Last pdated 4/3/2026.
+Last pdated 5/1/2026.
 
 `sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm`
 
