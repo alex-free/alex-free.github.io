@@ -63,6 +63,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 ## Misc
 
+* [Fedora Setup By Alex](fedora-setup-by-alex) - Script to setup Fedora Linux the way I like it.
+
 * [FLAC2MP3](flac2mp3) - Recursively convert a folder of FLAC files to one containing 320kbs stereo MP3 files.
  purposes.
 
