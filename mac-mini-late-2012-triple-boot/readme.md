@@ -2,13 +2,13 @@
 
 _By Alex Free_
 
-v1.0.1 - 4/12/2026
+v1.0.2 - 5/2/2026
 
 This guide will describe how I triple boot a [late 2012 Mac mini](https://everymac.com/systems/apple/mac_mini/specs/mac-mini-core-i5-2.5-late-2012-specs.html) with Mac OS (any version that can run), Windows 7, and Fedora Linux. 
 
-Specifically, I will be setting up a triple boot of Mac OS 10.12, Fedora Linux 41 (though this has been tested up to 43 with KDE and Gnome editions), and Windows 7 Pro (64-bit). There will also be a `Shared` `ExFat` partition, useful for file transfers between all 3 OSes. ExFat has no 4GB file size limitation, nor does it have a partition size limit of 32GB like regular FAT32.
+Specifically, I will be setting up a triple boot of Mac OS 10.12, Fedora Linux 41 (though this has been tested up to 44 with KDE and Gnome editions), and Windows 7 Pro (64-bit). There will also be a `Shared` `ExFat` partition, useful for file transfers between all 3 OSes. ExFat has no 4GB file size limitation, nor does it have a partition size limit of 32GB like regular FAT32.
 
-This guide has surpsignly been applicable to other early intel macs, including up to the Macbook Air 2017.
+This guide has suprisingly been applicable to other early intel macs, I've tested it on a Macbook mid 2007 and a Macbook Air 2017.
 
 ## Table Of Contents
 
@@ -115,7 +115,7 @@ Click on your internal drive.
 
 ![f-4](images/f-4.png)
 
-Under `Storage Configuration` select `Custom`.
+Under `Storage Configuration` select `Custom`. Note, in newer Fedora there is an option to `share with other operating system`.
 
 ![f-5](images/f-5.png)
 
@@ -178,6 +178,7 @@ Notes: you can install WiFi with these guides:
 
 * [Macbook Air 2017 Wifi Fedora Linux](https://alex-free.github.io/macbook-air-2017-fedora-wifi/)
 
+The Macbook mid 2007 has WiFi working out the box.
 
 ## Step 5: Set Up A Hybrid MBR
 
