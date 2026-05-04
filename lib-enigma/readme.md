@@ -95,7 +95,7 @@ int read_sector_edc(FILE *bin, unsigned int sector_number, unsigned char * secto
 
 int read_sector_ecc(FILE *bin, unsigned int sector_number, unsigned char * sector_buf); // Read only the ecc data (repair data used during disc error repair attempts when EDC verification mismatches) into sector_buf. This excludes sync header, user data, or EDC. If requested sector does not exist (i.e. not enough sectors in disc image for sector requested), it returns 2. If it successfully reads the sector, it returns 1. If it fails to read the sector but the sector exists, it returns 0.
 
-int Write_sector_user_data(FILE *bin, unsigned int sector_number, unsigned char *sector_buf); // Write sector user data (0x800 byte array). If requested sector does not exist (i.e. not enough sectors in disc image for sector requested), it returns 2. If it successfully writes the sector data, it returns 1. If it fails to write the sector but the sector exists, it returns 0.
+int write_sector_user_data(FILE *bin, unsigned int sector_number, unsigned char *sector_buf); // Write sector user data (0x800 byte array). If requested sector does not exist (i.e. not enough sectors in disc image for sector requested), it returns 2. If it successfully writes the sector data, it returns 1. If it fails to write the sector but the sector exists, it returns 0.
 
 // Identification functions.
 const char * get_psx_exe_gameid(FILE *bin, char *volume_creation_timestamp);
