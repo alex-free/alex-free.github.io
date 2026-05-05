@@ -41,6 +41,12 @@ _Note:_ these are also compiled for multiple operating systems [on the releases 
 
 * [Example 4](https://github.com/alex-free/lib-enigma/tree/master/example-4-sector-viewer): View a sector's worth of data.
 
+## Real World Usage
+
+I'm still working on adding this to more of my patchers, but the following programs use lib-enigma:
+
+* [LibCrypt Patcher](https://github.com/alex-free/libcrypt-patcher).
+
 | [Homepage](https://alex-free.github.io/lib-enigma) | [GitHub](https://github.com/alex-free/lib-enigma) | [PSX Place Thread](https://www.psx-place.com/threads/lib-enigma-a-playstation-1-2-cd-image-c-library-for-patching-and-identification.49422/) |
 
 
@@ -54,21 +60,17 @@ _Note:_ these are also compiled for multiple operating systems [on the releases 
 
 ## Downloads
 
-Get the latest as a submodule for your project:
+Note: you can get the latest as a submodule for your project:
 
 `git add submodule --recursive https://github.com/alex-free/lib-enigma`.
 
 ### v1.0.3 (5/4/2026)
 
+* [lib-enigma-v1.0.4](https://github.com/alex-free/lib-enigma/releases/download/v1.0.4/lib-enigma-v1.0.4.zip)
+
 Changes: 
 
-* Completely rewritten the advanced find n replace sector boundary aware function. Instead of giving it a file, you give it a sector. This allows you to run multiple find n replace searches at once per sector through the entire disc image.
-
-* [Example 3](https://github.com/alex-free/lib-enigma/tree/master/example-3-piracy-patcher) now patches every Libcrypt v1 game.
-
-* Added write sector user data function.
-
-* Upgraded `build-examples` script to use [ezre](https://github.com/alex-free/ezre) submodule and update all example version numbers to correspond with the lib-enigma one by editing one line.
+* Better build system and documentation.
 
 ---------------------------------------
 [Previous versions](changelog.md).

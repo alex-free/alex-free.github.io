@@ -1,5 +1,17 @@
 # [Lib Enigma](readme.md) -> Building From Source
 
+Note: Execute `./build clean` to clean source tree.
+
+## Library Release Zip
+
+`./build` (also builds all examples for all targets possible on host). The built examples are found in `<example>/build`, but they are also copied to `all-examples` in the root of the source tree.
+
+## Examples
+
+If you want just one example, `cd` into the example and execute `make deps all` for all targets possible on host for that example.
+
+## Library
+
 Execute the build script for your target:
 
 `build-lib-enigma-host` - build for Linux (or maybe BSD).
