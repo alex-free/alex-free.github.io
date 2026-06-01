@@ -9,7 +9,7 @@ Find me @:
 
 Checkout the different stuff I cover here:
 
-| [Blog](#blog) | [Dreamcast](#dreamcast) | [iOS](#ios) | [Development Tools](#development-tools) | [Misc](#misc) | [Mods](#mods) | [Portable Linux x86_64 Builds Of Existing Software](#portable-linux-x86_64-builds-of-existing-software) | [Mac](#mac) | [PSX](#psx) | [Xbox 360](#xbox-360) |
+| [Blog](#blog) | [Dreamcast](#dreamcast) | [iOS](#ios) | [Development Tools](#development-tools) | [Misc](#misc) | [Mods](#mods) | [Portable Linux x86_64 Builds Of Existing Software](#portable-linux-x86_64-builds-of-existing-software) | [Mac](#mac) | [PS5](#ps5) | [PSX](#psx) | [Xbox 360](#xbox-360) |
 
 -----------------------------------------
 
@@ -72,13 +72,13 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [Open95Keygen](open95keygen) - Open source Windows 95/NT 4.0 keygen that can generate random retail and OEM keys.
 
-* [PS5 12.70 FW Jailbreak Tutorial](ps5-jb-12.70fw-tutorial) - text guide on setting it up.
-
 * [qBittorrent Backup And Restore](qbtbar) - Transfer all of your current qBittorrent data to a different computer or new OS installation. 
 
 * [SuperMario64GameSharkWriter](sm64gsw) - Allows you to write and patch GameShark codes to SM64 ROM files.
 
 * [Updated Windows 7 Xbox One Controller Driver](updated-windows-7-xbox-one-controller-driver) - Updated Xbox One controller driver compatible with Windows 7 that works with all existing controller models.
+
+* [Widevine Installer](widevine-installer) - Installs Widevine DRM for chromium based browsers on Linux.
 
 ## Mods
 
@@ -115,6 +115,10 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 * [Source Engine Fork](source-engine) - modified to compile on Mac OS with MacPorts and case-sensitive filesystems.
 
 * [Source Engine Mac App](source-engine-mac-app) - Play Half-Life 2 on modern Mac OS!
+
+## PS5
+
+* [PS5 12.70 FW Jailbreak Tutorial](ps5-jb-12.70fw-tutorial) - text guide on setting it up.
 
 ## PSX
 
