@@ -2,8 +2,6 @@
 
 _By Alex Free_
 
-v1.0 (5/30/2026)
-
 Since text tutorials are apparently dead, we are all supposed to watch 3 different YouTube videos weeks apart to figure out what to do, and this is still cutting edge stuff, I figured I'd put together a tutorial on how I'm successfully Jailbreaking my PS5 on 12.70 FW. I've been:
 
 * Watching Netflix (the one for NetflixNHax). Somehow the PS5 installed the latest update for this Netflix pkg while Jailbroken and it made it work.
@@ -11,6 +9,11 @@ Since text tutorials are apparently dead, we are all supposed to watch 3 differe
 * Playing Neir: Automata (PS4 backup .pkg).
 * Playing Pragmata (PS5 backup, game folder dump).
 * Running homebrew (PS5 XPlorer .pkg).
+
+## Changelog
+
+* v1.0 (5/30/2026)
+* v1.0.1 (5/31/2026) - add FTP setup.
 
 ## Background
 
@@ -20,7 +23,7 @@ Alrighty, so my setup was that I downloaded Resident Evil 9 on launch day from P
 
 My problem now is you need a user land exploit to run Patience2Jailbreak. I obviously never downloaded Star Wars Racer Revenge from PSN or any LUA games from PSN when it could still connect to PSN. But I had a trick up my sleeve, the disc drive.
 
-So going back to when the Patience2Jailbreak exploit was announced, Star Wars Racer Revenge PS4 discs had already reached ~$500 USD or something like that. Little rich for my blood. Knowing the LUA exploit was still going to be a viable approach once updated, and that KStuff (an important kernel enabler for running unsigned code needed after both a userland exploit and kernel exploit nowadays) would probably gain 12.70 FW around the same time, I bit the bullet and purchased me a physical PS4 disc of Nora Princess and Stray Cat HD. One of the LUA exploit games.
+So going back to when the Patience2Jailbreak exploit was announced, Star Wars Racer Revenge PS4 discs had already reached ~$500 USD or something like that. Little rich for my blood. Knowing the LUA exploit was still going to be a viable approach once updated (and still to this day **much cheaper** to get a physical copy of such a game), and that KStuff (an important kernel enabler for running unsigned code needed after both a userland exploit and kernel exploit nowadays) would probably gain 12.70 FW around the same time, I bit the bullet and purchased me a physical PS4 disc of Nora Princess and Stray Cat HD. One of the LUA exploit games.
 
 Since it was coming from Japan it took about a week, and by that time everything was updated for 12.70 FW support .that I needed. We have [remote lua loader](https://github.com/n0llptr/remote_lua_loader), [KStuff Lite](https://github.com/EchoStretch/kstuff-lite), and even an improved Patience2Jailbreak (included in Remote Lua Loader) that takes the exploit time from 2hrs to about 1hr.
 
@@ -44,7 +47,7 @@ Since it was coming from Japan it took about a week, and by that time everything
 
 * [ShadowMountPlus](https://github.com/drakmor/ShadowMountPlus/releases) by [drakmor](https://github.com/drakmor).
 
-* [UFS2Tool](https://github.com/SvenGDK/UFS2Tool) by [SvenGDK](https://github.com/SvenGDK).
+* [FTPSrv](https://github.com/ps5-payload-dev/ftpsrv) by [ps5-payload-dev](https://github.com/ps5-payload-dev).
 
 Notes:
 
@@ -96,17 +99,21 @@ Notes:
 
 20) Send over [LapyJB](https://git.etawen.dev/soniciso/elf-arsenal/raw/branch/main/payloads/lapyjb.elf) to the console. The command is `nc < <IP address> 9021 < <path to lapyjb.elf>`. So in my case it was `nc 10.0.0.174 9021 < /home/alex/Downloads/lapyjb.elf`. Same thing, once you see the notification on the PS5 go ahead and CTRL+C to exit out of netcat (nc command). This enables us to use things that would otherwise require Homebrew ENabler (HEN), like PS5 Xplorer (a file manager for PS5).
 
+21) Send over [FTPSrv](https://github.com/ps5-payload-dev/ftpsrv) to the console. The command is `nc < <IP address> 9021 < <path to ftpsrv-ps5.elf>`. So in my case it was  `nc 10.0.0.174 9021 < /home/alex/Downloads/ftpsrv-ps5.elf`. Same thing, once you see the notification on the PS5 go ahead and CTRL+C to exit out of netcat (nc command). FTP server needs no user name or password, and is on port 2121.
+
+
 ## Installing .PKG Files
 
-21) Go ahead and get any .pkg files (PS4 games or PS4/PS5 homebrew) onto the root of your USB drive from your computer. You can install these by going to Settings->Debug Settings->Game->Package Installer and select any of your .pkgs to be installed on your internal console storage.
+
+22) Go ahead and get any .pkg files (PS4 games or PS4/PS5 homebrew) onto the root of your USB drive from your computer. You can install these by going to Settings->Debug Settings->Game->Package Installer and select any of your .pkgs to be installed on your internal console storage.
 
 ## Installing PS5 Games
 
-22) For PS5 games, you have a couple of options. You can use a 'dumped' folder of loose files ripped from the game, or you can take that folder and create an image file for the best results/performance. By far the easiest way to do this is to find out what the title ID of the game is (i.e. Pragmata is `PPSA-02530`, just google it for your game). Rename the extracted game dump folder to the title id. This tutorial is not yet covering the image file formats created from game dumps.
+23) For PS5 games, you have a couple of options. You can use a 'dumped' folder of loose files ripped from the game, or you can take that folder and create an image file for the best results/performance. By far the easiest way to do this is to find out what the title ID of the game is (i.e. Pragmata is `PPSA-02530`, just google it for your game). Rename the extracted game dump folder to the title id. This tutorial is not yet covering the image file formats created from game dumps.
 
-23) Copy either the game dump folder to the root of a USB HDD (recommended for speed) or flash drive.
+24) Copy either the game dump folder to the root of a USB HDD (recommended for speed) or flash drive.
 
-24) On your computer, send over [ShadowMountPlus](https://github.com/drakmor/ShadowMountPlus/releases). The command will be `nc <IP address> 9021 < <path to shadow mount plus elf file>`. So in my case it was `nc 10.0.0.174 9021 < /home/alex/Downloads/ShadowMountPlus_1.6test11/shadowmountplus.elf`. Once you see the notification on the PS5 go ahead and CTRL+C to exit out of netcat (nc command). As long as your  game dump folder is found in the root of the USB HDD or flash drive, you should get notified that the game is ready and be able to launch it from the homescreen.
+25) On your computer, send over [ShadowMountPlus](https://github.com/drakmor/ShadowMountPlus/releases). The command will be `nc <IP address> 9021 < <path to shadow mount plus elf file>`. So in my case it was `nc 10.0.0.174 9021 < /home/alex/Downloads/ShadowMountPlus_1.6test11/shadowmountplus.elf`. Once you see the notification on the PS5 go ahead and CTRL+C to exit out of netcat (nc command). As long as your  game dump folder is found in the root of the USB HDD or flash drive, you should get notified that the game is ready and be able to launch it from the homescreen.
 
 Notes for PS5 games:
 
