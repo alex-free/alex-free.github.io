@@ -118,9 +118,11 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 ## PS5
 
+* [How To Dump, Fakesign, & Run PS5 Game Backups](ps5-game-backups-guide/readme.md) - Rip PS5 games and play them on jailbroken consoles.
+
 * [PS5 12.70 FW Jailbreak Tutorial](ps5-jb-12.70fw-tutorial) - text guide on setting it up.
 
-* [PS5 Make FSelf Recursive](ps5-make-fself-recursive) - Run make_fself.py recursively on a decrypted PS5 game dump folder.
+* [PS5 Make FSELF Recursive](ps5-make-fself-recursive) - Run make_fself.py recursively on a decrypted PS5 game dump folder.
 
 ## PSX
 
