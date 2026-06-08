@@ -116,6 +116,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [Source Engine Mac App](source-engine-mac-app) - Play Half-Life 2 on modern Mac OS!
 
+* [YT-DLP Mac OS Legacy](yt-dlp-macos-legacy) - Standalone yt-dlp binary containing ffmpeg for older Mac OS versions.
+
 ## PS5
 
 * [How To Dump, Fakesign, & Run PS5 Game Backups](ps5-game-backups-guide/readme.md) - Rip PS5 games and play them on jailbroken consoles.
