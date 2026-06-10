@@ -74,6 +74,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [qBittorrent Backup And Restore](qbtbar) - Transfer all of your current qBittorrent data to a different computer or new OS installation. 
 
+* [Portable YouTube Ripper](portable-youtube-ripper) - Portable, advanced YouTube downloader.
+
 * [SuperMario64GameSharkWriter](sm64gsw) - Allows you to write and patch GameShark codes to SM64 ROM files.
 
 * [Updated Windows 7 Xbox One Controller Driver](updated-windows-7-xbox-one-controller-driver) - Updated Xbox One controller driver compatible with Windows 7 that works with all existing controller models.
