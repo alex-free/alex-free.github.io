@@ -2,14 +2,11 @@
 
 _By Alex Free_
 
-Changes:
-* v1.0 - 6/3/2026.
-
-* v1.0.1 - 6/6/2026 - FFPKG/PFS/PFSC image generation and better formatting.
-
 This tutorial will cover how to dump, fake sign (allowing any console including your own to run the backup), and test (**without deleting anything before you know the game can even be ran as a dumped folder!**) PS5 games and apps up to the latest jailbreakble FW 12.70. It works for any apps or games downloaded from PSN back when you were on the latest firmware that you've been hoarding all this time, as well as physical game discs. Doing this for a game installed from a physical game disc allows you to not have to put in the physical disc to play it!
 
 ## Table Of Contents
+
+* [Changelog](changelog.md).
 
 * [Preparations](#preparations).
 
@@ -18,10 +15,6 @@ This tutorial will cover how to dump, fake sign (allowing any console including 
 * [Fake Signing](#fake-signing).
 
 * [Dump Folder To FFPKG (UFS2) Image Conversion](#dump-folder-to-ffpkg-ufs2-image-conversion).
-
-* [Dump Folder To FFPFS (PFS Uncompressed) Image Conversion](#dump-folder-to-ffpfs-pfs-uncompressed-image-conversion).
-
-* [Dump Folder To FFPFSC (PFS Compressed) Image Conversion](#dump-folder-to-ffpfsc-pfs-compressed-image-conversion).
 
 * [Notes](#notes).
 
@@ -105,80 +98,6 @@ So in my example with Pragmata:
 ```/home/alex/Downloads/linux-x64-selfcontained/UFS2Tool newfs -O 2 -b 65536 -f 65536 -m 0 -S 4096 -i 262144 -D ./PPSA02530 PPSA02530.ffpkg```
 
 To use it with ShadowMountPlus, same thing, put the `.ffpkg` anywhere you'd normally put a game dump folder at and enjoy.
-
-## Dump Folder To FFPFS (PFS Uncompressed) Image Conversion
-
-**Note: This support is expieremental in ShadowMountPlus, and some games do not work with it. In fact, I have not been able to find a game yet that works with it. I am simply laying out the documentation for you from the official sources. Once I find something that works, I'll update this disclaimer.**
-
-Thanks to the release of [mkpfs](https://github.com/PSBrew/MkPFS), it's now very easy to create PFS and PFSC image files. [PFS](https://www.psdevwiki.com/ps4/PFS) is the native filesystem used by PS4 and PS5 games. 
-
-The PS5 kernel also natively supports PFSC, a compressed varient which can reduce the size of the image by over 50% (I've seen 83GB dumps go to 35GBs), but does so at an impact to read speeds (150-250mb/s according to [drakmor](https://github.com/drakmor/ShadowMountPlus/releases/tag/1.6beta14-fix1)).
-
-[ShadowMountPlus 1.6beta14 fix1](https://github.com/drakmor/ShadowMountPlus/releases) is the first version to add support for both PFS and PFSC, but I certainly recommend using the latest one since support is so new and still being tweaked as of this writing.
-
-First, install mkpfs with pip (you need Python):
-
-`pip install mkpfs`
-
-First thing you have to do no matter what for PFS or PFSC is to create a PFS file. So you want these commands:
-
-`cd <folder on my external HDD>`
-
-`mkpfs pack folder --no-compress --temp-folder ./ ./<title id> ./<title id>.ffpfs`
-
-So for Pragmata, my commands were:
-
-`cd <folder on my external HDD>`
-
-`mkpfs pack folder --no-compress --temp-folder ./ ./PPSA02530 ./PPSA02530.ffpfs`
-
-NOTE: I use `--temp-folder ./` for a reason. By default  `mkpfs` will use the system tmp dir, so `/tmp`. I don't nearly have enough space for this to not take up my computer's entire internal storage. So instead I `cd` _into_ my external HDD and specify the tmp folder to be _on_ my external HDD.
-
-NOTE: I can't use `--verify` because apparently it needs to do that by putting the entire file in RAM, and I don't have 83GBs of RAM. It's not important or required to do it as long as you get no errors your fine.
-
-To use it with ShadowMountPlus, same thing, put the `.ffpfsc` anywhere you'd normally put a game dump folder at and enjoy.
-
-## Dump Folder To FFPFSC (PFS Compressed) Image Conversion
-
-**Note: This support is expieremental in ShadowMountPlus, and some games do not work with it. In fact, I have not been able to find a game yet that works with it. I am simply laying out the documentation for you from the official sources. Once I find something that works, I'll update this disclaimer.**
-
-For compressed images, you need to create a nested image. So rename your game dump folder (append `-app` after title id) and put your game dump in a folder named as the title id:
-
-`mv <game dump folder named as title id> <game dump folder named as title id>-app`
-
-`mkdir <parent folder named as title id>`
-
-`mv <game dump folder named as title id>-app <parent folder named as title id>/<game dump folder named as title id>-app`
-
-So in my example:
-
-`mv PPSA02530 PPSA02530-app`
-
-`mkdir PPSA02530`
-
-`mv PPSA02530-app PPSA02530/PPSA02530-app`.
-
-Create the `pfs_image.dat` with these commands:
-
-`cd <folder on my external HDD>`
-
-`mkpfs pack folder --no-compress --no-adjust-output-file-extension --temp-folder ./ <parent folder named as title id>/<game dump folder named as title id>-app ./pfs_image.dat`
-
-So for Pragmata, my command was:
-
-`cd <folder on my external HDD>`
-
-`mkpfs pack folder --no-compress --no-adjust-output-file-extension --temp-folder ./ PPSA02530/PPSA02530-app ./pfs_image.dat`
-
-Now with your nested uncompressed image, use the command to make the final file:
-
-`mkpfs pack file --temp-folder ./ ./pfs_image.dat ./<title id>.ffpfsc'
-
-So in my example the command was:
-
-`mkpfs pack file --temp-folder ./ ./pfs_image.dat ./PPSA02530.ffpfsc'
-
-To use it with ShadowMountPlus, same thing, put the `.ffpfsc` anywhere you'd normally put a game dump folder at and enjoy.
 
 ## Notes
 
