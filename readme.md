@@ -128,6 +128,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 * [PS5 Make FSELF Recursive](ps5-make-fself-recursive) - Run make_fself.py recursively on a decrypted PS5 game dump folder.
 
+* [PS5 Disc Drive Pairing Explained](ps5-disc-drive-pairing-explained) - Write up on how it works.
+
 ## PSX
 
 * [APrip](aprip) - Patch out additional anti-piracy copy protection routines found in some later PSX games.
