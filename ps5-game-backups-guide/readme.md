@@ -48,7 +48,7 @@ So in my case it was:
 
 A notification will appear saying the dumping is starting. You'll get progress in the form of constant PS5 notifications as well as on your PC terminal.
 
-![ps5-app-dumper](ps5-app-dumper.png)
+![ps5-app-dumper](images/ps5-app-dumper.png)
 
 ## Fake Signing
 
@@ -64,7 +64,7 @@ Remove the USB device from your PS5. Connect the USB device to your computer, an
 
 If you want to copy a virigin copy of the 'decrypted' backup for pedantic reasons, make a copy of the decrypted folder somewhere because the next part is going to fake sign the game dump folder. Give [PS5 Make FSELF Recursive](https://github.com/alex-free/ps5-make-fself-recursive) the decrypted game dump folder as argument, for example `ps5mfr PPSA02530-app0`. This will look through the game dump (which is already decrytped, PS5 App Dumper automatically decrypts as it dumps since [v1.01 Beta](https://github.com/EchoStretch/ps5-app-dumper/releases/tag/v1.01)), and fake sign the `eboot.bin` as well as any `*.psx` shared libraries that it finds.
 
-![ps5mfr](ps5mfr.png)
+![ps5mfr](images/ps5mfr.png)
 
 Go back to your USB and delete the original decrypted game dump folder. Copy over your fake signed game dump folder to the root of the usb in the `homebrew` folder (or wherever you want to that ShadowMountPlus looks at).
 
@@ -100,6 +100,14 @@ Default scan locations:
 /mnt/ext1
 ```
 **Note** for any game you put into internal, you have to make sure the `/data` folder has recursive RWX permissions (777). The best way to set this currently seems to be [FileZilla FTP client](https://filezilla-project.org/), which is available for Windows, Mac, and Linux.
+
+1) Right click the `/data` folder:
+
+![select-data-filezilla](images/select-data-filezilla.png)
+
+2) Enter `777` into the `numerical value:` box. Check `Recurse into subdirectories`, and leave the default sub-option `Apply to all files and directories` selected. Click OK:
+
+![apply-permissions-recursively-to-data-filezilla](images/apply-permissions-recursively-to-data-filezilla.png)
 
 ### Mounting The Dump Folder
 
@@ -140,8 +148,6 @@ To use it with ShadowMountPlus, same thing, put the `.ffpkg` anywhere you'd norm
 
 ## Notes
 
-* If you find that no ShadowMountPlus mounted games are launching and causing an immediete KP, even though they did previously (this can happen if you move the game from say an external USB to an internal USB it can get confused), delete `/data/shadowmountplus` and `/user/data/shadowmountplus` to reset all configs. Note that if ShadowMountPlus is running while you do this, you will get an error as not all files will be alowed to be deleted but thats ok. You can avoid the error by doing the BEFORE you send over ShadowMountPlus.
-
 * Some games may run better either as a folder or as a .ffpkg.
 
 * Some games may not run from internal.
@@ -153,3 +159,24 @@ To use it with ShadowMountPlus, same thing, put the `.ffpkg` anywhere you'd norm
 * Backports are a thing that PS5 App Dumper is capable of. This can allow the dump to run on much earlier PS5 FW versions if everything works out. Because I don't have any other PS5 but the latest jailbreakable FW 12.70, I have no way to test this or give advice on it currently.
 
 * I imagine DLC is also included in the dumps, but I'll need to look into it as I dump more games.
+
+## Completely Reset ShadowMountPlus
+
+I have found that if you try to put a FFPKG into the internal PS5 storage `/data/homebrew` it may KP the console, even though a folder format dump there of the same game/dump works. Once jailbreaking again, you may find your PS5 in a bad state where any shadowmountplus mounted games or even PS5 homebrew will cause an immediete kernal panic. If this happens:
+
+1) Restart the PS5.
+
+2) Jailbreak, send all the normal payloads EXCEPT SHADOWMOUNTPLUS.
+
+3) Over FTP or via PS5 Explorer, delete `/data/shadowmount`.
+
+4) Delete any games mounted previously with ShadowMountPlus from the home screen. You do not need to delete the actual image dumps or folder dumps (but definitely delete the game that originally caused the issue).
+
+5) NOW send ShadowMountPlus payload over. Everything is clean and reset, wait for your games to 'install' once again.
+
+From here on out you won't have any problems and it will all work correctly. Homebrew will launch, backups mounted with ShadowMountPlus will launch. If it happens again you know what to do!
+
+
+
+
+
