@@ -20,7 +20,7 @@ This is a native PS5 port of [Wolf4SDL](https://github.com/alex-free/wolf4sdl/tr
 
 ## Features
 
-* Completely portable and self-contained. All config files, save files, WL* files, temp files, and game engine executables are inside the `Crispy-Doom` folder you extract from the release.
+* Completely portable and self-contained. All config files, save files, WL* files, temp files, and game engine executables are inside the `Wolf4SDL` folder you extract from the release.
 
 * Shareware/Registerd engine specific folders, each game engine has it's own folder organizing your config files, save files, WL* files, etc..
 
