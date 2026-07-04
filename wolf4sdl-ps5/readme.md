@@ -58,7 +58,7 @@ Changes: Intial release.
 
 ## Notes
 
-Due to [Issue #12](https://github.com/ps5-payload-dev/SDL/issues/12) with [ps5-payload-dev/SDL](https://github.com/ps5-payload-dev/SDL) using a USB keyboard in-game is not currently feesable. Use a controller, which works perfect!
+Due to [Issue #12](https://github.com/ps5-payload-dev/SDL/issues/12) with [ps5-payload-dev/SDL](https://github.com/ps5-payload-dev/SDL) using a USB keyboard in-game is not currently feasible. Use a controller, which works perfect!
 
 ## Source
 
