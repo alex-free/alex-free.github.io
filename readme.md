@@ -122,6 +122,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 
 ## PS5
 
+* [Crispy Doom PS5](crispy-doom-ps5-port) - Crispy Doom source port for PS5.
+
 * [How To Dump, Fakesign, & Run PS5 Game Backups](ps5-game-backups-guide/readme.md) - Rip PS5 games and play them on jailbroken consoles.
 
 * [PS5 12.70 FW Jailbreak Tutorial](ps5-jb-12.70fw-tutorial) - text guide on setting it up.
@@ -129,6 +131,8 @@ Get the latest updates: [What's New?](https://github.com/alex-free/alex-free.git
 * [PS5 Make FSELF Recursive](ps5-make-fself-recursive) - Run make_fself.py recursively on a decrypted PS5 game dump folder.
 
 * [PS5 Disc Drive Pairing Explained](ps5-disc-drive-pairing-explained) - Write up on how it works.
+
+* [Wolf4SDL PS5](wolf4sdl-ps5) - Wolfenstien 3D source port for PS5.
 
 ## PSX
 
